@@ -1,0 +1,8 @@
+org/webgme/guest/airlinegateman2/AirlineGateMan2.class
+org/webgme/guest/airlinegateman2/rti/DayaheadScheduleConfirm.class
+org/webgme/guest/airlinegateman2/rti/TransferPassComfirm2.class
+org/webgme/guest/airlinegateman2/rti/DayaheadFlightInfo.class
+org/webgme/guest/airlinegateman2/rti/ArrivalFlightConfirm.class
+org/webgme/guest/airlinegateman2/AirlineGateMan2Base.class
+org/webgme/guest/airlinegateman2/rti/DepartureFlightInfo.class
+org/webgme/guest/airlinegateman2/rti/ArrivalTransferPass2.class

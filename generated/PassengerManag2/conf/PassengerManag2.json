@@ -1,0 +1,8 @@
+{
+  "federateRTIInitWaitTimeMs": 200,
+  "federateType": "PassengerManag2",
+  "federationId": "FlatCase",
+  "isLateJoiner": false,
+  "lookAhead": 0.2,
+  "stepSize": 1.0
+}

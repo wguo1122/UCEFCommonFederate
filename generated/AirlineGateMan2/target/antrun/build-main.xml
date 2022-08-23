@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <copy todir="/home/vagrant/Projects/Airport4/generated/AirlineGateMan2/target/conf" overwrite="true">
+    <fileset dir="/home/vagrant/Projects/Airport4/generated/AirlineGateMan2/conf"/>
+  </copy>
+  <copy todir="/home/vagrant/Projects/Airport4/generated/AirlineGateMan2/target" overwrite="true">
+    <fileset file="/home/vagrant/Projects/Airport4/generated/AirlineGateMan2/RTI.rid"/>
+  </copy>
+</target>
+</project>

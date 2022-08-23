@@ -1,0 +1,21 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.webgme.guest:FlatCase_exec[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding FlatCase_exec 0.1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mexec-maven-plugin:1.5.0:java[m [1m(default-cli)[m @ [36mFlatCase_exec[0;1m ---[m
+
+-------------------------------------------------------------------
+GMS: address=vagrant-15609, cluster=FlatCase, physical address=192.168.0.21:51051
+-------------------------------------------------------------------
+19:35:03.623 [org.webgme.guest.airlinegateman1.AirlineGateMan1.main()] INFO  org.webgme.guest.airlinegateman1.AirlineGateMan1 - waiting on readyToPopulate...
+19:35:44.001 [org.webgme.guest.airlinegateman1.AirlineGateMan1.main()] INFO  org.webgme.guest.airlinegateman1.AirlineGateMan1 - ...synchronized on readyToPopulate
+19:35:44.002 [org.webgme.guest.airlinegateman1.AirlineGateMan1.main()] INFO  org.webgme.guest.airlinegateman1.AirlineGateMan1 - waiting on readyToRun...
+19:35:44.252 [org.webgme.guest.airlinegateman1.AirlineGateMan1.main()] INFO  org.webgme.guest.airlinegateman1.AirlineGateMan1 - ...synchronized on readyToRun
+19:35:44.254 [org.webgme.guest.airlinegateman1.AirlineGateMan1.main()] INFO  org.webgme.guest.airlinegateman1.AirlineGateMan1 - started logical time progression
