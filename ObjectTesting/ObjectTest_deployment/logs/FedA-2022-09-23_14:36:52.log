@@ -1,0 +1,72 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------< [0;36morg.webgme.guest:ObjectTest_exec[0;1m >------------------[m
+[[1;34mINFO[m] [1mBuilding ObjectTest_exec 0.1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mexec-maven-plugin:1.5.0:java[m [1m(default-cli)[m @ [36mObjectTest_exec[0;1m ---[m
+
+-------------------------------------------------------------------
+GMS: address=vagrant-13868, cluster=ObjectTest, physical address=192.168.1.166:60107
+-------------------------------------------------------------------
+14:37:18.573 [org.webgme.guest.feda.FedA.main()] INFO  org.webgme.guest.feda.FedA - waiting on readyToPopulate...
+14:37:23.696 [org.webgme.guest.feda.FedA.main()] INFO  org.webgme.guest.feda.FedA - ...synchronized on readyToPopulate
+14:37:23.696 [org.webgme.guest.feda.FedA.main()] INFO  org.webgme.guest.feda.FedA - waiting on readyToRun...
+14:37:24.198 [org.webgme.guest.feda.FedA.main()] INFO  org.webgme.guest.feda.FedA - ...synchronized on readyToRun
+14:37:24.199 [org.webgme.guest.feda.FedA.main()] INFO  org.webgme.guest.feda.FedA - started logical time progression
+Current logic time = 0.0
+Update DataA value as 100
+Update DataB value as 100
+Current logic time = 1.0
+Update DataA value as 101
+Update DataB value as 101
+Current logic time = 2.0
+Update DataA value as 102
+Update DataB value as 102
+Current logic time = 3.0
+Update DataA value as 103
+Update DataB value as 103
+Current logic time = 4.0
+Update DataA value as 104
+Update DataB value as 104
+Current logic time = 5.0
+Update DataA value as 105
+Update DataB value as 105
+Current logic time = 6.0
+Update DataA value as 106
+Update DataB value as 106
+Current logic time = 7.0
+Update DataA value as 107
+Update DataB value as 107
+Current logic time = 8.0
+Update DataA value as 108
+Update DataB value as 108
+Current logic time = 9.0
+Update DataA value as 109
+Update DataB value as 109
+Current logic time = 10.0
+Update DataA value as 110
+Update DataB value as 110
+Current logic time = 11.0
+Update DataA value as 111
+Update DataB value as 111
+Current logic time = 12.0
+Update DataA value as 112
+Update DataB value as 112
+Current logic time = 13.0
+Update DataA value as 113
+Update DataB value as 113
+Current logic time = 14.0
+Update DataA value as 114
+Update DataB value as 114
+Current logic time = 15.0
+Update DataA value as 115
+Update DataB value as 115
+^CCurrent logic time = 16.0
+Update DataA value as 116
+Update DataB value as 116

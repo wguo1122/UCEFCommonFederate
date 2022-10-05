@@ -1,0 +1,35 @@
+{
+  "federateTypesAllowed": [
+    "Analysis",
+    "FedA",
+    "FedB"
+  ],
+  "expectedFederates": [
+    {
+      "federateType": "Analysis",
+      "count": 1
+    },
+    {
+      "federateType": "FedA",
+      "count": 1
+    },
+    {
+      "federateType": "FedB",
+      "count": 1
+    }
+  ],
+  "lateJoinerFederates": [
+    {
+      "federateType": "Analysis",
+      "count": 0
+    },
+    {
+      "federateType": "FedA",
+      "count": 0
+    },
+    {
+      "federateType": "FedB",
+      "count": 0
+    }
+  ]
+}

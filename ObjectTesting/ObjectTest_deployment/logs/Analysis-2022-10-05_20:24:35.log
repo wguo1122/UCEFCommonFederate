@@ -1,0 +1,52 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------< [0;36morg.webgme.guest:ObjectTest_exec[0;1m >------------------[m
+[[1;34mINFO[m] [1mBuilding ObjectTest_exec 0.1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mexec-maven-plugin:1.5.0:java[m [1m(default-cli)[m @ [36mObjectTest_exec[0;1m ---[m
+
+-------------------------------------------------------------------
+GMS: address=vagrant-41432, cluster=ObjectTest, physical address=192.168.1.166:42142
+-------------------------------------------------------------------
+20:24:56.751 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - waiting on readyToPopulate...
+20:25:13.216 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - ...synchronized on readyToPopulate
+20:25:13.217 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - waiting on readyToRun...
+20:25:13.474 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - ...synchronized on readyToRun
+20:25:13.475 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - started logical time progression
+Received Updated Data A as 100 at Timestep = 1.0
+Received Updated Data B as 100 at Timestep = 1.0
+Received Updated Data A as 102 at Timestep = 3.0
+Received Updated Data B as 102 at Timestep = 3.0
+Received Updated Data A as 104 at Timestep = 5.0
+Received Updated Data B as 104 at Timestep = 5.0
+Received Updated Data A as 106 at Timestep = 7.0
+Received Updated Data B as 106 at Timestep = 7.0
+Received Updated Data A as 108 at Timestep = 9.0
+Received Updated Data B as 108 at Timestep = 9.0
+Received Updated Data A as 110 at Timestep = 11.0
+Received Updated Data B as 110 at Timestep = 11.0
+Received Updated Data A as 112 at Timestep = 13.0
+Received Updated Data B as 112 at Timestep = 13.0
+Received Updated Data A as 114 at Timestep = 15.0
+Received Updated Data B as 114 at Timestep = 15.0
+Received Updated Data A as 116 at Timestep = 17.0
+Received Updated Data B as 116 at Timestep = 17.0
+Received Updated Data A as 118 at Timestep = 19.0
+Received Updated Data B as 118 at Timestep = 19.0
+Received Updated Data A as 120 at Timestep = 21.0
+Received Updated Data B as 120 at Timestep = 21.0
+Received Updated Data A as 122 at Timestep = 23.0
+Received Updated Data B as 122 at Timestep = 23.0
+Received Updated Data A as 124 at Timestep = 25.0
+Received Updated Data B as 124 at Timestep = 25.0
+Received Updated Data A as 126 at Timestep = 27.0
+Received Updated Data B as 126 at Timestep = 27.0
+Received Updated Data A as 128 at Timestep = 29.0
+Received Updated Data B as 128 at Timestep = 29.0
+^C

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <copy todir="/home/vagrant/Documents/GitHub/ChenliTesting/UCEF_Project/ObjectTesting/ObjectTest_generated/FedB/target/conf" overwrite="true">
+    <fileset dir="/home/vagrant/Documents/GitHub/ChenliTesting/UCEF_Project/ObjectTesting/ObjectTest_generated/FedB/conf"/>
+  </copy>
+  <copy todir="/home/vagrant/Documents/GitHub/ChenliTesting/UCEF_Project/ObjectTesting/ObjectTest_generated/FedB/target" overwrite="true">
+    <fileset file="/home/vagrant/Documents/GitHub/ChenliTesting/UCEF_Project/ObjectTesting/ObjectTest_generated/FedB/RTI.rid"/>
+  </copy>
+</target>
+</project>
