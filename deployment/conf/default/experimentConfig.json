@@ -1,0 +1,80 @@
+{
+  "federateTypesAllowed": [
+    "ATC",
+    "AircraftCoordinator",
+    "Airline1Manager",
+    "Airline2Manager",
+    "Analysis",
+    "PassengerManag1",
+    "PassengerManag2",
+    "PeopleFlow"
+  ],
+  "expectedFederates": [
+    {
+      "federateType": "ATC",
+      "count": 1
+    },
+    {
+      "federateType": "AircraftCoordinator",
+      "count": 1
+    },
+    {
+      "federateType": "Airline1Manager",
+      "count": 1
+    },
+    {
+      "federateType": "Airline2Manager",
+      "count": 1
+    },
+    {
+      "federateType": "Analysis",
+      "count": 1
+    },
+    {
+      "federateType": "PassengerManag1",
+      "count": 1
+    },
+    {
+      "federateType": "PassengerManag2",
+      "count": 1
+    },
+    {
+      "federateType": "PeopleFlow",
+      "count": 1
+    }
+  ],
+  "lateJoinerFederates": [
+    {
+      "federateType": "ATC",
+      "count": 0
+    },
+    {
+      "federateType": "AircraftCoordinator",
+      "count": 0
+    },
+    {
+      "federateType": "Airline1Manager",
+      "count": 0
+    },
+    {
+      "federateType": "Airline2Manager",
+      "count": 0
+    },
+    {
+      "federateType": "Analysis",
+      "count": 0
+    },
+    {
+      "federateType": "PassengerManag1",
+      "count": 0
+    },
+    {
+      "federateType": "PassengerManag2",
+      "count": 0
+    },
+    {
+      "federateType": "PeopleFlow",
+      "count": 0
+    }
+  ]
+}

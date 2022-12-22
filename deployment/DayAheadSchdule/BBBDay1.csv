@@ -1,0 +1,11 @@
+﻿Airline,FlightNum,Arrive/Departure,Aircraft,ScheduledTime,PassengerCapacity,PassengerBooked,PassengerTransfer,GateNum,FlightStatus
+BBB,11,1,747,5:00,415,215,13,G1,On Time
+BBB,12,1,747,7:00,415,334,15,G1,On Time
+BBB,13,1,A380,13:00,525,387,36,G1,On Time
+BBB,14,1,A380,16:00,525,456,47,G1,On Time
+BBB,15,1,A380,22:00,525,286,52,G1,On Time
+BBB,911,0,747,3:20,415,234,47,G91,On Time
+BBB,912,0,747,5:20,415,346,14,G91,On Time
+BBB,913,0,A380,11:20,525,367,4,G91,On Time
+BBB,914,0,A380,14:20,525,387,36,G91,On Time
+BBB,915,0,A380,20:20,525,478,25,G91,On Time

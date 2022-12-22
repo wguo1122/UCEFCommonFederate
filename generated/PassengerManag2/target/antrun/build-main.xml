@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <copy todir="/home/vagrant/Projects/UCEFCommonFederate/generated/PassengerManag2/target/conf" overwrite="true">
+    <fileset dir="/home/vagrant/Projects/UCEFCommonFederate/generated/PassengerManag2/conf"/>
+  </copy>
+  <copy todir="/home/vagrant/Projects/UCEFCommonFederate/generated/PassengerManag2/target" overwrite="true">
+    <fileset file="/home/vagrant/Projects/UCEFCommonFederate/generated/PassengerManag2/RTI.rid"/>
+  </copy>
+</target>
+</project>

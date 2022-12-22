@@ -1,0 +1,9 @@
+org/webgme/guest/aircraftcoordinator/rti/DayaheadSchedule.class
+org/webgme/guest/aircraftcoordinator/AircraftCoordinatorBase.class
+org/webgme/guest/aircraftcoordinator/rti/RealTimeArriSche.class
+org/webgme/guest/aircraftcoordinator/rti/RealTimeDepSche.class
+org/webgme/guest/aircraftcoordinator/rti/RealtimeArrivalRequest.class
+org/webgme/guest/aircraftcoordinator/rti/DepartureRequest.class
+org/webgme/guest/aircraftcoordinator/rti/Aircraft.class
+org/webgme/guest/aircraftcoordinator/rti/ArrivalConfirm.class
+org/webgme/guest/aircraftcoordinator/AircraftCoordinator.class
