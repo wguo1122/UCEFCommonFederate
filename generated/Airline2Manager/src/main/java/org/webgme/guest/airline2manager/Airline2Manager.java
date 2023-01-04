@@ -12,6 +12,13 @@ import org.cpswt.hla.base.AdvanceTimeRequest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+import java.io.File;  
+
 
 
 // Define the Airline2Manager type of federate for the federation.
@@ -20,6 +27,16 @@ public class Airline2Manager extends Airline2ManagerBase {
     private final static Logger log = LogManager.getLogger();
 
     private double currentTime = 0;
+    private boolean updateDayahead = false;
+    private int timeScale = 5; // mins per timestep
+    private int simulationDay = 0;
+    private int simulationHour = 0;
+    private int simulationMin = 0;
+    
+    private String path = "";
+    private String line = "";
+    private boolean inboundFlight = false;
+
 
     public Airline2Manager(FederateConfig params) throws Exception {
         super(params);
@@ -28,10 +45,7 @@ public class Airline2Manager extends Airline2ManagerBase {
     private void checkReceivedSubscriptions() {
         InteractionRoot interaction = null;
         while ((interaction = getNextInteractionNoWait()) != null) {
-            if (interaction instanceof FlightRemovalNotification) {
-                handleInteractionClass((FlightRemovalNotification) interaction);
-            }
-            else if (interaction instanceof Airline2DeparturReady) {
+            if (interaction instanceof Airline2DeparturReady) {
                 handleInteractionClass((Airline2DeparturReady) interaction);
             }
             else {
@@ -92,6 +106,60 @@ public class Airline2Manager extends Airline2ManagerBase {
             atr.requestSyncStart();
             enteredTimeGrantedState();
 
+            // Simulaiton Day/Hour/Min Calculation
+            simulationDay = (int)(currentTime*timeScale)/(60*24);
+            simulationHour = ((int)(currentTime*timeScale)%(60*24))/(60);
+            simulationMin = ((int)(currentTime*timeScale)%(60*24))%(60);
+
+            System.out.println("Current time step :"+ currentTime);
+            System.out.println("Simulation Day: "+ simulationDay + " Hour: "+ simulationHour + " Min: "+simulationMin);
+
+
+            // Sending out new Day-ahead Schedule
+            if (currentTime%((60/timeScale)*24) == 0 ) {            
+
+                path = "./DayAheadSchdule/"+"BBB"+"Day"+String.valueOf(simulationDay)+".csv";
+                System.out.println("Checking DayAheadSchdule at :"+ path);
+                BufferedReader reader = new BufferedReader(new FileReader(path));
+                String headerLine = reader.readLine(); // Read Header Line
+                System.out.println(headerLine);
+                while ((line = reader.readLine()) != null) {
+                    // Split the line into separate values
+                    String[] values = line.split(",");
+                    
+                    // Send Day ahead Schedule to Aircraft coordinator
+                    
+                    
+
+                    if (values[2].equals("0")) {
+                        inboundFlight = false;
+                    } else {
+                        inboundFlight = true;
+                    }
+                    
+
+                    DayaheadSchedule dayaheadSchedule = create_DayaheadSchedule();
+                    
+                    
+                    dayaheadSchedule.set_airline( values [0] );
+                    dayaheadSchedule.set_flightNum( values [1] );
+                    dayaheadSchedule.set_InboundOutbound( inboundFlight );
+                    dayaheadSchedule.set_aircraft( values [3] );
+                    dayaheadSchedule.set_scheduledTime( values [4] );
+                    dayaheadSchedule.set_capacity( values [5] );
+                    dayaheadSchedule.set_booked( values [6]  );
+                    dayaheadSchedule.set_transfer( values [7]  );
+                    dayaheadSchedule.set_gateNum( values [8] );
+                    dayaheadSchedule.set_flightStatus( values [9] );
+                    dayaheadSchedule.sendInteraction(getLRC(), currentTime + getLookAhead());
+
+                    System.out.println("Send Interaction with InboundFlight :" + inboundFlight);
+                    System.out.println(Arrays.toString(values));
+                    }
+                reader.close();
+
+                
+            }
             ////////////////////////////////////////////////////////////
             // TODO send interactions that must be sent every logical //
             // time step below                                        //
@@ -157,12 +225,6 @@ public class Airline2Manager extends Airline2ManagerBase {
         //////////////////////////////////////////////////////////////////////
         // TODO Perform whatever cleanups are needed before exiting the app //
         //////////////////////////////////////////////////////////////////////
-    }
-
-    private void handleInteractionClass(FlightRemovalNotification interaction) {
-        ///////////////////////////////////////////////////////////////
-        // TODO implement how to handle reception of the interaction //
-        ///////////////////////////////////////////////////////////////
     }
 
     private void handleInteractionClass(Airline2DeparturReady interaction) {
