@@ -31,12 +31,17 @@ public class Airline1ManagerBase extends SynchronizedFederate {
         enableAsynchronousDelivery();
 
         // interaction pubsub
-        DepartureRequest.publish(getLRC());
         ArrivalPass.publish(getLRC());
         DayaheadSchedule.publish(getLRC());
+        DepartureRequest.publish(getLRC());
         Airline1DeparturReady.subscribe(getLRC());
         _subscribedInteractionFilter.setFedFilters( 
            Airline1DeparturReady.get_handle(),
+           SubscribedInteractionFilter.OriginFedFilter.ORIGIN_FILTER_DISABLED,
+           SubscribedInteractionFilter.SourceFedFilter.SOURCE_FILTER_DISABLED);
+        FlightRemovalNotification.subscribe(getLRC());
+        _subscribedInteractionFilter.setFedFilters( 
+           FlightRemovalNotification.get_handle(),
            SubscribedInteractionFilter.OriginFedFilter.ORIGIN_FILTER_DISABLED,
            SubscribedInteractionFilter.SourceFedFilter.SOURCE_FILTER_DISABLED);
 
@@ -68,12 +73,6 @@ public class Airline1ManagerBase extends SynchronizedFederate {
         RealTimeArriSche.subscribe(getLRC());
     }
 
-    public DepartureRequest create_DepartureRequest() {
-        DepartureRequest interaction = new DepartureRequest();
-        interaction.set_sourceFed(getFederateId());
-        interaction.set_originFed(getFederateId());
-        return interaction;
-    }
     public ArrivalPass create_ArrivalPass() {
         ArrivalPass interaction = new ArrivalPass();
         interaction.set_sourceFed(getFederateId());
@@ -82,6 +81,12 @@ public class Airline1ManagerBase extends SynchronizedFederate {
     }
     public DayaheadSchedule create_DayaheadSchedule() {
         DayaheadSchedule interaction = new DayaheadSchedule();
+        interaction.set_sourceFed(getFederateId());
+        interaction.set_originFed(getFederateId());
+        return interaction;
+    }
+    public DepartureRequest create_DepartureRequest() {
+        DepartureRequest interaction = new DepartureRequest();
         interaction.set_sourceFed(getFederateId());
         interaction.set_originFed(getFederateId());
         return interaction;

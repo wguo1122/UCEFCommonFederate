@@ -8,7 +8,7 @@
         <name>FlatCase</name>
         <type>FOM</type>
         <version>0.1.0</version>
-        <modificationDate>2022-12-08</modificationDate>
+        <modificationDate>2023-01-04</modificationDate>
         <securityClassification>Unclassified</securityClassification>
         <description>
           This file was generated from WebGME based on the
@@ -158,7 +158,7 @@
                 </attribute>
                 <attribute>
                     <name>booked</name>
-                    <dataType>int</dataType>
+                    <dataType>String</dataType>
                     <updateType>NA</updateType>
                     <ownership>NoTransfer</ownership>
                     <sharing>PublishSubscribe</sharing>
@@ -167,7 +167,7 @@
                 </attribute>
                 <attribute>
                     <name>capacity</name>
-                    <dataType>int</dataType>
+                    <dataType>String</dataType>
                     <updateType>NA</updateType>
                     <ownership>NoTransfer</ownership>
                     <sharing>PublishSubscribe</sharing>
@@ -176,7 +176,7 @@
                 </attribute>
                 <attribute>
                     <name>checkedIn</name>
-                    <dataType>int</dataType>
+                    <dataType>String</dataType>
                     <updateType>NA</updateType>
                     <ownership>NoTransfer</ownership>
                     <sharing>PublishSubscribe</sharing>
@@ -230,7 +230,7 @@
                 </attribute>
                 <attribute>
                     <name>transfer</name>
-                    <dataType>int</dataType>
+                    <dataType>String</dataType>
                     <updateType>NA</updateType>
                     <ownership>NoTransfer</ownership>
                     <sharing>PublishSubscribe</sharing>
@@ -372,11 +372,11 @@
                     </parameter>
                     <parameter> 
                         <name>booked</name>
-                        <dataType>int</dataType>
+                        <dataType>String</dataType>
                     </parameter>
                     <parameter> 
                         <name>capacity</name>
-                        <dataType>int</dataType>
+                        <dataType>String</dataType>
                     </parameter>
                     <parameter> 
                         <name>flightNum</name>
@@ -396,7 +396,7 @@
                     </parameter>
                     <parameter> 
                         <name>transfer</name>
-                        <dataType>int</dataType>
+                        <dataType>String</dataType>
                     </parameter>
                 </interactionClass>
                 <interactionClass>
@@ -418,6 +418,20 @@
                     </parameter>
                     <parameter> 
                         <name>scheduledDeparTime</name>
+                        <dataType>String</dataType>
+                    </parameter>
+                </interactionClass>
+                <interactionClass>
+                    <name>FlightRemovalNotification</name>
+                    <sharing>PublishSubscribe</sharing>
+                    <transportation>HLAreliable</transportation>
+                    <order>TimeStamp</order>
+                    <parameter> 
+                        <name>airline</name>
+                        <dataType>String</dataType>
+                    </parameter>
+                    <parameter> 
+                        <name>flightNumber</name>
                         <dataType>String</dataType>
                     </parameter>
                 </interactionClass>

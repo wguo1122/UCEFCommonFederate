@@ -37,6 +37,11 @@ public class PeopleFlowBase extends SynchronizedFederate {
            RTPeopleFlow.get_handle(),
            SubscribedInteractionFilter.OriginFedFilter.ORIGIN_FILTER_DISABLED,
            SubscribedInteractionFilter.SourceFedFilter.SOURCE_FILTER_DISABLED);
+        FlightRemovalNotification.subscribe(getLRC());
+        _subscribedInteractionFilter.setFedFilters( 
+           FlightRemovalNotification.get_handle(),
+           SubscribedInteractionFilter.OriginFedFilter.ORIGIN_FILTER_DISABLED,
+           SubscribedInteractionFilter.SourceFedFilter.SOURCE_FILTER_DISABLED);
 
         // object pubsub
         RealTimeDepSche.subscribe_aircraft();

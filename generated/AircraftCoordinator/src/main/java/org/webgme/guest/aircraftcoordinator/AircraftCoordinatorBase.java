@@ -31,13 +31,9 @@ public class AircraftCoordinatorBase extends SynchronizedFederate {
         enableAsynchronousDelivery();
 
         // interaction pubsub
+        FlightRemovalNotification.publish(getLRC());
         ArrivalConfirm.publish(getLRC());
         Aircraft.publish(getLRC());
-        DepartureRequest.subscribe(getLRC());
-        _subscribedInteractionFilter.setFedFilters( 
-           DepartureRequest.get_handle(),
-           SubscribedInteractionFilter.OriginFedFilter.ORIGIN_FILTER_DISABLED,
-           SubscribedInteractionFilter.SourceFedFilter.SOURCE_FILTER_DISABLED);
         RealtimeArrivalRequest.subscribe(getLRC());
         _subscribedInteractionFilter.setFedFilters( 
            RealtimeArrivalRequest.get_handle(),
@@ -51,6 +47,11 @@ public class AircraftCoordinatorBase extends SynchronizedFederate {
         Aircraft.subscribe(getLRC());
         _subscribedInteractionFilter.setFedFilters( 
            Aircraft.get_handle(),
+           SubscribedInteractionFilter.OriginFedFilter.ORIGIN_FILTER_DISABLED,
+           SubscribedInteractionFilter.SourceFedFilter.SOURCE_FILTER_DISABLED);
+        DepartureRequest.subscribe(getLRC());
+        _subscribedInteractionFilter.setFedFilters( 
+           DepartureRequest.get_handle(),
            SubscribedInteractionFilter.OriginFedFilter.ORIGIN_FILTER_DISABLED,
            SubscribedInteractionFilter.SourceFedFilter.SOURCE_FILTER_DISABLED);
 
@@ -82,6 +83,12 @@ public class AircraftCoordinatorBase extends SynchronizedFederate {
         RealTimeArriSche.publish(getLRC());
     }
 
+    public FlightRemovalNotification create_FlightRemovalNotification() {
+        FlightRemovalNotification interaction = new FlightRemovalNotification();
+        interaction.set_sourceFed(getFederateId());
+        interaction.set_originFed(getFederateId());
+        return interaction;
+    }
     public ArrivalConfirm create_ArrivalConfirm() {
         ArrivalConfirm interaction = new ArrivalConfirm();
         interaction.set_sourceFed(getFederateId());

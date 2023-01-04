@@ -28,7 +28,10 @@ public class PeopleFlow extends PeopleFlowBase {
     private void checkReceivedSubscriptions() {
         InteractionRoot interaction = null;
         while ((interaction = getNextInteractionNoWait()) != null) {
-            if (interaction instanceof RTPeopleFlow) {
+            if (interaction instanceof FlightRemovalNotification) {
+                handleInteractionClass((FlightRemovalNotification) interaction);
+            }
+            else if (interaction instanceof RTPeopleFlow) {
                 handleInteractionClass((RTPeopleFlow) interaction);
             }
             else {
@@ -125,6 +128,12 @@ public class PeopleFlow extends PeopleFlowBase {
         //////////////////////////////////////////////////////////////////////
         // TODO Perform whatever cleanups are needed before exiting the app //
         //////////////////////////////////////////////////////////////////////
+    }
+
+    private void handleInteractionClass(FlightRemovalNotification interaction) {
+        ///////////////////////////////////////////////////////////////
+        // TODO implement how to handle reception of the interaction //
+        ///////////////////////////////////////////////////////////////
     }
 
     private void handleInteractionClass(RTPeopleFlow interaction) {

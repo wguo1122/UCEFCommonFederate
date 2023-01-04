@@ -34,6 +34,11 @@ public class Airline2ManagerBase extends SynchronizedFederate {
         ArrivalPass.publish(getLRC());
         DepartureRequest.publish(getLRC());
         DayaheadSchedule.publish(getLRC());
+        FlightRemovalNotification.subscribe(getLRC());
+        _subscribedInteractionFilter.setFedFilters( 
+           FlightRemovalNotification.get_handle(),
+           SubscribedInteractionFilter.OriginFedFilter.ORIGIN_FILTER_DISABLED,
+           SubscribedInteractionFilter.SourceFedFilter.SOURCE_FILTER_DISABLED);
         Airline2DeparturReady.subscribe(getLRC());
         _subscribedInteractionFilter.setFedFilters( 
            Airline2DeparturReady.get_handle(),

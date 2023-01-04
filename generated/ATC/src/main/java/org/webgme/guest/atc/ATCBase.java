@@ -33,6 +33,11 @@ public class ATCBase extends SynchronizedFederate {
         // interaction pubsub
         RealtimeArrivalRequest.publish(getLRC());
         Aircraft.publish(getLRC());
+        FlightRemovalNotification.subscribe(getLRC());
+        _subscribedInteractionFilter.setFedFilters( 
+           FlightRemovalNotification.get_handle(),
+           SubscribedInteractionFilter.OriginFedFilter.ORIGIN_FILTER_DISABLED,
+           SubscribedInteractionFilter.SourceFedFilter.SOURCE_FILTER_DISABLED);
         ArrivalConfirm.subscribe(getLRC());
         _subscribedInteractionFilter.setFedFilters( 
            ArrivalConfirm.get_handle(),

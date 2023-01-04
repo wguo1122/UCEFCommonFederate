@@ -1,8 +1,0 @@
-org/webgme/guest/airline1manager/rti/RealTimeArriSche.class
-org/webgme/guest/airline1manager/Airline1ManagerBase.class
-org/webgme/guest/airline1manager/Airline1Manager.class
-org/webgme/guest/airline1manager/rti/DayaheadSchedule.class
-org/webgme/guest/airline1manager/rti/Airline1DeparturReady.class
-org/webgme/guest/airline1manager/rti/RealTimeDepSche.class
-org/webgme/guest/airline1manager/rti/DepartureRequest.class
-org/webgme/guest/airline1manager/rti/ArrivalPass.class

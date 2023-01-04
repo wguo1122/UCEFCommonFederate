@@ -85,14 +85,6 @@ public class PassengerManag2 extends PassengerManag2Base {
 
             // Set the interaction's parameters.
             //
-            //    Airline2DeparturReady airline2DeparturReady = create_Airline2DeparturReady();
-            //    airline2DeparturReady.set_actualLogicalGenerationTime( < YOUR VALUE HERE > );
-            //    airline2DeparturReady.set_airline( < YOUR VALUE HERE > );
-            //    airline2DeparturReady.set_federateFilter( < YOUR VALUE HERE > );
-            //    airline2DeparturReady.set_flightNumber( < YOUR VALUE HERE > );
-            //    airline2DeparturReady.set_originFed( < YOUR VALUE HERE > );
-            //    airline2DeparturReady.set_sourceFed( < YOUR VALUE HERE > );
-            //    airline2DeparturReady.sendInteraction(getLRC(), currentTime + getLookAhead());
             //    TransferPass transferPass = create_TransferPass();
             //    transferPass.set_actualLogicalGenerationTime( < YOUR VALUE HERE > );
             //    transferPass.set_federateFilter( < YOUR VALUE HERE > );
@@ -109,6 +101,14 @@ public class PassengerManag2 extends PassengerManag2Base {
             //    rTPeopleFlow.set_sourceFed( < YOUR VALUE HERE > );
             //    rTPeopleFlow.set_to( < YOUR VALUE HERE > );
             //    rTPeopleFlow.sendInteraction(getLRC(), currentTime + getLookAhead());
+            //    Airline2DeparturReady airline2DeparturReady = create_Airline2DeparturReady();
+            //    airline2DeparturReady.set_actualLogicalGenerationTime( < YOUR VALUE HERE > );
+            //    airline2DeparturReady.set_airline( < YOUR VALUE HERE > );
+            //    airline2DeparturReady.set_federateFilter( < YOUR VALUE HERE > );
+            //    airline2DeparturReady.set_flightNumber( < YOUR VALUE HERE > );
+            //    airline2DeparturReady.set_originFed( < YOUR VALUE HERE > );
+            //    airline2DeparturReady.set_sourceFed( < YOUR VALUE HERE > );
+            //    airline2DeparturReady.sendInteraction(getLRC(), currentTime + getLookAhead());
 
             checkReceivedSubscriptions();
 

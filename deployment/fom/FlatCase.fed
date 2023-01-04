@@ -330,6 +330,10 @@
         (parameter flightNum)
         (parameter scheduledDeparTime)
       )
+      (class FlightRemovalNotification reliable timestamp
+        (parameter airline)
+        (parameter flightNumber)
+      )
       (class RTPeopleFlow reliable timestamp
         (parameter from)
         (parameter passengerNumber)

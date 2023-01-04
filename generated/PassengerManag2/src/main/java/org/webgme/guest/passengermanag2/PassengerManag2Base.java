@@ -31,9 +31,9 @@ public class PassengerManag2Base extends SynchronizedFederate {
         enableAsynchronousDelivery();
 
         // interaction pubsub
-        Airline2DeparturReady.publish(getLRC());
         TransferPass.publish(getLRC());
         RTPeopleFlow.publish(getLRC());
+        Airline2DeparturReady.publish(getLRC());
         TransferPass.subscribe(getLRC());
         _subscribedInteractionFilter.setFedFilters( 
            TransferPass.get_handle(),
@@ -53,12 +53,6 @@ public class PassengerManag2Base extends SynchronizedFederate {
         // object pubsub
     }
 
-    public Airline2DeparturReady create_Airline2DeparturReady() {
-        Airline2DeparturReady interaction = new Airline2DeparturReady();
-        interaction.set_sourceFed(getFederateId());
-        interaction.set_originFed(getFederateId());
-        return interaction;
-    }
     public TransferPass create_TransferPass() {
         TransferPass interaction = new TransferPass();
         interaction.set_sourceFed(getFederateId());
@@ -67,6 +61,12 @@ public class PassengerManag2Base extends SynchronizedFederate {
     }
     public RTPeopleFlow create_RTPeopleFlow() {
         RTPeopleFlow interaction = new RTPeopleFlow();
+        interaction.set_sourceFed(getFederateId());
+        interaction.set_originFed(getFederateId());
+        return interaction;
+    }
+    public Airline2DeparturReady create_Airline2DeparturReady() {
+        Airline2DeparturReady interaction = new Airline2DeparturReady();
         interaction.set_sourceFed(getFederateId());
         interaction.set_originFed(getFederateId());
         return interaction;

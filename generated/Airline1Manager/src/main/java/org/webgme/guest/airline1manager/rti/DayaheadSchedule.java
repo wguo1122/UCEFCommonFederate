@@ -139,13 +139,13 @@ public class DayaheadSchedule extends C2WInteractionRoot {
         _datamemberTypeMap.put("InboundOutbound", "boolean");
         _datamemberTypeMap.put("aircraft", "String");
         _datamemberTypeMap.put("airline", "String");
-        _datamemberTypeMap.put("booked", "int");
-        _datamemberTypeMap.put("capacity", "int");
+        _datamemberTypeMap.put("booked", "String");
+        _datamemberTypeMap.put("capacity", "String");
         _datamemberTypeMap.put("flightNum", "String");
         _datamemberTypeMap.put("flightStatus", "String");
         _datamemberTypeMap.put("gateNum", "String");
         _datamemberTypeMap.put("scheduledTime", "String");
-        _datamemberTypeMap.put("transfer", "int");
+        _datamemberTypeMap.put("transfer", "String");
 
         _allDatamemberNames.add("InboundOutbound");
         _allDatamemberNames.add("actualLogicalGenerationTime");
@@ -537,13 +537,13 @@ public class DayaheadSchedule extends C2WInteractionRoot {
     private boolean _InboundOutbound = false;
     private String _aircraft = "";
     private String _airline = "";
-    private int _booked = 0;
-    private int _capacity = 0;
+    private String _booked = "";
+    private String _capacity = "";
     private String _flightNum = "";
     private String _flightStatus = "";
     private String _gateNum = "";
     private String _scheduledTime = "";
-    private int _transfer = 0;
+    private String _transfer = "";
 
     /**
     * Set the value of the "InboundOutbound" parameter to "value" for this parameter.
@@ -601,7 +601,7 @@ public class DayaheadSchedule extends C2WInteractionRoot {
     *
     * @param value the new value for the "booked" parameter
     */
-    public void set_booked( int value ) {
+    public void set_booked( String value ) {
         _booked = value;
     }
 
@@ -610,7 +610,7 @@ public class DayaheadSchedule extends C2WInteractionRoot {
     *
     * @return the value of the "booked" parameter
     */
-    public int get_booked() {
+    public String get_booked() {
         return _booked;
     }
     /**
@@ -618,7 +618,7 @@ public class DayaheadSchedule extends C2WInteractionRoot {
     *
     * @param value the new value for the "capacity" parameter
     */
-    public void set_capacity( int value ) {
+    public void set_capacity( String value ) {
         _capacity = value;
     }
 
@@ -627,7 +627,7 @@ public class DayaheadSchedule extends C2WInteractionRoot {
     *
     * @return the value of the "capacity" parameter
     */
-    public int get_capacity() {
+    public String get_capacity() {
         return _capacity;
     }
     /**
@@ -703,7 +703,7 @@ public class DayaheadSchedule extends C2WInteractionRoot {
     *
     * @param value the new value for the "transfer" parameter
     */
-    public void set_transfer( int value ) {
+    public void set_transfer( String value ) {
         _transfer = value;
     }
 
@@ -712,7 +712,7 @@ public class DayaheadSchedule extends C2WInteractionRoot {
     *
     * @return the value of the "transfer" parameter
     */
-    public int get_transfer() {
+    public String get_transfer() {
         return _transfer;
     }
 
@@ -789,13 +789,13 @@ public class DayaheadSchedule extends C2WInteractionRoot {
         if ( "InboundOutbound".equals(datamemberName) ) return new Boolean(get_InboundOutbound());
         else if ( "aircraft".equals(datamemberName) ) return get_aircraft();
         else if ( "airline".equals(datamemberName) ) return get_airline();
-        else if ( "booked".equals(datamemberName) ) return new Integer(get_booked());
-        else if ( "capacity".equals(datamemberName) ) return new Integer(get_capacity());
+        else if ( "booked".equals(datamemberName) ) return get_booked();
+        else if ( "capacity".equals(datamemberName) ) return get_capacity();
         else if ( "flightNum".equals(datamemberName) ) return get_flightNum();
         else if ( "flightStatus".equals(datamemberName) ) return get_flightStatus();
         else if ( "gateNum".equals(datamemberName) ) return get_gateNum();
         else if ( "scheduledTime".equals(datamemberName) ) return get_scheduledTime();
-        else if ( "transfer".equals(datamemberName) ) return new Integer(get_transfer());
+        else if ( "transfer".equals(datamemberName) ) return get_transfer();
         else return super.getParameter( datamemberName );
     }
 
@@ -804,13 +804,13 @@ public class DayaheadSchedule extends C2WInteractionRoot {
         if ( "InboundOutbound".equals( datamemberName) ) set_InboundOutbound( Boolean.parseBoolean(val) );
         else if ( "aircraft".equals( datamemberName) ) set_aircraft( val );
         else if ( "airline".equals( datamemberName) ) set_airline( val );
-        else if ( "booked".equals( datamemberName) ) set_booked( Integer.parseInt(val) );
-        else if ( "capacity".equals( datamemberName) ) set_capacity( Integer.parseInt(val) );
+        else if ( "booked".equals( datamemberName) ) set_booked( val );
+        else if ( "capacity".equals( datamemberName) ) set_capacity( val );
         else if ( "flightNum".equals( datamemberName) ) set_flightNum( val );
         else if ( "flightStatus".equals( datamemberName) ) set_flightStatus( val );
         else if ( "gateNum".equals( datamemberName) ) set_gateNum( val );
         else if ( "scheduledTime".equals( datamemberName) ) set_scheduledTime( val );
-        else if ( "transfer".equals( datamemberName) ) set_transfer( Integer.parseInt(val) );
+        else if ( "transfer".equals( datamemberName) ) set_transfer( val );
         else retval = super.setParameterAux( datamemberName, val );
 
         return retval;
@@ -821,13 +821,13 @@ public class DayaheadSchedule extends C2WInteractionRoot {
         if ( "InboundOutbound".equals( datamemberName) ) set_InboundOutbound( (Boolean)val );
         else if ( "aircraft".equals( datamemberName) ) set_aircraft( (String)val );
         else if ( "airline".equals( datamemberName) ) set_airline( (String)val );
-        else if ( "booked".equals( datamemberName) ) set_booked( (Integer)val );
-        else if ( "capacity".equals( datamemberName) ) set_capacity( (Integer)val );
+        else if ( "booked".equals( datamemberName) ) set_booked( (String)val );
+        else if ( "capacity".equals( datamemberName) ) set_capacity( (String)val );
         else if ( "flightNum".equals( datamemberName) ) set_flightNum( (String)val );
         else if ( "flightStatus".equals( datamemberName) ) set_flightStatus( (String)val );
         else if ( "gateNum".equals( datamemberName) ) set_gateNum( (String)val );
         else if ( "scheduledTime".equals( datamemberName) ) set_scheduledTime( (String)val );
-        else if ( "transfer".equals( datamemberName) ) set_transfer( (Integer)val );
+        else if ( "transfer".equals( datamemberName) ) set_transfer( (String)val );
         else retval = super.setParameterAux( datamemberName, val );
 
         return retval;

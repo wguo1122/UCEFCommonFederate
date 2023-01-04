@@ -28,7 +28,10 @@ public class ATC extends ATCBase {
     private void checkReceivedSubscriptions() {
         InteractionRoot interaction = null;
         while ((interaction = getNextInteractionNoWait()) != null) {
-            if (interaction instanceof ArrivalConfirm) {
+            if (interaction instanceof FlightRemovalNotification) {
+                handleInteractionClass((FlightRemovalNotification) interaction);
+            }
+            else if (interaction instanceof ArrivalConfirm) {
                 handleInteractionClass((ArrivalConfirm) interaction);
             }
             else if (interaction instanceof Aircraft) {
@@ -136,6 +139,12 @@ public class ATC extends ATCBase {
         //////////////////////////////////////////////////////////////////////
         // TODO Perform whatever cleanups are needed before exiting the app //
         //////////////////////////////////////////////////////////////////////
+    }
+
+    private void handleInteractionClass(FlightRemovalNotification interaction) {
+        ///////////////////////////////////////////////////////////////
+        // TODO implement how to handle reception of the interaction //
+        ///////////////////////////////////////////////////////////////
     }
 
     private void handleInteractionClass(ArrivalConfirm interaction) {

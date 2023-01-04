@@ -141,15 +141,15 @@ public class RealTimeDepSche extends ObjectRoot {
 
         _datamemberTypeMap.put("aircraft", "String");
         _datamemberTypeMap.put("airline", "String");
-        _datamemberTypeMap.put("booked", "int");
-        _datamemberTypeMap.put("capacity", "int");
-        _datamemberTypeMap.put("checkedIn", "int");
+        _datamemberTypeMap.put("booked", "String");
+        _datamemberTypeMap.put("capacity", "String");
+        _datamemberTypeMap.put("checkedIn", "String");
         _datamemberTypeMap.put("depStatus", "String");
         _datamemberTypeMap.put("estimated", "String");
         _datamemberTypeMap.put("flightNumber", "String");
         _datamemberTypeMap.put("gate", "String");
         _datamemberTypeMap.put("scheduledDepTime", "String");
-        _datamemberTypeMap.put("transfer", "int");
+        _datamemberTypeMap.put("transfer", "String");
 
         _allDatamemberNames.add("aircraft");
         _allDatamemberNames.add("airline");
@@ -1134,15 +1134,15 @@ public class RealTimeDepSche extends ObjectRoot {
         return _airline.getTime();
     }
 
-    protected Attribute< Integer > _booked =
-            new Attribute< Integer >(  new Integer( 0 )  );
+    protected Attribute< String > _booked =
+            new Attribute< String >(  new String( "" )  );
 
     /**
     * Set the value of the "booked" attribute to "value" for this object.
     *
     * @param value the new value for the "booked" attribute
     */
-    public void set_booked( int value ) {
+    public void set_booked( String value ) {
         _booked.setValue( value );
         _booked.setTime( getTime() );
     }
@@ -1152,7 +1152,7 @@ public class RealTimeDepSche extends ObjectRoot {
     *
     * @return the value of the "booked" attribute
     */
-    public int get_booked() {
+    public String get_booked() {
         return _booked.getValue();
     }
 
@@ -1165,15 +1165,15 @@ public class RealTimeDepSche extends ObjectRoot {
         return _booked.getTime();
     }
 
-    protected Attribute< Integer > _capacity =
-            new Attribute< Integer >(  new Integer( 0 )  );
+    protected Attribute< String > _capacity =
+            new Attribute< String >(  new String( "" )  );
 
     /**
     * Set the value of the "capacity" attribute to "value" for this object.
     *
     * @param value the new value for the "capacity" attribute
     */
-    public void set_capacity( int value ) {
+    public void set_capacity( String value ) {
         _capacity.setValue( value );
         _capacity.setTime( getTime() );
     }
@@ -1183,7 +1183,7 @@ public class RealTimeDepSche extends ObjectRoot {
     *
     * @return the value of the "capacity" attribute
     */
-    public int get_capacity() {
+    public String get_capacity() {
         return _capacity.getValue();
     }
 
@@ -1196,15 +1196,15 @@ public class RealTimeDepSche extends ObjectRoot {
         return _capacity.getTime();
     }
 
-    protected Attribute< Integer > _checkedIn =
-            new Attribute< Integer >(  new Integer( 0 )  );
+    protected Attribute< String > _checkedIn =
+            new Attribute< String >(  new String( "" )  );
 
     /**
     * Set the value of the "checkedIn" attribute to "value" for this object.
     *
     * @param value the new value for the "checkedIn" attribute
     */
-    public void set_checkedIn( int value ) {
+    public void set_checkedIn( String value ) {
         _checkedIn.setValue( value );
         _checkedIn.setTime( getTime() );
     }
@@ -1214,7 +1214,7 @@ public class RealTimeDepSche extends ObjectRoot {
     *
     * @return the value of the "checkedIn" attribute
     */
-    public int get_checkedIn() {
+    public String get_checkedIn() {
         return _checkedIn.getValue();
     }
 
@@ -1382,15 +1382,15 @@ public class RealTimeDepSche extends ObjectRoot {
         return _scheduledDepTime.getTime();
     }
 
-    protected Attribute< Integer > _transfer =
-            new Attribute< Integer >(  new Integer( 0 )  );
+    protected Attribute< String > _transfer =
+            new Attribute< String >(  new String( "" )  );
 
     /**
     * Set the value of the "transfer" attribute to "value" for this object.
     *
     * @param value the new value for the "transfer" attribute
     */
-    public void set_transfer( int value ) {
+    public void set_transfer( String value ) {
         _transfer.setValue( value );
         _transfer.setTime( getTime() );
     }
@@ -1400,7 +1400,7 @@ public class RealTimeDepSche extends ObjectRoot {
     *
     * @return the value of the "transfer" attribute
     */
-    public int get_transfer() {
+    public String get_transfer() {
         return _transfer.getValue();
     }
 
@@ -1486,15 +1486,15 @@ public class RealTimeDepSche extends ObjectRoot {
     public Object getAttribute( String datamemberName ) {
         if ( "aircraft".equals(datamemberName) ) return get_aircraft();
         else if ( "airline".equals(datamemberName) ) return get_airline();
-        else if ( "booked".equals(datamemberName) ) return new Integer(get_booked());
-        else if ( "capacity".equals(datamemberName) ) return new Integer(get_capacity());
-        else if ( "checkedIn".equals(datamemberName) ) return new Integer(get_checkedIn());
+        else if ( "booked".equals(datamemberName) ) return get_booked();
+        else if ( "capacity".equals(datamemberName) ) return get_capacity();
+        else if ( "checkedIn".equals(datamemberName) ) return get_checkedIn();
         else if ( "depStatus".equals(datamemberName) ) return get_depStatus();
         else if ( "estimated".equals(datamemberName) ) return get_estimated();
         else if ( "flightNumber".equals(datamemberName) ) return get_flightNumber();
         else if ( "gate".equals(datamemberName) ) return get_gate();
         else if ( "scheduledDepTime".equals(datamemberName) ) return get_scheduledDepTime();
-        else if ( "transfer".equals(datamemberName) ) return new Integer(get_transfer());
+        else if ( "transfer".equals(datamemberName) ) return get_transfer();
         else return super.getAttribute( datamemberName );
     }
 
@@ -1502,15 +1502,15 @@ public class RealTimeDepSche extends ObjectRoot {
         boolean retval = true;
         if ( "aircraft".equals( datamemberName) ) set_aircraft( val );
         else if ( "airline".equals( datamemberName) ) set_airline( val );
-        else if ( "booked".equals( datamemberName) ) set_booked( Integer.parseInt(val) );
-        else if ( "capacity".equals( datamemberName) ) set_capacity( Integer.parseInt(val) );
-        else if ( "checkedIn".equals( datamemberName) ) set_checkedIn( Integer.parseInt(val) );
+        else if ( "booked".equals( datamemberName) ) set_booked( val );
+        else if ( "capacity".equals( datamemberName) ) set_capacity( val );
+        else if ( "checkedIn".equals( datamemberName) ) set_checkedIn( val );
         else if ( "depStatus".equals( datamemberName) ) set_depStatus( val );
         else if ( "estimated".equals( datamemberName) ) set_estimated( val );
         else if ( "flightNumber".equals( datamemberName) ) set_flightNumber( val );
         else if ( "gate".equals( datamemberName) ) set_gate( val );
         else if ( "scheduledDepTime".equals( datamemberName) ) set_scheduledDepTime( val );
-        else if ( "transfer".equals( datamemberName) ) set_transfer( Integer.parseInt(val) );
+        else if ( "transfer".equals( datamemberName) ) set_transfer( val );
         else retval = super.setAttributeAux( datamemberName, val );
 
         return retval;
@@ -1520,15 +1520,15 @@ public class RealTimeDepSche extends ObjectRoot {
         boolean retval = true;
         if ( "aircraft".equals( datamemberName) ) set_aircraft( (String)val );
         else if ( "airline".equals( datamemberName) ) set_airline( (String)val );
-        else if ( "booked".equals( datamemberName) ) set_booked( (Integer)val );
-        else if ( "capacity".equals( datamemberName) ) set_capacity( (Integer)val );
-        else if ( "checkedIn".equals( datamemberName) ) set_checkedIn( (Integer)val );
+        else if ( "booked".equals( datamemberName) ) set_booked( (String)val );
+        else if ( "capacity".equals( datamemberName) ) set_capacity( (String)val );
+        else if ( "checkedIn".equals( datamemberName) ) set_checkedIn( (String)val );
         else if ( "depStatus".equals( datamemberName) ) set_depStatus( (String)val );
         else if ( "estimated".equals( datamemberName) ) set_estimated( (String)val );
         else if ( "flightNumber".equals( datamemberName) ) set_flightNumber( (String)val );
         else if ( "gate".equals( datamemberName) ) set_gate( (String)val );
         else if ( "scheduledDepTime".equals( datamemberName) ) set_scheduledDepTime( (String)val );
-        else if ( "transfer".equals( datamemberName) ) set_transfer( (Integer)val );
+        else if ( "transfer".equals( datamemberName) ) set_transfer( (String)val );
         else retval = super.setAttributeAux( datamemberName, val );
 
         return retval;
