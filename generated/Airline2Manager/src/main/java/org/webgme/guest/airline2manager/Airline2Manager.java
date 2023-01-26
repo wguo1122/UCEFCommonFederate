@@ -14,10 +14,10 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.Arrays;
-import java.util.List;
-import java.io.File;  
+import java.util.HashMap;
+import java.util.Map;
+import java.util.*; 
 
 
 
@@ -27,7 +27,7 @@ public class Airline2Manager extends Airline2ManagerBase {
     private final static Logger log = LogManager.getLogger();
 
     private double currentTime = 0;
-    private boolean updateDayahead = false;
+    private boolean newUpdate = false;
     private int timeScale = 5; // mins per timestep
     private int simulationDay = 0;
     private int simulationHour = 0;
@@ -37,6 +37,15 @@ public class Airline2Manager extends Airline2ManagerBase {
     private String line = "";
     private boolean inboundFlight = false;
 
+    // Create Hash Map of <index, FlightInfo>
+    private Map<String, RealTimeArriSche> rtArriveMap = new HashMap<String, RealTimeArriSche>(); 
+    private Map<String, RealTimeDepSche> rtDepartureMap = new HashMap<String, RealTimeDepSche>(); 
+    
+    // Create array of [flightIndex, flightID, actualTime, arrive/departure]
+    private ArrayList<ArrayList<String>> flightBoardList =  new ArrayList<ArrayList<String>>(); 
+
+    // Create Hash Map of <FlightID, index in flightBoardList>
+    private Map<String, Integer> flightIDMap = new HashMap<String, Integer>();
 
     public Airline2Manager(FederateConfig params) throws Exception {
         super(params);
@@ -208,6 +217,30 @@ public class Airline2Manager extends Airline2ManagerBase {
             ////////////////////////////////////////////////////////////////////
             // TODO break here if ready to resign and break out of while loop //
             ////////////////////////////////////////////////////////////////////
+            if (newUpdate) {
+                Comparator<ArrayList<String>> arrayListComparator = new Comparator<ArrayList<String>>() {
+                    @Override
+                    public int compare(ArrayList<String> o1, ArrayList<String> o2) {
+                    return Double. valueOf(o1.get(1).replace(":","")).compareTo(Double. valueOf(o2.get(1).replace(":","")));
+                    //return o1[2].compareTo(o2[2]);
+                    }
+                };
+
+                Collections.sort(flightBoardList, arrayListComparator);
+                System.out.println("FlightBoard after sort:");
+
+                for (int i = 0; i <flightBoardList.size(); i++) { 
+                    System.out.println(flightBoardList.get(i)); 
+                    flightIDMap.put(flightBoardList.get(i).get(1),i);
+                }
+
+                System.out.println("FlightIndex Map:"+ flightIDMap);
+
+                //    Reset 
+                newUpdate = false;
+                updateDayahead = false;
+                
+            }
 
             if (!exitCondition) {
                 currentTime += super.getStepSize();
@@ -237,12 +270,64 @@ public class Airline2Manager extends Airline2ManagerBase {
         //////////////////////////////////////////////////////////
         // TODO implement how to handle reception of the object //
         //////////////////////////////////////////////////////////
+        String FlightID = object.get_airline()+object.get_flightNumber();
+        newUpdate = true;
+        
+        if (object.get_airline().equals("BBB")) {
+            System.out.println("Received new Arr updates of flight "+FlightID);
+
+            if (rtArriveMap.containsKey(FlightID)) { // Check new sche or updates
+                rtArriveMap.remove(FlightID); //Removr old record
+                rtArriveMap.put(FlightID,object); // Update new record
+                flightBoardList.get(flightIDMap.get(FlightID)).set(2,object.get_estimatedArrivalTime());// Update flight Board Info
+
+            } else {
+                rtArriveMap.put(FlightID,object); // Update new record
+
+                // Setup the flight infomation board list
+                ArrayList<String> flightInfoRow = new ArrayList<String>(
+                Arrays.asList(FlightID,object.get_estimatedArrivalTime(),"1"));
+                flightBoardList.add(flightInfoRow);
+
+            }
+            
+            
+            
+        } else {
+            System.out.println("Ignored new Arr updates of flight "+FlightID);
+        }
     }
 
     private void handleObjectClass(RealTimeDepSche object) {
         //////////////////////////////////////////////////////////
         // TODO implement how to handle reception of the object //
         //////////////////////////////////////////////////////////
+        String FlightID = object.get_airline()+object.get_flightNumber();
+        newUpdate = true;
+        
+        if (object.get_airline().equals("BBB")) {
+            System.out.println("Received new Dep updates of flight "+FlightID);
+
+            if (rtDepartureMap.containsKey(FlightID)) { // Check new sche or updates
+                rtDepartureMap.remove(FlightID); //Removr old record
+                rtDepartureMap.put(FlightID,object); // Update new record
+                flightBoardList.get(flightIDMap.get(FlightID)).set(2,object.get_estimated());// Update flight Board Info
+
+            } else {
+                rtDepartureMap.put(FlightID,object); // Update new record
+
+                // Setup the flight infomation board list
+                ArrayList<String> flightInfoRow = new ArrayList<String>(
+                Arrays.asList(FlightID,object.get_estimated(),"1"));
+                flightBoardList.add(flightInfoRow);
+
+            }
+            
+            
+            
+        } else {
+            System.out.println("Ignored new Dep updates of flight "+FlightID);
+        }
     }
 
     public static void main(String[] args) {

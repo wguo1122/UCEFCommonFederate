@@ -1,4 +1,5 @@
 org/webgme/guest/airline1manager/rti/RealTimeArriSche.class
+org/webgme/guest/airline1manager/Airline1Manager$1.class
 org/webgme/guest/airline1manager/Airline1ManagerBase.class
 org/webgme/guest/airline1manager/Airline1Manager.class
 org/webgme/guest/airline1manager/rti/DayaheadSchedule.class

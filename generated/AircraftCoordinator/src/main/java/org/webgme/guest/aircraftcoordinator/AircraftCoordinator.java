@@ -11,10 +11,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Arrays;
-import java.util.HashMap;
+import java.util.*;
+
 
 // Define the AircraftCoordinator type of federate for the federation.
 
@@ -29,20 +28,20 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
     private int simulationMin = 0;
     
 
-    private int numberOfRegistedObject = 20;
+    
     private int flightIndex = 0;
-    private int arriveIndex = 0;
-    private int departureIndex = 0;
+    
     // Create Hash Map of <index, FlightInfo>
     private Map<String, RealTimeArriSche> rtArriveMap = new HashMap<String, RealTimeArriSche>(); 
     private Map<String, RealTimeDepSche> rtDepartureMap = new HashMap<String, RealTimeDepSche>(); 
-    // Create Hash Map of <FlightID, index in RealTime_Map>
-    private Map<String, String> arriveflightIDMap = new HashMap<String, String>();
-    private Map<String, String> departureflightIDMap = new HashMap<String, String>();
-    // Create array of [flightIndex, flightID, actualTime, arrive/departure]
-    private String[][] flightBoard = new String[2*numberOfRegistedObject][4];
-
     
+    // Create array of [flightIndex, flightID, actualTime, arrive/departure]
+    private ArrayList<ArrayList<String>> flightBoardList =  new ArrayList<ArrayList<String>>(); 
+
+    // Create Hash Map of <FlightID, index in flightBoardList>
+    private Map<String, Integer> flightIDMap = new HashMap<String, Integer>();
+
+        
 
     
     ////////////////////////////////////////////////////////////////////////
@@ -64,24 +63,25 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
 
         // Register 10 Objects for both arrive and departure
         // Register realtime schedule at RTI
-        for (int i=0; i<numberOfRegistedObject; i++){
 
-            RealTimeDepSche realTimeDepSche = new RealTimeDepSche();
-            realTimeDepSche.registerObject(getLRC());
-            rtDepartureMap.put(String.valueOf(i),realTimeDepSche);
+        // for (int i=0; i<numberOfRegistedObject; i++){
 
-            RealTimeArriSche realTimeArriSche = new RealTimeArriSche();
-            realTimeArriSche.registerObject(getLRC());
-            rtArriveMap.put(String.valueOf(i),realTimeArriSche);
+        //     RealTimeDepSche realTimeDepSche = new RealTimeDepSche();
+        //     realTimeDepSche.registerObject(getLRC());
+        //     rtDepartureMap.put(String.valueOf(i),realTimeDepSche);
 
-        }
+        //     RealTimeArriSche realTimeArriSche = new RealTimeArriSche();
+        //     realTimeArriSche.registerObject(getLRC());
+        //     rtArriveMap.put(String.valueOf(i),realTimeArriSche);
+
+        // }
     }
 
     private void checkReceivedSubscriptions() {
         InteractionRoot interaction = null;
-        log.info("Check Point 1");
+        
         while ((interaction = getNextInteractionNoWait()) != null) {
-            log.info("Check Point 2");
+            
             if (interaction instanceof RealtimeArrivalRequest) {
                 handleInteractionClass((RealtimeArrivalRequest) interaction);
                 log.info("New realtime Arrival Request interaction");
@@ -209,26 +209,38 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
             
 
             if (updateDayahead) {
-                System.out.println("*************************************");
-                System.out.println("New Arrive flight ID map as:");
-                System.out.println(arriveflightIDMap);
-                System.out.println("*************************************");
-                System.out.println("New Departure flight ID map as:");
-                System.out.println(departureflightIDMap);
-                System.out.println("*************************************");
-                System.out.println("New flight board before sort");
-                System.out.println(Arrays.deepToString(flightBoard));
-            
+                
+                Comparator<ArrayList<String>> arrayListComparator = new Comparator<ArrayList<String>>() {
+                    @Override
+                    public int compare(ArrayList<String> o1, ArrayList<String> o2) {
+                    return Double. valueOf(o1.get(2).replace(":","")).compareTo(Double. valueOf(o2.get(2).replace(":","")));
+                    //return o1[2].compareTo(o2[2]);
+                    }
+                };
+
+                Collections.sort(flightBoardList, arrayListComparator);
+                System.out.println("FlightBoard after sort:");
+
+                for (int i = 0; i <flightBoardList.size(); i++) { 
+                    System.out.println(flightBoardList.get(i)); 
+                    flightIDMap.put(flightBoardList.get(i).get(1),i);
+                }
+
+                System.out.println("FlightIndex Map:"+ flightIDMap);
 
                 //    Reset all the Index for the next day
                 updateDayahead = false;
-                arriveIndex = 0;
-                departureIndex = 0;
                 flightIndex = 0;
             }
 
 
-            
+            //Update all realtime schedule objects
+            for (RealTimeArriSche rtas : rtArriveMap.values()){
+                rtas.updateAttributeValues(getLRC(),currentTime+getLookAhead());
+            }
+            for (RealTimeDepSche rtds : rtDepartureMap.values()){
+                rtds.updateAttributeValues(getLRC(),currentTime+getLookAhead());
+            }
 
             ////////////////////////////////////////////////////////////////////
             // TODO break here if ready to resign and break out of while loop //
@@ -271,7 +283,11 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
         updateDayahead = true;
         if (interaction.get_InboundOutbound() == true){
             // New Arrive Day Ahead Schedule
-            RealTimeArriSche rtas = rtArriveMap.get(String.valueOf(arriveIndex));
+            String FlightID = interaction.get_airline()+interaction.get_flightNum();
+
+            RealTimeArriSche rtas = new RealTimeArriSche();
+            rtas.registerObject(getLRC());
+
             rtas.set_airline(interaction.get_airline());
             rtas.set_flightNumber(interaction.get_flightNum());
             rtas.set_aircraft(interaction.get_aircraft());
@@ -284,21 +300,28 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
             rtas.set_checkedIn("0"); // Temp
             rtas.set_gate(interaction.get_gateNum());
             rtas.set_arrivalStatus(interaction.get_flightStatus());
-            
-            System.out.println("Received Arrive Day Ahead Schedule of "+rtas.get_airline()+rtas.get_flightNumber());
-            // Setup the arrive fight ID map
-            arriveflightIDMap.put(rtas.get_airline()+rtas.get_flightNumber(), String.valueOf(arriveIndex));
-            // Setup the arrive board
-            flightBoard [flightIndex][0] = String.valueOf(flightIndex);
-            flightBoard [flightIndex][1] = rtas.get_airline()+rtas.get_flightNumber();
-            flightBoard [flightIndex][2] = rtas.get_estimatedArrivalTime();
-            flightBoard [flightIndex][3] = "1";
 
-            arriveIndex = arriveIndex + 1;
+            rtArriveMap.put(FlightID,rtas);
+            
+            System.out.println("Received Arrive Day Ahead Schedule of "+FlightID);
+
+            // Setup the flight infomation board list
+            ArrayList<String> flightInfoRow = new ArrayList<String>(
+            Arrays.asList(String.valueOf(flightIndex),FlightID,rtas.get_estimatedArrivalTime(),"1"));
+            
+            flightBoardList.add(flightInfoRow);
+
+            
+
+            //arriveIndex = arriveIndex + 1;
             flightIndex = flightIndex + 1;
         }else{
             // New Departure Day Ahead Schedule
-            RealTimeDepSche rtds = rtDepartureMap.get(String.valueOf(departureIndex));
+            String FlightID = interaction.get_airline()+interaction.get_flightNum();
+
+            RealTimeDepSche rtds = new RealTimeDepSche();
+            rtds.registerObject(getLRC());
+
             rtds.set_airline(interaction.get_airline());
             rtds.set_flightNumber(interaction.get_flightNum());
             rtds.set_aircraft(interaction.get_aircraft());
@@ -310,22 +333,25 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
             rtds.set_checkedIn("0"); // Temp Check Type
             rtds.set_gate(interaction.get_gateNum());
             rtds.set_depStatus(interaction.get_flightStatus());
+
+            rtDepartureMap.put(FlightID,rtds);
             
-            System.out.println("Received Departure Day Ahead Schedule of "+rtds.get_airline()+rtds.get_flightNumber());
-            // Setup the arrive fight ID map
-            departureflightIDMap.put(rtds.get_airline()+rtds.get_flightNumber(), String.valueOf(departureIndex));
-            // Setup the arrive board
-            flightBoard [flightIndex][0] = String.valueOf(flightIndex);
-            flightBoard [flightIndex][1] = rtds.get_airline()+rtds.get_flightNumber();
-            flightBoard [flightIndex][2] = rtds.get_estimated();
-            flightBoard [flightIndex][3] = "0";
+            System.out.println("Received Departure Day Ahead Schedule of "+FlightID);
             
-            departureIndex = departureIndex + 1;
+            // Setup the flight infomation board list
+            ArrayList<String> flightInfoRow = new ArrayList<String>(
+            Arrays.asList(String.valueOf(flightIndex),FlightID,rtds.get_estimated(),"0"));
+            
+            flightBoardList.add(flightInfoRow);
+
+            
+            
+            //departureIndex = departureIndex + 1;
             flightIndex = flightIndex + 1;
 
         }
-        System.out.println("Current arrive Index : " + arriveIndex);
-        System.out.println("Current departure Index : " + departureIndex);
+        // System.out.println("Current arrive Index : " + arriveIndex);
+        // System.out.println("Current departure Index : " + departureIndex);
         System.out.println("Current flight Index : " + flightIndex);
     }
 
