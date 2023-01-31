@@ -11,7 +11,6 @@ import org.cpswt.hla.base.AdvanceTimeRequest;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.core.lookup.SystemPropertiesLookup;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -21,15 +20,14 @@ import java.util.Map;
 import java.util.*;  
 
 
-
 // Define the Airline1Manager type of federate for the federation.
 
 public class Airline1Manager extends Airline1ManagerBase {
     private final static Logger log = LogManager.getLogger();
 
     private double currentTime = 0;
-    private boolean updateDayahead = false;
     private boolean newUpdate = false;
+    private boolean newRemoval = false;
     private int timeScale = 5; // mins per timestep
     private int simulationDay = 0;
     private int simulationHour = 0;
@@ -52,14 +50,18 @@ public class Airline1Manager extends Airline1ManagerBase {
     private Map<String, Integer> flightIDMap = new HashMap<String, Integer>();
 
 
+
     public Airline1Manager(FederateConfig params) throws Exception {
         super(params);
     }
-    
+
     private void checkReceivedSubscriptions() {
         InteractionRoot interaction = null;
         while ((interaction = getNextInteractionNoWait()) != null) {
-            if (interaction instanceof Airline1DeparturReady) {
+            if (interaction instanceof FlightRemovalNotification) {
+                handleInteractionClass((FlightRemovalNotification) interaction);
+            }
+            else if (interaction instanceof Airline1DeparturReady) {
                 handleInteractionClass((Airline1DeparturReady) interaction);
             }
             else {
@@ -120,57 +122,57 @@ public class Airline1Manager extends Airline1ManagerBase {
             atr.requestSyncStart();
             enteredTimeGrantedState();
 
-            // Simulaiton Day/Hour/Min Calculation
-            simulationDay = (int)(currentTime*timeScale)/(60*24);
-            simulationHour = ((int)(currentTime*timeScale)%(60*24))/(60);
-            simulationMin = ((int)(currentTime*timeScale)%(60*24))%(60);
-
-            System.out.println("Current time step :"+ currentTime);
-            System.out.println("Simulation Day: "+ simulationDay + " Hour: "+ simulationHour + " Min: "+simulationMin);
-
-
-            // Sending out new Day-ahead Schedule
-            if (currentTime%((60/timeScale)*24) == 0 ) {
-
-                path = "./DayAheadSchdule/"+"AAA"+"Day"+String.valueOf(simulationDay)+".csv";
-                System.out.println("Checking DayAheadSchdule at :"+ path);
-                BufferedReader reader = new BufferedReader(new FileReader(path));
-                String headerLine = reader.readLine(); // Read Header Line
-                System.out.println(headerLine);
-                while ((line = reader.readLine()) != null) {
-                    // Split the line into separate values
-                    String[] values = line.split(",");
-                    
-                    // Send Day ahead Schedule to Aircraft coordinator
-                    
-                    if (values[2].equals("0")) {
-                        inboundFlight = false;
-                    } else {
-                        inboundFlight = true;
-                    }
-                    
-                    DayaheadSchedule dayaheadSchedule = create_DayaheadSchedule();
-                    
-                    
-                    dayaheadSchedule.set_airline( values [0] );
-                    dayaheadSchedule.set_flightNum( values [1] );
-                    dayaheadSchedule.set_InboundOutbound( inboundFlight );
-                    dayaheadSchedule.set_aircraft( values [3] );
-                    dayaheadSchedule.set_scheduledTime( values [4] );
-                    dayaheadSchedule.set_capacity( values [5] );
-                    dayaheadSchedule.set_booked( values [6]  );
-                    dayaheadSchedule.set_transfer( values [7]  );
-                    dayaheadSchedule.set_gateNum( values [8] );
-                    dayaheadSchedule.set_flightStatus( values [9] );
-                    dayaheadSchedule.sendInteraction(getLRC(), currentTime + getLookAhead());
-
-                    System.out.println("Send Interaction with InboundFlight :" + inboundFlight);
-                    System.out.println(Arrays.toString(values));
-                    }
-                reader.close();
-
-                
-            }
+             // Simulaiton Day/Hour/Min Calculation
+             simulationDay = (int)(currentTime*timeScale)/(60*24);
+             simulationHour = ((int)(currentTime*timeScale)%(60*24))/(60);
+             simulationMin = ((int)(currentTime*timeScale)%(60*24))%(60);
+ 
+             System.out.println("Current time step :"+ currentTime);
+             System.out.println("Simulation Day: "+ simulationDay + " Hour: "+ simulationHour + " Min: "+simulationMin);
+ 
+ 
+             // Sending out new Day-ahead Schedule
+             if (currentTime%((60/timeScale)*24) == 0 ) {
+ 
+                 path = "./DayAheadSchdule/"+"AAA"+"Day"+String.valueOf(simulationDay)+".csv";
+                 System.out.println("Checking DayAheadSchdule at :"+ path);
+                 BufferedReader reader = new BufferedReader(new FileReader(path));
+                 String headerLine = reader.readLine(); // Read Header Line
+                 System.out.println(headerLine);
+                 while ((line = reader.readLine()) != null) {
+                     // Split the line into separate values
+                     String[] values = line.split(",");
+                     
+                     // Send Day ahead Schedule to Aircraft coordinator
+                     
+                     if (values[2].equals("0")) {
+                         inboundFlight = false;
+                     } else {
+                         inboundFlight = true;
+                     }
+                     
+                     DayaheadSchedule dayaheadSchedule = create_DayaheadSchedule();
+                     
+                     
+                     dayaheadSchedule.set_airline( values [0] );
+                     dayaheadSchedule.set_flightNum( values [1] );
+                     dayaheadSchedule.set_InboundOutbound( inboundFlight );
+                     dayaheadSchedule.set_aircraft( values [3] );
+                     dayaheadSchedule.set_scheduledTime( values [4] );
+                     dayaheadSchedule.set_capacity( values [5] );
+                     dayaheadSchedule.set_booked( values [6]  );
+                     dayaheadSchedule.set_transfer( values [7]  );
+                     dayaheadSchedule.set_gateNum( values [8] );
+                     dayaheadSchedule.set_flightStatus( values [9] );
+                     dayaheadSchedule.sendInteraction(getLRC(), currentTime + getLookAhead());
+ 
+                     System.out.println("Send Interaction with InboundFlight :" + inboundFlight);
+                     System.out.println(Arrays.toString(values));
+                     }
+                 reader.close();
+ 
+                 
+             }
             ////////////////////////////////////////////////////////////
             // TODO send interactions that must be sent every logical //
             // time step below                                        //
@@ -178,16 +180,6 @@ public class Airline1Manager extends Airline1ManagerBase {
 
             // Set the interaction's parameters.
             //
-            //    DepartureRequest departureRequest = create_DepartureRequest();
-            //    departureRequest.set_actualLogicalGenerationTime( < YOUR VALUE HERE > );
-            //    departureRequest.set_airline( < YOUR VALUE HERE > );
-            //    departureRequest.set_checkedIn( < YOUR VALUE HERE > );
-            //    departureRequest.set_federateFilter( < YOUR VALUE HERE > );
-            //    departureRequest.set_flightNum( < YOUR VALUE HERE > );
-            //    departureRequest.set_originFed( < YOUR VALUE HERE > );
-            //    departureRequest.set_scheduledDeparTime( < YOUR VALUE HERE > );
-            //    departureRequest.set_sourceFed( < YOUR VALUE HERE > );
-            //    departureRequest.sendInteraction(getLRC(), currentTime + getLookAhead());
             //    ArrivalPass arrivalPass = create_ArrivalPass();
             //    arrivalPass.set_actualLogicalGenerationTime( < YOUR VALUE HERE > );
             //    arrivalPass.set_airline( < YOUR VALUE HERE > );
@@ -213,8 +205,16 @@ public class Airline1Manager extends Airline1ManagerBase {
             //    dayaheadSchedule.set_sourceFed( < YOUR VALUE HERE > );
             //    dayaheadSchedule.set_transfer( < YOUR VALUE HERE > );
             //    dayaheadSchedule.sendInteraction(getLRC(), currentTime + getLookAhead());
-
-            
+            //    DepartureRequest departureRequest = create_DepartureRequest();
+            //    departureRequest.set_actualLogicalGenerationTime( < YOUR VALUE HERE > );
+            //    departureRequest.set_airline( < YOUR VALUE HERE > );
+            //    departureRequest.set_checkedIn( < YOUR VALUE HERE > );
+            //    departureRequest.set_federateFilter( < YOUR VALUE HERE > );
+            //    departureRequest.set_flightNum( < YOUR VALUE HERE > );
+            //    departureRequest.set_originFed( < YOUR VALUE HERE > );
+            //    departureRequest.set_scheduledDeparTime( < YOUR VALUE HERE > );
+            //    departureRequest.set_sourceFed( < YOUR VALUE HERE > );
+            //    departureRequest.sendInteraction(getLRC(), currentTime + getLookAhead());
 
             checkReceivedSubscriptions();
 
@@ -232,15 +232,30 @@ public class Airline1Manager extends Airline1ManagerBase {
 
                 for (int i = 0; i <flightBoardList.size(); i++) { 
                     System.out.println(flightBoardList.get(i)); 
-                    flightIDMap.put(flightBoardList.get(i).get(1),i);
+                    flightIDMap.put(flightBoardList.get(i).get(0),i);
                 }
 
-                System.out.println("FlightIndex Map:"+ flightIDMap);
+                System.out.println("FlightID Map:"+ flightIDMap);
 
                 //    Reset 
                 newUpdate = false;
-                updateDayahead = false;
                 
+                
+            }
+
+            if (newRemoval){
+               
+                for (int i = 0; i<flightBoardList.size();){
+                    ArrayList<String> flightInfoRow = flightBoardList.get(i);
+                    if (flightInfoRow.get(2).equals("-1")) {
+                        flightBoardList.remove(i);
+                        System.out.println("Remove flight "+flightInfoRow.get(0)+" from flightBoardList!");
+                    } else {
+                        i = i + 1;
+                    }
+                }
+                System.out.println("New flightBoardList after removal" + flightBoardList);
+                newRemoval = false;
             }
 
             ////////////////////////////////////////////////////////////////////
@@ -265,6 +280,29 @@ public class Airline1Manager extends Airline1ManagerBase {
         //////////////////////////////////////////////////////////////////////
     }
 
+    private void handleInteractionClass(FlightRemovalNotification interaction) {
+        ///////////////////////////////////////////////////////////////
+        // TODO implement how to handle reception of the interaction //
+        ///////////////////////////////////////////////////////////////
+        String FlightID = interaction.get_airline()+interaction.get_flightNumber();
+        
+        if (interaction.get_airline().equals("AAA")) {
+            System.out.println("Received new removal Notificaiton for "+FlightID);
+            newRemoval = true;
+            if (((flightBoardList.get(flightIDMap.get(FlightID))).get(2)).equals("0")) { // Arrive case
+                (flightBoardList.get(flightIDMap.get(FlightID))).set(2, "-1");
+                rtArriveMap.remove(FlightID);
+                flightIDMap.remove(FlightID);
+            } else {  //Departure case 
+                (flightBoardList.get(flightIDMap.get(FlightID))).set(2, "-1");
+                rtDepartureMap.remove(FlightID);
+                flightIDMap.remove(FlightID);
+            }
+        } else { 
+            System.out.println("Ignored new removal Notificaiton for "+FlightID);
+        }
+    }
+
     private void handleInteractionClass(Airline1DeparturReady interaction) {
         ///////////////////////////////////////////////////////////////
         // TODO implement how to handle reception of the interaction //
@@ -284,8 +322,8 @@ public class Airline1Manager extends Airline1ManagerBase {
             if (rtArriveMap.containsKey(FlightID)) { // Check new sche or updates
                 rtArriveMap.remove(FlightID); //Removr old record
                 rtArriveMap.put(FlightID,object); // Update new record
-                flightBoardList.get(flightIDMap.get(FlightID)).set(2,object.get_estimatedArrivalTime());// Update flight Board Info
-
+                flightBoardList.get(flightIDMap.get(FlightID)).set(1,object.get_estimatedArrivalTime());// Update flight Board Info
+                
             } else {
                 rtArriveMap.put(FlightID,object); // Update new record
 
@@ -301,7 +339,6 @@ public class Airline1Manager extends Airline1ManagerBase {
         } else {
             System.out.println("Ignored new Arr updates of flight "+FlightID);
         }
-        
     }
 
     private void handleObjectClass(RealTimeDepSche object) {
@@ -317,14 +354,14 @@ public class Airline1Manager extends Airline1ManagerBase {
             if (rtDepartureMap.containsKey(FlightID)) { // Check new sche or updates
                 rtDepartureMap.remove(FlightID); //Removr old record
                 rtDepartureMap.put(FlightID,object); // Update new record
-                flightBoardList.get(flightIDMap.get(FlightID)).set(2,object.get_estimated());// Update flight Board Info
+                flightBoardList.get(flightIDMap.get(FlightID)).set(1,object.get_estimated());// Update flight Board Info
 
             } else {
                 rtDepartureMap.put(FlightID,object); // Update new record
 
                 // Setup the flight infomation board list
                 ArrayList<String> flightInfoRow = new ArrayList<String>(
-                Arrays.asList(FlightID,object.get_estimated(),"1"));
+                Arrays.asList(FlightID,object.get_estimated(),"0"));
                 flightBoardList.add(flightInfoRow);
 
             }

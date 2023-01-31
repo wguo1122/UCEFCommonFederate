@@ -21,6 +21,7 @@ import java.util.*;
 
 
 
+
 // Define the Airline2Manager type of federate for the federation.
 
 public class Airline2Manager extends Airline2ManagerBase {
@@ -28,6 +29,7 @@ public class Airline2Manager extends Airline2ManagerBase {
 
     private double currentTime = 0;
     private boolean newUpdate = false;
+    private boolean newRemoval = false;
     private int timeScale = 5; // mins per timestep
     private int simulationDay = 0;
     private int simulationHour = 0;
@@ -54,7 +56,10 @@ public class Airline2Manager extends Airline2ManagerBase {
     private void checkReceivedSubscriptions() {
         InteractionRoot interaction = null;
         while ((interaction = getNextInteractionNoWait()) != null) {
-            if (interaction instanceof Airline2DeparturReady) {
+            if (interaction instanceof FlightRemovalNotification) {
+                handleInteractionClass((FlightRemovalNotification) interaction);
+            }
+            else if (interaction instanceof Airline2DeparturReady) {
                 handleInteractionClass((Airline2DeparturReady) interaction);
             }
             else {
@@ -214,9 +219,6 @@ public class Airline2Manager extends Airline2ManagerBase {
 
             checkReceivedSubscriptions();
 
-            ////////////////////////////////////////////////////////////////////
-            // TODO break here if ready to resign and break out of while loop //
-            ////////////////////////////////////////////////////////////////////
             if (newUpdate) {
                 Comparator<ArrayList<String>> arrayListComparator = new Comparator<ArrayList<String>>() {
                     @Override
@@ -231,16 +233,35 @@ public class Airline2Manager extends Airline2ManagerBase {
 
                 for (int i = 0; i <flightBoardList.size(); i++) { 
                     System.out.println(flightBoardList.get(i)); 
-                    flightIDMap.put(flightBoardList.get(i).get(1),i);
+                    flightIDMap.put(flightBoardList.get(i).get(0),i);
                 }
 
                 System.out.println("FlightIndex Map:"+ flightIDMap);
 
                 //    Reset 
                 newUpdate = false;
-                updateDayahead = false;
+                
                 
             }
+
+            if (newRemoval){
+               
+                for (int i = 0; i<flightBoardList.size();){
+                    ArrayList<String> flightInfoRow = flightBoardList.get(i);
+                    if (flightInfoRow.get(2).equals("-1")) {
+                        flightBoardList.remove(i);
+                        System.out.println("Remove flight "+flightInfoRow.get(0)+" from flightBoardList!");
+                    } else {
+                        i = i + 1;
+                    }
+                }
+                System.out.println("New flightBoardList after removal" + flightBoardList);
+                newRemoval = false;
+            }
+
+            ////////////////////////////////////////////////////////////////////
+            // TODO break here if ready to resign and break out of while loop //
+            ////////////////////////////////////////////////////////////////////
 
             if (!exitCondition) {
                 currentTime += super.getStepSize();
@@ -258,6 +279,29 @@ public class Airline2Manager extends Airline2ManagerBase {
         //////////////////////////////////////////////////////////////////////
         // TODO Perform whatever cleanups are needed before exiting the app //
         //////////////////////////////////////////////////////////////////////
+    }
+
+    private void handleInteractionClass(FlightRemovalNotification interaction) {
+        ///////////////////////////////////////////////////////////////
+        // TODO implement how to handle reception of the interaction //
+        ///////////////////////////////////////////////////////////////
+        String FlightID = interaction.get_airline()+interaction.get_flightNumber();
+        
+        if (interaction.get_airline().equals("BBB")) {
+            System.out.println("Received new removal Notificaiton for "+FlightID);
+            newRemoval = true;
+            if (((flightBoardList.get(flightIDMap.get(FlightID))).get(2)).equals("0")) { // Arrive case
+                (flightBoardList.get(flightIDMap.get(FlightID))).set(2, "-1");
+                rtArriveMap.remove(FlightID);
+                flightIDMap.remove(FlightID);
+            } else {  //Departure case 
+                (flightBoardList.get(flightIDMap.get(FlightID))).set(2, "-1");
+                rtDepartureMap.remove(FlightID);
+                flightIDMap.remove(FlightID);
+            }
+        } else { 
+            System.out.println("Ignored new removal Notificaiton for "+FlightID);
+        }
     }
 
     private void handleInteractionClass(Airline2DeparturReady interaction) {
@@ -279,7 +323,7 @@ public class Airline2Manager extends Airline2ManagerBase {
             if (rtArriveMap.containsKey(FlightID)) { // Check new sche or updates
                 rtArriveMap.remove(FlightID); //Removr old record
                 rtArriveMap.put(FlightID,object); // Update new record
-                flightBoardList.get(flightIDMap.get(FlightID)).set(2,object.get_estimatedArrivalTime());// Update flight Board Info
+                flightBoardList.get(flightIDMap.get(FlightID)).set(1,object.get_estimatedArrivalTime());// Update flight Board Info
 
             } else {
                 rtArriveMap.put(FlightID,object); // Update new record
@@ -311,14 +355,14 @@ public class Airline2Manager extends Airline2ManagerBase {
             if (rtDepartureMap.containsKey(FlightID)) { // Check new sche or updates
                 rtDepartureMap.remove(FlightID); //Removr old record
                 rtDepartureMap.put(FlightID,object); // Update new record
-                flightBoardList.get(flightIDMap.get(FlightID)).set(2,object.get_estimated());// Update flight Board Info
+                flightBoardList.get(flightIDMap.get(FlightID)).set(1,object.get_estimated());// Update flight Board Info
 
             } else {
                 rtDepartureMap.put(FlightID,object); // Update new record
 
                 // Setup the flight infomation board list
                 ArrayList<String> flightInfoRow = new ArrayList<String>(
-                Arrays.asList(FlightID,object.get_estimated(),"1"));
+                Arrays.asList(FlightID,object.get_estimated(),"0"));
                 flightBoardList.add(flightInfoRow);
 
             }

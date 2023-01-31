@@ -15,6 +15,7 @@ import java.util.Map;
 import java.util.*;
 
 
+
 // Define the AircraftCoordinator type of federate for the federation.
 
 public class AircraftCoordinator extends AircraftCoordinatorBase {
@@ -34,7 +35,9 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
     // Create Hash Map of <index, FlightInfo>
     private Map<String, RealTimeArriSche> rtArriveMap = new HashMap<String, RealTimeArriSche>(); 
     private Map<String, RealTimeDepSche> rtDepartureMap = new HashMap<String, RealTimeDepSche>(); 
-    
+
+    private Map<String, RealTimeArriSche> completedArriveMap = new HashMap<String, RealTimeArriSche>(); 
+    private Map<String, RealTimeDepSche> completedDepartureMap = new HashMap<String, RealTimeDepSche>(); 
     // Create array of [flightIndex, flightID, actualTime, arrive/departure]
     private ArrayList<ArrayList<String>> flightBoardList =  new ArrayList<ArrayList<String>>(); 
 
@@ -60,43 +63,22 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
         //////////////////////////////////////////////////////
         // realTimeDepSche.registerObject(getLRC());
         // realTimeArriSche.registerObject(getLRC());
-
-        // Register 10 Objects for both arrive and departure
-        // Register realtime schedule at RTI
-
-        // for (int i=0; i<numberOfRegistedObject; i++){
-
-        //     RealTimeDepSche realTimeDepSche = new RealTimeDepSche();
-        //     realTimeDepSche.registerObject(getLRC());
-        //     rtDepartureMap.put(String.valueOf(i),realTimeDepSche);
-
-        //     RealTimeArriSche realTimeArriSche = new RealTimeArriSche();
-        //     realTimeArriSche.registerObject(getLRC());
-        //     rtArriveMap.put(String.valueOf(i),realTimeArriSche);
-
-        // }
     }
 
     private void checkReceivedSubscriptions() {
         InteractionRoot interaction = null;
-        
         while ((interaction = getNextInteractionNoWait()) != null) {
-            
             if (interaction instanceof RealtimeArrivalRequest) {
                 handleInteractionClass((RealtimeArrivalRequest) interaction);
-                log.info("New realtime Arrival Request interaction");
-            }
-            else if (interaction instanceof DepartureRequest) {
-                handleInteractionClass((DepartureRequest) interaction);
-                log.info("New Departure Arrival Request interaction");
             }
             else if (interaction instanceof DayaheadSchedule) {
                 handleInteractionClass((DayaheadSchedule) interaction);
-                log.info("New Day Ahead Schedule interaction");
+            }
+            else if (interaction instanceof DepartureRequest) {
+                handleInteractionClass((DepartureRequest) interaction);
             }
             else if (interaction instanceof Aircraft) {
                 handleInteractionClass((Aircraft) interaction);
-                log.info("New Aircraft interaction");
             }
             else {
                 log.debug("unhandled interaction: {}", interaction.getClassName());
@@ -156,6 +138,14 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
 
             // Set the interaction's parameters.
             //
+            //    FlightRemovalNotification flightRemovalNotification = create_FlightRemovalNotification();
+            //    flightRemovalNotification.set_actualLogicalGenerationTime( < YOUR VALUE HERE > );
+            //    flightRemovalNotification.set_airline( < YOUR VALUE HERE > );
+            //    flightRemovalNotification.set_federateFilter( < YOUR VALUE HERE > );
+            //    flightRemovalNotification.set_flightNumber( < YOUR VALUE HERE > );
+            //    flightRemovalNotification.set_originFed( < YOUR VALUE HERE > );
+            //    flightRemovalNotification.set_sourceFed( < YOUR VALUE HERE > );
+            //    flightRemovalNotification.sendInteraction(getLRC(), currentTime + getLookAhead());
             //    ArrivalConfirm arrivalConfirm = create_ArrivalConfirm();
             //    arrivalConfirm.set_actualLogicalGenerationTime( < YOUR VALUE HERE > );
             //    arrivalConfirm.set_airline( < YOUR VALUE HERE > );
@@ -206,7 +196,6 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
             //    realTimeArriSche.updateAttributeValues(getLRC(), currentTime + getLookAhead());
 
             checkReceivedSubscriptions();
-            
 
             if (updateDayahead) {
                 
@@ -233,12 +222,71 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
                 flightIndex = 0;
             }
 
+            //  Check current time with flight board info list
+            for (int i=0; i < flightBoardList.size();){
+                double curentTimeValue = 100*simulationHour+simulationMin;
+                String flightID = flightBoardList.get(i).get(1);
+                if (curentTimeValue<Double.valueOf(flightBoardList.get(i).get(2).replace(":",""))) {
+                    break;
+                }
 
-            //Update all realtime schedule objects
+                if (flightBoardList.get(i).get(3).equals("1")) {    //Arrival Case: Move flight to completed Map
+                    rtArriveMap.get(flightID).set_arrivalStatus("Completed");
+                    completedArriveMap.put(flightID, rtArriveMap.remove(flightID));
+                } else {                                            //Departure case
+                    rtDepartureMap.get(flightID).set_depStatus("Completed");
+                    completedDepartureMap.put(flightID, rtDepartureMap.remove(flightID));
+                }
+                flightBoardList.remove(0);
+
+            }
+            //   Sending removal notification at 23:30
+            if ((simulationHour == 23) && (simulationMin == 30)) {
+                for (RealTimeDepSche rtds : completedDepartureMap.values()){
+                    FlightRemovalNotification flightRemovalNotification = create_FlightRemovalNotification();
+                    String airline = rtds.get_airline();
+                    String flgihtNumber = rtds.get_flightNumber();
+                    flightRemovalNotification.set_airline(airline);
+                    flightRemovalNotification.set_flightNumber(flgihtNumber);
+                    flightRemovalNotification.sendInteraction(getLRC(), currentTime + getLookAhead());
+                    System.out.println("Send removal notification for "+airline+flgihtNumber);    
+                }
+                for (RealTimeArriSche rtas : completedArriveMap.values()){
+                    FlightRemovalNotification flightRemovalNotification = create_FlightRemovalNotification();
+                    String airline = rtas.get_airline();
+                    String flgihtNumber = rtas.get_flightNumber();
+                    flightRemovalNotification.set_airline(airline);
+                    flightRemovalNotification.set_flightNumber(flgihtNumber);
+                    flightRemovalNotification.sendInteraction(getLRC(), currentTime + getLookAhead());
+                    System.out.println("Send removal notification for "+airline+flgihtNumber);    
+                }
+            }
+
+            //  Unregister completed flight object at 23:45
+            if ((simulationHour == 23) && (simulationMin == 45)) {
+                for (RealTimeDepSche rtds : completedDepartureMap.values()){
+                    System.out.println("Unregister Flight Object "+ rtds.get_airline()+rtds.get_flightNumber());
+                    rtds.unregisterObject(getLRC());
+                }
+                for (RealTimeArriSche rtas : completedArriveMap.values()){
+                    System.out.println("Unregister Flight Object "+ rtas.get_airline()+rtas.get_flightNumber());
+                    rtas.unregisterObject(getLRC());
+                }
+                completedDepartureMap.clear();
+                completedArriveMap.clear();
+            }
+
+            //  Update all realtime schedule objects
             for (RealTimeArriSche rtas : rtArriveMap.values()){
                 rtas.updateAttributeValues(getLRC(),currentTime+getLookAhead());
             }
+            for (RealTimeArriSche rtas : completedArriveMap.values()){
+                rtas.updateAttributeValues(getLRC(),currentTime+getLookAhead());
+            }
             for (RealTimeDepSche rtds : rtDepartureMap.values()){
+                rtds.updateAttributeValues(getLRC(),currentTime+getLookAhead());
+            }
+            for (RealTimeDepSche rtds : completedDepartureMap.values()){
                 rtds.updateAttributeValues(getLRC(),currentTime+getLookAhead());
             }
 
@@ -265,12 +313,6 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
     }
 
     private void handleInteractionClass(RealtimeArrivalRequest interaction) {
-        ///////////////////////////////////////////////////////////////
-        // TODO implement how to handle reception of the interaction //
-        ///////////////////////////////////////////////////////////////
-    }
-
-    private void handleInteractionClass(DepartureRequest interaction) {
         ///////////////////////////////////////////////////////////////
         // TODO implement how to handle reception of the interaction //
         ///////////////////////////////////////////////////////////////
@@ -353,6 +395,13 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
         // System.out.println("Current arrive Index : " + arriveIndex);
         // System.out.println("Current departure Index : " + departureIndex);
         System.out.println("Current flight Index : " + flightIndex);
+
+    }
+
+    private void handleInteractionClass(DepartureRequest interaction) {
+        ///////////////////////////////////////////////////////////////
+        // TODO implement how to handle reception of the interaction //
+        ///////////////////////////////////////////////////////////////
     }
 
     private void handleInteractionClass(Aircraft interaction) {
