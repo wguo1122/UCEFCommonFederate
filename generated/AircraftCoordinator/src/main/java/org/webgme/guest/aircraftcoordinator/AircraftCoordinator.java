@@ -224,9 +224,9 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
 
             //  Check current time with flight board info list
             for (int i=0; i < flightBoardList.size();){
-                double curentTimeValue = 100*simulationHour+simulationMin;
+                double currentTimeValue = 100*simulationHour+simulationMin;
                 String flightID = flightBoardList.get(i).get(1);
-                if (curentTimeValue<Double.valueOf(flightBoardList.get(i).get(2).replace(":",""))) {
+                if (currentTimeValue<Double.valueOf(flightBoardList.get(i).get(2).replace(":",""))) {
                     break;
                 }
 
