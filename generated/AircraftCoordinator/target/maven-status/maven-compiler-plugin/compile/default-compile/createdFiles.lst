@@ -6,6 +6,7 @@ org/webgme/guest/aircraftcoordinator/rti/RealTimeDepSche.class
 org/webgme/guest/aircraftcoordinator/rti/RealtimeArrivalRequest.class
 org/webgme/guest/aircraftcoordinator/rti/DepartureRequest.class
 org/webgme/guest/aircraftcoordinator/rti/Aircraft.class
+org/webgme/guest/aircraftcoordinator/AircraftCoordinator$2.class
 org/webgme/guest/aircraftcoordinator/AircraftCoordinator$1.class
 org/webgme/guest/aircraftcoordinator/rti/ArrivalConfirm.class
 org/webgme/guest/aircraftcoordinator/AircraftCoordinator.class

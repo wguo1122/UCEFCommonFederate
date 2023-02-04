@@ -305,12 +305,15 @@ public class ATC extends ATCBase {
         ///////////////////////////////////////////////////////////////
         String FlightID = interaction.get_airline()+interaction.get_flightNumber();
         System.out.println("Received new removal Notificaiton for "+FlightID);
-        newRemoval = true;
+        
 
-        if (((flightBoardList.get(flightIDMap.get(FlightID))).get(2)).equals("0")) { // Arrive case
+        if (rtArriveMap.containsKey(FlightID)) { // Arrive case
             (flightBoardList.get(flightIDMap.get(FlightID))).set(2, "-1");
             rtArriveMap.remove(FlightID);
             flightIDMap.remove(FlightID);
+
+            newRemoval = true;
+
         } else {  //Departure case 
             System.out.println("Ignored new removal Notificaiton for "+FlightID);
         }

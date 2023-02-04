@@ -23,6 +23,10 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
 
     private double currentTime = 0;
     private boolean updateDayahead = false;
+    private boolean newArrivalRequest1 = false;     // First Round Arrival Request
+    private boolean newArrivalRequest2 = false;     // Second Round Arrival Request
+    private boolean newCompleted = false; 
+ 
     private int timeScale = 5; // mins per timestep
     private int simulationDay = 0;
     private int simulationHour = 0;
@@ -40,12 +44,17 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
     private Map<String, RealTimeDepSche> completedDepartureMap = new HashMap<String, RealTimeDepSche>(); 
     // Create array of [flightIndex, flightID, actualTime, arrive/departure]
     private ArrayList<ArrayList<String>> flightBoardList =  new ArrayList<ArrayList<String>>(); 
-
+    // Create array of [flightID, RequestLandingTime]
+    private ArrayList<ArrayList<String>> firstRequestList =  new ArrayList<ArrayList<String>>(); 
+    private ArrayList<ArrayList<String>> secondRequestList =  new ArrayList<ArrayList<String>>(); 
     // Create Hash Map of <FlightID, index in flightBoardList>
     private Map<String, Integer> flightIDMap = new HashMap<String, Integer>();
-
+    // Create Runway List of <LandingHour, LandingMin, FlightID> 
+    private ArrayList<ArrayList<String>> runwayList =  new ArrayList<ArrayList<String>>();
+    private ArrayList<String> runway0 = new ArrayList<String>(Arrays.asList("0:00","Available")); 
+    private ArrayList<String> runway1 = new ArrayList<String>(Arrays.asList("0:05","Available")); 
+    private ArrayList<String> runway2 = new ArrayList<String>(Arrays.asList("0:10","Available")); 
         
-
     
     ////////////////////////////////////////////////////////////////////////
     // TODO instantiate objects that must be sent every logical time step //
@@ -118,6 +127,10 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
 
         startAdvanceTimeThread();
         log.info("started logical time progression");
+
+        runwayList.add(runway0);
+        runwayList.add(runway1);
+        runwayList.add(runway2);
 
         while (!exitCondition) {
             atr.requestSyncStart();
@@ -197,30 +210,87 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
 
             checkReceivedSubscriptions();
 
-            if (updateDayahead) {
-                
+            
+
+            //  Check for new First Round Landing Request
+            if (newArrivalRequest1) {
+                System.out.println("Current 1st Request List:"+ firstRequestList);
+                for (ArrayList<String> flr : firstRequestList){
+                    String RequestTime = flr.get(1);
+                    String newLandingTime = "";
+                    int landingHour = Integer.valueOf(RequestTime.substring(0,RequestTime.indexOf(":")))+1;
+                    newLandingTime =String.valueOf(landingHour)+RequestTime.substring(RequestTime.indexOf(":"),RequestTime.length());
+                    // Update rtArriveMap
+                    rtArriveMap.get(flr.get(0)).set_estimatedArrivalTime(newLandingTime);
+                    // Update flightBoardList
+                    flightBoardList.get(flightIDMap.get(flr.get(0))).set(2,newLandingTime);
+                }
+                firstRequestList.clear();
+            } 
+
+            //  Check for new Second Round Landing Request
+            if (newArrivalRequest2) {
+                //  Sort Second Round Landing Request List by time
                 Comparator<ArrayList<String>> arrayListComparator = new Comparator<ArrayList<String>>() {
                     @Override
                     public int compare(ArrayList<String> o1, ArrayList<String> o2) {
-                    return Double. valueOf(o1.get(2).replace(":","")).compareTo(Double. valueOf(o2.get(2).replace(":","")));
+                    return Double. valueOf(o1.get(1).replace(":","")).compareTo(Double. valueOf(o2.get(1).replace(":","")));
                     //return o1[2].compareTo(o2[2]);
                     }
                 };
+                Collections.sort(secondRequestList, arrayListComparator);
+                System.out.println("Current 2nd Request List:"+ secondRequestList);
 
-                Collections.sort(flightBoardList, arrayListComparator);
-                System.out.println("FlightBoard after sort:");
+                for (ArrayList<String> slr : secondRequestList){
+                    String[] runwayTime = runwayList.get(runwayList.size()-1).get(0).split(":");
+                    String newLandingTime = "";
+                    int landingHour = Integer.valueOf(runwayTime[0]);
+                    int landingMin = Integer.valueOf(runwayTime[1]);
 
-                for (int i = 0; i <flightBoardList.size(); i++) { 
-                    System.out.println(flightBoardList.get(i)); 
-                    flightIDMap.put(flightBoardList.get(i).get(1),i);
+                    if (landingMin == 0) {
+                        newLandingTime = String.valueOf(landingHour)+":05";
+                    } else if (landingMin != 55) {
+                        newLandingTime = String.valueOf(landingHour)+":"+String.valueOf(landingMin+5);
+                    } else if (landingHour != 23){
+                        newLandingTime = String.valueOf(landingHour+1)+":00";
+                    } else {
+                        newLandingTime = "0:00";
+                    }
+                   
+
+                    ArrayList<String> runwayRow = new ArrayList<String>(Arrays.asList(newLandingTime,slr.get(0)));
+                    runwayList.add(runwayRow);
+                    
+                    // Update rtArriveMap
+                    rtArriveMap.get(slr.get(0)).set_estimatedArrivalTime(newLandingTime);
+                    // Update flightBoardList
+                    flightBoardList.get(flightIDMap.get(slr.get(0))).set(2,newLandingTime);
+                }
+                secondRequestList.clear();
+            } 
+
+            //  Update Runway List
+            if (runwayList.size()<4){
+                String[] runwayTime = runwayList.get(runwayList.size()-1).get(0).split(":");
+                String newLandingTime = "";
+                int landingHour = Integer.valueOf(runwayTime[0]);
+                int landingMin = Integer.valueOf(runwayTime[1]);
+
+                if (landingMin == 0) {
+                    newLandingTime = String.valueOf(landingHour)+":05";
+                } else if (landingMin != 55) {
+                    newLandingTime = String.valueOf(landingHour)+":"+String.valueOf(landingMin+5);
+                } else if (landingHour != 23){
+                    newLandingTime = String.valueOf(landingHour+1)+":00";
+                } else {
+                    newLandingTime = "0:00";
                 }
 
-                System.out.println("FlightIndex Map:"+ flightIDMap);
-
-                //    Reset all the Index for the next day
-                updateDayahead = false;
-                flightIndex = 0;
+                ArrayList<String> runwayRow = new ArrayList<String>(Arrays.asList(newLandingTime,"Available"));
+                    runwayList.add(runwayRow);
             }
+            runwayList.remove(0);
+            System.out.println("Current Runway List:"+ runwayList);
 
             //  Check current time with flight board info list
             for (int i=0; i < flightBoardList.size();){
@@ -238,8 +308,38 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
                     completedDepartureMap.put(flightID, rtDepartureMap.remove(flightID));
                 }
                 flightBoardList.remove(0);
+                newCompleted = true;
 
             }
+
+            // Sort flightBoard by estimated time
+            if (updateDayahead||newArrivalRequest1||newArrivalRequest2||newCompleted) {
+                
+                Comparator<ArrayList<String>> arrayListComparator = new Comparator<ArrayList<String>>() {
+                    @Override
+                    public int compare(ArrayList<String> o1, ArrayList<String> o2) {
+                    return Double. valueOf(o1.get(2).replace(":","")).compareTo(Double. valueOf(o2.get(2).replace(":","")));
+                    //return o1[2].compareTo(o2[2]);
+                    }
+                };
+
+                Collections.sort(flightBoardList, arrayListComparator);
+                System.out.println("FlightBoard after sort:");
+
+                for (int i = 0; i <flightBoardList.size(); i++) { 
+                    System.out.println(flightBoardList.get(i)); 
+                    flightIDMap.put(flightBoardList.get(i).get(1),i);
+                }
+
+                
+                //    Reset all the Index for the next day
+                updateDayahead = false;
+                newArrivalRequest1 = false;
+                newArrivalRequest2 = false;
+                newCompleted = false;
+                flightIndex = 0;
+            }
+
             //   Sending removal notification at 23:30
             if ((simulationHour == 23) && (simulationMin == 30)) {
                 for (RealTimeDepSche rtds : completedDepartureMap.values()){
@@ -316,6 +416,24 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
         ///////////////////////////////////////////////////////////////
         // TODO implement how to handle reception of the interaction //
         ///////////////////////////////////////////////////////////////
+        
+        String requestRound = "";
+        String requestTime = "";
+        requestRound = (interaction.get_landingTime()).substring(0,3);
+        requestTime = (interaction.get_landingTime()).substring(3);
+        String FlightID = interaction.get_airline()+interaction.get_flightNumber();
+
+        ArrayList<String> flightRequestRow = new ArrayList<String>(Arrays.asList(FlightID,requestTime));
+
+        if (requestRound.equals("1ST")) {   // First Round Landing Request only update RT schedule
+            firstRequestList.add(flightRequestRow);
+            newArrivalRequest1 = true;
+        } else {
+            secondRequestList.add(flightRequestRow);
+            newArrivalRequest2 = true;
+        }
+
+
     }
 
     private void handleInteractionClass(DayaheadSchedule interaction) {
