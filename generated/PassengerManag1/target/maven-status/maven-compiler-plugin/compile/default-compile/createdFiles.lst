@@ -1,6 +1,6 @@
 org/webgme/guest/passengermanag1/rti/Airline1DeparturReady.class
-org/webgme/guest/passengermanag1/rti/ArrivalPass.class
 org/webgme/guest/passengermanag1/PassengerManag1Base.class
+org/webgme/guest/passengermanag1/rti/ArrivalPass.class
 org/webgme/guest/passengermanag1/rti/RTPeopleFlow.class
 org/webgme/guest/passengermanag1/PassengerManag1.class
 org/webgme/guest/passengermanag1/rti/TransferPass.class

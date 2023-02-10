@@ -3,7 +3,7 @@
 /home/vagrant/Projects/UCEFCommonFederate/generated/Airline2Manager/src/main/java/org/webgme/guest/airline2manager/Airline2ManagerBase.java
 /home/vagrant/Projects/UCEFCommonFederate/generated/Airline2Manager/src/main/java/org/webgme/guest/airline2manager/rti/ArrivalPass.java
 /home/vagrant/Projects/UCEFCommonFederate/generated/Airline2Manager/src/main/java/org/webgme/guest/airline2manager/rti/DayaheadSchedule.java
-/home/vagrant/Projects/UCEFCommonFederate/generated/Airline2Manager/src/main/java/org/webgme/guest/airline2manager/rti/Airline2DeparturReady.java
 /home/vagrant/Projects/UCEFCommonFederate/generated/Airline2Manager/src/main/java/org/webgme/guest/airline2manager/rti/FlightRemovalNotification.java
+/home/vagrant/Projects/UCEFCommonFederate/generated/Airline2Manager/src/main/java/org/webgme/guest/airline2manager/rti/Airline2DeparturReady.java
 /home/vagrant/Projects/UCEFCommonFederate/generated/Airline2Manager/src/main/java/org/webgme/guest/airline2manager/rti/RealTimeDepSche.java
 /home/vagrant/Projects/UCEFCommonFederate/generated/Airline2Manager/src/main/java/org/webgme/guest/airline2manager/Airline2Manager.java
