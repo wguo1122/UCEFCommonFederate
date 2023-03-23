@@ -236,6 +236,7 @@ public class Airline1Manager extends Airline1ManagerBase {
                 }
 
                 System.out.println("FlightID Map:"+ flightIDMap);
+                
 
                 //    Reset 
                 newUpdate = false;
@@ -255,6 +256,9 @@ public class Airline1Manager extends Airline1ManagerBase {
                     }
                 }
                 System.out.println("New flightBoardList after removal" + flightBoardList);
+                System.out.println("New rtArrive Flight after removal" + rtArriveMap.keySet());
+                System.out.println("New rtDep Flight after removal" + rtDepartureMap.keySet());
+
                 newRemoval = false;
             }
 
@@ -289,7 +293,11 @@ public class Airline1Manager extends Airline1ManagerBase {
         if (interaction.get_airline().equals("AAA")) {
             System.out.println("Received new removal Notificaiton for "+FlightID);
             newRemoval = true;
-            if (((flightBoardList.get(flightIDMap.get(FlightID))).get(2)).equals("0")) { // Arrive case
+
+            //System.out.println("rtArrive Flight before removal" + rtArriveMap.keySet());
+            //System.out.println("rtDep Flight before removal" + rtDepartureMap.keySet());
+
+            if (((flightBoardList.get(flightIDMap.get(FlightID))).get(2)).equals("1")) { // Arrive case
                 (flightBoardList.get(flightIDMap.get(FlightID))).set(2, "-1");
                 rtArriveMap.remove(FlightID);
                 flightIDMap.remove(FlightID);
@@ -298,6 +306,10 @@ public class Airline1Manager extends Airline1ManagerBase {
                 rtDepartureMap.remove(FlightID);
                 flightIDMap.remove(FlightID);
             }
+
+            //System.out.println("rtArrive After removal" + rtArriveMap.keySet());
+            //System.out.println("rtDep After removal" + rtDepartureMap.keySet());
+
         } else { 
             System.out.println("Ignored new removal Notificaiton for "+FlightID);
         }
@@ -314,10 +326,11 @@ public class Airline1Manager extends Airline1ManagerBase {
         // TODO implement how to handle reception of the object //
         //////////////////////////////////////////////////////////
         String FlightID = object.get_airline()+object.get_flightNumber();
-        newUpdate = true;
+        
         
         if (object.get_airline().equals("AAA")) {
             System.out.println("Received new Arr updates of flight "+FlightID);
+            newUpdate = true;
 
             if (rtArriveMap.containsKey(FlightID)) { // Check new sche or updates
                 rtArriveMap.remove(FlightID); //Removr old record

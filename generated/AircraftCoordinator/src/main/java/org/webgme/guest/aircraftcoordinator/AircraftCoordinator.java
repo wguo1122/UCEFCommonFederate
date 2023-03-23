@@ -247,6 +247,8 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
                     int landingHour = Integer.valueOf(runwayTime[0]);
                     int landingMin = Integer.valueOf(runwayTime[1]);
 
+                    System.out.println("1: Current slr:"+ slr);
+
                     if (landingMin == 0) {
                         newLandingTime = String.valueOf(landingHour)+":05";
                     } else if (landingMin != 55) {
@@ -261,6 +263,8 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
                     ArrayList<String> runwayRow = new ArrayList<String>(Arrays.asList(newLandingTime,slr.get(0)));
                     runwayList.add(runwayRow);
                     
+                    System.out.println("1: Current slr:"+ slr);
+
                     // Update rtArriveMap
                     rtArriveMap.get(slr.get(0)).set_estimatedArrivalTime(newLandingTime);
                     // Update flightBoardList
