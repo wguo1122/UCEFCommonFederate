@@ -42,7 +42,7 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
 
     private Map<String, RealTimeArriSche> completedArriveMap = new HashMap<String, RealTimeArriSche>(); 
     private Map<String, RealTimeDepSche> completedDepartureMap = new HashMap<String, RealTimeDepSche>(); 
-    // Create array of [flightIndex, flightID, actualTime, arrive/departure]
+    // Create array of [flightIndex, flightID, actualTime, arrive/departure, LandingRequest]
     private ArrayList<ArrayList<String>> flightBoardList =  new ArrayList<ArrayList<String>>(); 
     // Create array of [flightID, RequestLandingTime]
     private ArrayList<ArrayList<String>> firstRequestList =  new ArrayList<ArrayList<String>>(); 
@@ -224,6 +224,7 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
                     rtArriveMap.get(flr.get(0)).set_estimatedArrivalTime(newLandingTime);
                     // Update flightBoardList
                     flightBoardList.get(flightIDMap.get(flr.get(0))).set(2,newLandingTime);
+                    flightBoardList.get(flightIDMap.get(flr.get(0))).set(4,"1ST");
                 }
                 firstRequestList.clear();
             } 
@@ -247,7 +248,7 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
                     int landingHour = Integer.valueOf(runwayTime[0]);
                     int landingMin = Integer.valueOf(runwayTime[1]);
 
-                    System.out.println("1: Current slr:"+ slr);
+                    
 
                     if (landingMin == 0) {
                         newLandingTime = String.valueOf(landingHour)+":05";
@@ -263,12 +264,13 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
                     ArrayList<String> runwayRow = new ArrayList<String>(Arrays.asList(newLandingTime,slr.get(0)));
                     runwayList.add(runwayRow);
                     
-                    System.out.println("1: Current slr:"+ slr);
+                    
 
                     // Update rtArriveMap
                     rtArriveMap.get(slr.get(0)).set_estimatedArrivalTime(newLandingTime);
                     // Update flightBoardList
                     flightBoardList.get(flightIDMap.get(slr.get(0))).set(2,newLandingTime);
+                    flightBoardList.get(flightIDMap.get(slr.get(0))).set(4,"2ND");
                 }
                 secondRequestList.clear();
             } 
@@ -304,16 +306,35 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
                     break;
                 }
 
-                if (flightBoardList.get(i).get(3).equals("1")) {    //Arrival Case: Move flight to completed Map
+                
+                if (flightBoardList.get(i).get(3).equals("1")) {    //Arrival Case: Update Flight Status
+                    if (flightBoardList.get(i).get(4).equals("2ND")){       //Received 2nd Landing Request
                     rtArriveMap.get(flightID).set_arrivalStatus("Completed");
                     completedArriveMap.put(flightID, rtArriveMap.remove(flightID));
+                    flightBoardList.remove(0);
+                    }
+                    else if (flightBoardList.get(i).get(4).equals("1ST")){       //Missing 2ND Landing Request
+                        rtArriveMap.get(flightID).set_arrivalStatus("DELAYED!Waiting for 2ND Request");
+                        rtArriveMap.get(flightID).set_estimatedArrivalTime("23:00");
+                        flightBoardList.get(i).set(2,"23:00");
+                        i = i+1;
+                    }
+                    else if(flightBoardList.get(i).get(4).equals("0")){         //Missing 1ST Landing Request
+                        rtArriveMap.get(flightID).set_arrivalStatus("DELAYED!Waiting for 1ST Request");
+                        rtArriveMap.get(flightID).set_estimatedArrivalTime("23:00");
+                        flightBoardList.get(i).set(2,"23:00");
+                        i = i+1;
+                    }
                 } else {                                            //Departure case
                     rtDepartureMap.get(flightID).set_depStatus("Completed");
                     completedDepartureMap.put(flightID, rtDepartureMap.remove(flightID));
+                    flightBoardList.remove(0);
                 }
-                flightBoardList.remove(0);
+                
                 newCompleted = true;
-
+                   
+                
+                
             }
 
             // Sort flightBoard by estimated time
@@ -471,7 +492,7 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
 
             // Setup the flight infomation board list
             ArrayList<String> flightInfoRow = new ArrayList<String>(
-            Arrays.asList(String.valueOf(flightIndex),FlightID,rtas.get_estimatedArrivalTime(),"1"));
+            Arrays.asList(String.valueOf(flightIndex),FlightID,rtas.get_estimatedArrivalTime(),"1","0"));
             
             flightBoardList.add(flightInfoRow);
 
@@ -504,7 +525,7 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
             
             // Setup the flight infomation board list
             ArrayList<String> flightInfoRow = new ArrayList<String>(
-            Arrays.asList(String.valueOf(flightIndex),FlightID,rtds.get_estimated(),"0"));
+            Arrays.asList(String.valueOf(flightIndex),FlightID,rtds.get_estimated(),"0","0"));
             
             flightBoardList.add(flightInfoRow);
 
