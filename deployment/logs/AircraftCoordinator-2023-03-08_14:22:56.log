@@ -1,0 +1,2861 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.webgme.guest:FlatCase_exec[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding FlatCase_exec 0.1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+Downloading from archiva.snapshots: http://cpswtng_archiva:8080/repository/snapshots/org/webgme/guest/atc/ATC/0.1.0-SNAPSHOT/maven-metadata.xml
+Downloading from archiva.internal: http://cpswtng_archiva:8080/repository/internal/org/webgme/guest/atc/ATC/0.1.0-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata org.webgme.guest.atc:ATC:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.internal (http://cpswtng_archiva:8080/repository/internal/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Could not transfer metadata org.webgme.guest.atc:ATC:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.snapshots (http://cpswtng_archiva:8080/repository/snapshots/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Failure to transfer org.webgme.guest.atc:ATC:0.1.0-SNAPSHOT/maven-metadata.xml from http://cpswtng_archiva:8080/repository/internal/ was cached in the local repository, resolution will not be reattempted until the update interval of archiva.internal has elapsed or updates are forced. Original error: Could not transfer metadata org.webgme.guest.atc:ATC:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.internal (http://cpswtng_archiva:8080/repository/internal/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Failure to transfer org.webgme.guest.atc:ATC:0.1.0-SNAPSHOT/maven-metadata.xml from http://cpswtng_archiva:8080/repository/snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of archiva.snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.webgme.guest.atc:ATC:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.snapshots (http://cpswtng_archiva:8080/repository/snapshots/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+Downloading from archiva.internal: http://cpswtng_archiva:8080/repository/internal/org/webgme/guest/aircraftcoordinator/AircraftCoordinator/0.1.0-SNAPSHOT/maven-metadata.xml
+Downloading from archiva.snapshots: http://cpswtng_archiva:8080/repository/snapshots/org/webgme/guest/aircraftcoordinator/AircraftCoordinator/0.1.0-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata org.webgme.guest.aircraftcoordinator:AircraftCoordinator:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.internal (http://cpswtng_archiva:8080/repository/internal/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Could not transfer metadata org.webgme.guest.aircraftcoordinator:AircraftCoordinator:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.snapshots (http://cpswtng_archiva:8080/repository/snapshots/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Failure to transfer org.webgme.guest.aircraftcoordinator:AircraftCoordinator:0.1.0-SNAPSHOT/maven-metadata.xml from http://cpswtng_archiva:8080/repository/internal/ was cached in the local repository, resolution will not be reattempted until the update interval of archiva.internal has elapsed or updates are forced. Original error: Could not transfer metadata org.webgme.guest.aircraftcoordinator:AircraftCoordinator:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.internal (http://cpswtng_archiva:8080/repository/internal/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Failure to transfer org.webgme.guest.aircraftcoordinator:AircraftCoordinator:0.1.0-SNAPSHOT/maven-metadata.xml from http://cpswtng_archiva:8080/repository/snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of archiva.snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.webgme.guest.aircraftcoordinator:AircraftCoordinator:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.snapshots (http://cpswtng_archiva:8080/repository/snapshots/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+Downloading from archiva.internal: http://cpswtng_archiva:8080/repository/internal/org/webgme/guest/airline1manager/Airline1Manager/0.1.0-SNAPSHOT/maven-metadata.xml
+Downloading from archiva.snapshots: http://cpswtng_archiva:8080/repository/snapshots/org/webgme/guest/airline1manager/Airline1Manager/0.1.0-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata org.webgme.guest.airline1manager:Airline1Manager:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.internal (http://cpswtng_archiva:8080/repository/internal/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Could not transfer metadata org.webgme.guest.airline1manager:Airline1Manager:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.snapshots (http://cpswtng_archiva:8080/repository/snapshots/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Failure to transfer org.webgme.guest.airline1manager:Airline1Manager:0.1.0-SNAPSHOT/maven-metadata.xml from http://cpswtng_archiva:8080/repository/internal/ was cached in the local repository, resolution will not be reattempted until the update interval of archiva.internal has elapsed or updates are forced. Original error: Could not transfer metadata org.webgme.guest.airline1manager:Airline1Manager:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.internal (http://cpswtng_archiva:8080/repository/internal/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Failure to transfer org.webgme.guest.airline1manager:Airline1Manager:0.1.0-SNAPSHOT/maven-metadata.xml from http://cpswtng_archiva:8080/repository/snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of archiva.snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.webgme.guest.airline1manager:Airline1Manager:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.snapshots (http://cpswtng_archiva:8080/repository/snapshots/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+Downloading from archiva.internal: http://cpswtng_archiva:8080/repository/internal/org/webgme/guest/airline2manager/Airline2Manager/0.1.0-SNAPSHOT/maven-metadata.xml
+Downloading from archiva.snapshots: http://cpswtng_archiva:8080/repository/snapshots/org/webgme/guest/airline2manager/Airline2Manager/0.1.0-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata org.webgme.guest.airline2manager:Airline2Manager:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.internal (http://cpswtng_archiva:8080/repository/internal/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Could not transfer metadata org.webgme.guest.airline2manager:Airline2Manager:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.snapshots (http://cpswtng_archiva:8080/repository/snapshots/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Failure to transfer org.webgme.guest.airline2manager:Airline2Manager:0.1.0-SNAPSHOT/maven-metadata.xml from http://cpswtng_archiva:8080/repository/internal/ was cached in the local repository, resolution will not be reattempted until the update interval of archiva.internal has elapsed or updates are forced. Original error: Could not transfer metadata org.webgme.guest.airline2manager:Airline2Manager:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.internal (http://cpswtng_archiva:8080/repository/internal/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Failure to transfer org.webgme.guest.airline2manager:Airline2Manager:0.1.0-SNAPSHOT/maven-metadata.xml from http://cpswtng_archiva:8080/repository/snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of archiva.snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.webgme.guest.airline2manager:Airline2Manager:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.snapshots (http://cpswtng_archiva:8080/repository/snapshots/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+Downloading from archiva.internal: http://cpswtng_archiva:8080/repository/internal/org/webgme/guest/analysis/Analysis/0.1.0-SNAPSHOT/maven-metadata.xml
+Downloading from archiva.snapshots: http://cpswtng_archiva:8080/repository/snapshots/org/webgme/guest/analysis/Analysis/0.1.0-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata org.webgme.guest.analysis:Analysis:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.internal (http://cpswtng_archiva:8080/repository/internal/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Could not transfer metadata org.webgme.guest.analysis:Analysis:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.snapshots (http://cpswtng_archiva:8080/repository/snapshots/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Failure to transfer org.webgme.guest.analysis:Analysis:0.1.0-SNAPSHOT/maven-metadata.xml from http://cpswtng_archiva:8080/repository/internal/ was cached in the local repository, resolution will not be reattempted until the update interval of archiva.internal has elapsed or updates are forced. Original error: Could not transfer metadata org.webgme.guest.analysis:Analysis:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.internal (http://cpswtng_archiva:8080/repository/internal/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Failure to transfer org.webgme.guest.analysis:Analysis:0.1.0-SNAPSHOT/maven-metadata.xml from http://cpswtng_archiva:8080/repository/snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of archiva.snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.webgme.guest.analysis:Analysis:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.snapshots (http://cpswtng_archiva:8080/repository/snapshots/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+Downloading from archiva.internal: http://cpswtng_archiva:8080/repository/internal/org/webgme/guest/passengermanag1/PassengerManag1/0.1.0-SNAPSHOT/maven-metadata.xml
+Downloading from archiva.snapshots: http://cpswtng_archiva:8080/repository/snapshots/org/webgme/guest/passengermanag1/PassengerManag1/0.1.0-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata org.webgme.guest.passengermanag1:PassengerManag1:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.internal (http://cpswtng_archiva:8080/repository/internal/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Could not transfer metadata org.webgme.guest.passengermanag1:PassengerManag1:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.snapshots (http://cpswtng_archiva:8080/repository/snapshots/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Failure to transfer org.webgme.guest.passengermanag1:PassengerManag1:0.1.0-SNAPSHOT/maven-metadata.xml from http://cpswtng_archiva:8080/repository/internal/ was cached in the local repository, resolution will not be reattempted until the update interval of archiva.internal has elapsed or updates are forced. Original error: Could not transfer metadata org.webgme.guest.passengermanag1:PassengerManag1:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.internal (http://cpswtng_archiva:8080/repository/internal/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Failure to transfer org.webgme.guest.passengermanag1:PassengerManag1:0.1.0-SNAPSHOT/maven-metadata.xml from http://cpswtng_archiva:8080/repository/snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of archiva.snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.webgme.guest.passengermanag1:PassengerManag1:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.snapshots (http://cpswtng_archiva:8080/repository/snapshots/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+Downloading from archiva.internal: http://cpswtng_archiva:8080/repository/internal/org/webgme/guest/passengermanag2/PassengerManag2/0.1.0-SNAPSHOT/maven-metadata.xml
+Downloading from archiva.snapshots: http://cpswtng_archiva:8080/repository/snapshots/org/webgme/guest/passengermanag2/PassengerManag2/0.1.0-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata org.webgme.guest.passengermanag2:PassengerManag2:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.internal (http://cpswtng_archiva:8080/repository/internal/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Could not transfer metadata org.webgme.guest.passengermanag2:PassengerManag2:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.snapshots (http://cpswtng_archiva:8080/repository/snapshots/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Failure to transfer org.webgme.guest.passengermanag2:PassengerManag2:0.1.0-SNAPSHOT/maven-metadata.xml from http://cpswtng_archiva:8080/repository/internal/ was cached in the local repository, resolution will not be reattempted until the update interval of archiva.internal has elapsed or updates are forced. Original error: Could not transfer metadata org.webgme.guest.passengermanag2:PassengerManag2:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.internal (http://cpswtng_archiva:8080/repository/internal/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Failure to transfer org.webgme.guest.passengermanag2:PassengerManag2:0.1.0-SNAPSHOT/maven-metadata.xml from http://cpswtng_archiva:8080/repository/snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of archiva.snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.webgme.guest.passengermanag2:PassengerManag2:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.snapshots (http://cpswtng_archiva:8080/repository/snapshots/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+Downloading from archiva.internal: http://cpswtng_archiva:8080/repository/internal/org/webgme/guest/peopleflow/PeopleFlow/0.1.0-SNAPSHOT/maven-metadata.xml
+Downloading from archiva.snapshots: http://cpswtng_archiva:8080/repository/snapshots/org/webgme/guest/peopleflow/PeopleFlow/0.1.0-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata org.webgme.guest.peopleflow:PeopleFlow:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.internal (http://cpswtng_archiva:8080/repository/internal/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Could not transfer metadata org.webgme.guest.peopleflow:PeopleFlow:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.snapshots (http://cpswtng_archiva:8080/repository/snapshots/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Failure to transfer org.webgme.guest.peopleflow:PeopleFlow:0.1.0-SNAPSHOT/maven-metadata.xml from http://cpswtng_archiva:8080/repository/internal/ was cached in the local repository, resolution will not be reattempted until the update interval of archiva.internal has elapsed or updates are forced. Original error: Could not transfer metadata org.webgme.guest.peopleflow:PeopleFlow:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.internal (http://cpswtng_archiva:8080/repository/internal/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;33mWARNING[m] Failure to transfer org.webgme.guest.peopleflow:PeopleFlow:0.1.0-SNAPSHOT/maven-metadata.xml from http://cpswtng_archiva:8080/repository/snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of archiva.snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.webgme.guest.peopleflow:PeopleFlow:0.1.0-SNAPSHOT/maven-metadata.xml from/to archiva.snapshots (http://cpswtng_archiva:8080/repository/snapshots/): Connect to cpswtng_archiva:8080 [cpswtng_archiva/127.0.0.1] failed: Connection refused
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mexec-maven-plugin:1.5.0:java[m [1m(default-cli)[m @ [36mFlatCase_exec[0;1m ---[m
+
+-------------------------------------------------------------------
+GMS: address=vagrant-54934, cluster=FlatCase, physical address=192.168.0.21:44677
+-------------------------------------------------------------------
+14:23:37.329 [org.webgme.guest.aircraftcoordinator.AircraftCoordinator.main()] INFO  org.webgme.guest.aircraftcoordinator.AircraftCoordinator - waiting on readyToPopulate...
+14:24:40.975 [org.webgme.guest.aircraftcoordinator.AircraftCoordinator.main()] INFO  org.webgme.guest.aircraftcoordinator.AircraftCoordinator - ...synchronized on readyToPopulate
+14:24:40.976 [org.webgme.guest.aircraftcoordinator.AircraftCoordinator.main()] INFO  org.webgme.guest.aircraftcoordinator.AircraftCoordinator - waiting on readyToRun...
+14:24:41.227 [org.webgme.guest.aircraftcoordinator.AircraftCoordinator.main()] INFO  org.webgme.guest.aircraftcoordinator.AircraftCoordinator - ...synchronized on readyToRun
+14:24:41.231 [org.webgme.guest.aircraftcoordinator.AircraftCoordinator.main()] INFO  org.webgme.guest.aircraftcoordinator.AircraftCoordinator - started logical time progression
+Current time step :0.0
+Simulation Day: 0 Hour: 0 Min: 0
+Current Runway List:[[0:05, Available], [0:10, Available], [0:15, Available]]
+Current time step :1.0
+Simulation Day: 0 Hour: 0 Min: 5
+Received Arrive Day Ahead Schedule of AAA1
+Current flight Index : 1
+Received Arrive Day Ahead Schedule of BBB1
+Current flight Index : 2
+Received Departure Day Ahead Schedule of BBB905
+Current flight Index : 3
+Received Departure Day Ahead Schedule of BBB904
+Current flight Index : 4
+Received Departure Day Ahead Schedule of BBB903
+Current flight Index : 5
+Received Departure Day Ahead Schedule of BBB902
+Current flight Index : 6
+Received Departure Day Ahead Schedule of BBB901
+Current flight Index : 7
+Received Arrive Day Ahead Schedule of BBB5
+Current flight Index : 8
+Received Arrive Day Ahead Schedule of BBB4
+Current flight Index : 9
+Received Arrive Day Ahead Schedule of BBB3
+Current flight Index : 10
+Received Arrive Day Ahead Schedule of BBB2
+Current flight Index : 11
+Received Departure Day Ahead Schedule of AAA905
+Current flight Index : 12
+Received Departure Day Ahead Schedule of AAA904
+Current flight Index : 13
+Received Departure Day Ahead Schedule of AAA903
+Current flight Index : 14
+Received Departure Day Ahead Schedule of AAA902
+Current flight Index : 15
+Received Departure Day Ahead Schedule of AAA901
+Current flight Index : 16
+Received Arrive Day Ahead Schedule of AAA5
+Current flight Index : 17
+Received Arrive Day Ahead Schedule of AAA4
+Current flight Index : 18
+Received Arrive Day Ahead Schedule of AAA3
+Current flight Index : 19
+Received Arrive Day Ahead Schedule of AAA2
+Current flight Index : 20
+Current Runway List:[[0:10, Available], [0:15, Available], [0:20, Available]]
+FlightBoard after sort:
+[0, AAA1, 2:00, 1]
+[6, BBB901, 3:20, 0]
+[15, AAA901, 3:40, 0]
+[1, BBB1, 5:00, 1]
+[19, AAA2, 5:00, 1]
+[5, BBB902, 5:20, 0]
+[14, AAA902, 5:40, 0]
+[10, BBB2, 7:00, 1]
+[18, AAA3, 11:00, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :2.0
+Simulation Day: 0 Hour: 0 Min: 10
+Current Runway List:[[0:15, Available], [0:20, Available], [0:25, Available]]
+Current time step :3.0
+Simulation Day: 0 Hour: 0 Min: 15
+Current Runway List:[[0:20, Available], [0:25, Available], [0:30, Available]]
+Current time step :4.0
+Simulation Day: 0 Hour: 0 Min: 20
+Current Runway List:[[0:25, Available], [0:30, Available], [0:35, Available]]
+Current time step :5.0
+Simulation Day: 0 Hour: 0 Min: 25
+Current Runway List:[[0:30, Available], [0:35, Available], [0:40, Available]]
+Current time step :6.0
+Simulation Day: 0 Hour: 0 Min: 30
+Current Runway List:[[0:35, Available], [0:40, Available], [0:45, Available]]
+Current time step :7.0
+Simulation Day: 0 Hour: 0 Min: 35
+Current Runway List:[[0:40, Available], [0:45, Available], [0:50, Available]]
+Current time step :8.0
+Simulation Day: 0 Hour: 0 Min: 40
+Current Runway List:[[0:45, Available], [0:50, Available], [0:55, Available]]
+Current time step :9.0
+Simulation Day: 0 Hour: 0 Min: 45
+Current Runway List:[[0:50, Available], [0:55, Available], [1:00, Available]]
+Current time step :10.0
+Simulation Day: 0 Hour: 0 Min: 50
+Current Runway List:[[0:55, Available], [1:00, Available], [1:05, Available]]
+Current time step :11.0
+Simulation Day: 0 Hour: 0 Min: 55
+Current Runway List:[[1:00, Available], [1:05, Available], [1:10, Available]]
+Current time step :12.0
+Simulation Day: 0 Hour: 1 Min: 0
+Current Runway List:[[1:05, Available], [1:10, Available], [1:15, Available]]
+Current time step :13.0
+Simulation Day: 0 Hour: 1 Min: 5
+Current 1st Request List:[[AAA1, 1:00]]
+Current Runway List:[[1:10, Available], [1:15, Available], [1:20, Available]]
+FlightBoard after sort:
+[0, AAA1, 2:00, 1]
+[6, BBB901, 3:20, 0]
+[15, AAA901, 3:40, 0]
+[1, BBB1, 5:00, 1]
+[19, AAA2, 5:00, 1]
+[5, BBB902, 5:20, 0]
+[14, AAA902, 5:40, 0]
+[10, BBB2, 7:00, 1]
+[18, AAA3, 11:00, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :14.0
+Simulation Day: 0 Hour: 1 Min: 10
+Current Runway List:[[1:15, Available], [1:20, Available], [1:25, Available]]
+Current time step :15.0
+Simulation Day: 0 Hour: 1 Min: 15
+Current Runway List:[[1:20, Available], [1:25, Available], [1:30, Available]]
+Current time step :16.0
+Simulation Day: 0 Hour: 1 Min: 20
+Current Runway List:[[1:25, Available], [1:30, Available], [1:35, Available]]
+Current time step :17.0
+Simulation Day: 0 Hour: 1 Min: 25
+Current Runway List:[[1:30, Available], [1:35, Available], [1:40, Available]]
+Current time step :18.0
+Simulation Day: 0 Hour: 1 Min: 30
+Current Runway List:[[1:35, Available], [1:40, Available], [1:45, Available]]
+Current time step :19.0
+Simulation Day: 0 Hour: 1 Min: 35
+Current Runway List:[[1:40, Available], [1:45, Available], [1:50, Available]]
+Current time step :20.0
+Simulation Day: 0 Hour: 1 Min: 40
+Current Runway List:[[1:45, Available], [1:50, Available], [1:55, Available]]
+Current time step :21.0
+Simulation Day: 0 Hour: 1 Min: 45
+Current Runway List:[[1:50, Available], [1:55, Available], [2:00, Available]]
+Current time step :22.0
+Simulation Day: 0 Hour: 1 Min: 50
+Current 2nd Request List:[[AAA1, 1:45]]
+Current Runway List:[[1:55, Available], [2:00, Available], [2:05, AAA1]]
+FlightBoard after sort:
+[0, AAA1, 2:05, 1]
+[6, BBB901, 3:20, 0]
+[15, AAA901, 3:40, 0]
+[1, BBB1, 5:00, 1]
+[19, AAA2, 5:00, 1]
+[5, BBB902, 5:20, 0]
+[14, AAA902, 5:40, 0]
+[10, BBB2, 7:00, 1]
+[18, AAA3, 11:00, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :23.0
+Simulation Day: 0 Hour: 1 Min: 55
+Current Runway List:[[2:00, Available], [2:05, AAA1], [2:10, Available]]
+Current time step :24.0
+Simulation Day: 0 Hour: 2 Min: 0
+Current Runway List:[[2:05, AAA1], [2:10, Available], [2:15, Available]]
+Current time step :25.0
+Simulation Day: 0 Hour: 2 Min: 5
+Current Runway List:[[2:10, Available], [2:15, Available], [2:20, Available]]
+FlightBoard after sort:
+[6, BBB901, 3:20, 0]
+[15, AAA901, 3:40, 0]
+[1, BBB1, 5:00, 1]
+[19, AAA2, 5:00, 1]
+[5, BBB902, 5:20, 0]
+[14, AAA902, 5:40, 0]
+[10, BBB2, 7:00, 1]
+[18, AAA3, 11:00, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :26.0
+Simulation Day: 0 Hour: 2 Min: 10
+Current Runway List:[[2:15, Available], [2:20, Available], [2:25, Available]]
+Current time step :27.0
+Simulation Day: 0 Hour: 2 Min: 15
+Current Runway List:[[2:20, Available], [2:25, Available], [2:30, Available]]
+Current time step :28.0
+Simulation Day: 0 Hour: 2 Min: 20
+Current Runway List:[[2:25, Available], [2:30, Available], [2:35, Available]]
+Current time step :29.0
+Simulation Day: 0 Hour: 2 Min: 25
+Current Runway List:[[2:30, Available], [2:35, Available], [2:40, Available]]
+Current time step :30.0
+Simulation Day: 0 Hour: 2 Min: 30
+Current Runway List:[[2:35, Available], [2:40, Available], [2:45, Available]]
+Current time step :31.0
+Simulation Day: 0 Hour: 2 Min: 35
+Current Runway List:[[2:40, Available], [2:45, Available], [2:50, Available]]
+Current time step :32.0
+Simulation Day: 0 Hour: 2 Min: 40
+Current Runway List:[[2:45, Available], [2:50, Available], [2:55, Available]]
+Current time step :33.0
+Simulation Day: 0 Hour: 2 Min: 45
+Current Runway List:[[2:50, Available], [2:55, Available], [3:00, Available]]
+Current time step :34.0
+Simulation Day: 0 Hour: 2 Min: 50
+Current Runway List:[[2:55, Available], [3:00, Available], [3:05, Available]]
+Current time step :35.0
+Simulation Day: 0 Hour: 2 Min: 55
+Current Runway List:[[3:00, Available], [3:05, Available], [3:10, Available]]
+Current time step :36.0
+Simulation Day: 0 Hour: 3 Min: 0
+Current Runway List:[[3:05, Available], [3:10, Available], [3:15, Available]]
+Current time step :37.0
+Simulation Day: 0 Hour: 3 Min: 5
+Current Runway List:[[3:10, Available], [3:15, Available], [3:20, Available]]
+Current time step :38.0
+Simulation Day: 0 Hour: 3 Min: 10
+Current Runway List:[[3:15, Available], [3:20, Available], [3:25, Available]]
+Current time step :39.0
+Simulation Day: 0 Hour: 3 Min: 15
+Current Runway List:[[3:20, Available], [3:25, Available], [3:30, Available]]
+Current time step :40.0
+Simulation Day: 0 Hour: 3 Min: 20
+Current Runway List:[[3:25, Available], [3:30, Available], [3:35, Available]]
+FlightBoard after sort:
+[15, AAA901, 3:40, 0]
+[1, BBB1, 5:00, 1]
+[19, AAA2, 5:00, 1]
+[5, BBB902, 5:20, 0]
+[14, AAA902, 5:40, 0]
+[10, BBB2, 7:00, 1]
+[18, AAA3, 11:00, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :41.0
+Simulation Day: 0 Hour: 3 Min: 25
+Current Runway List:[[3:30, Available], [3:35, Available], [3:40, Available]]
+Current time step :42.0
+Simulation Day: 0 Hour: 3 Min: 30
+Current Runway List:[[3:35, Available], [3:40, Available], [3:45, Available]]
+Current time step :43.0
+Simulation Day: 0 Hour: 3 Min: 35
+Current Runway List:[[3:40, Available], [3:45, Available], [3:50, Available]]
+Current time step :44.0
+Simulation Day: 0 Hour: 3 Min: 40
+Current Runway List:[[3:45, Available], [3:50, Available], [3:55, Available]]
+FlightBoard after sort:
+[1, BBB1, 5:00, 1]
+[19, AAA2, 5:00, 1]
+[5, BBB902, 5:20, 0]
+[14, AAA902, 5:40, 0]
+[10, BBB2, 7:00, 1]
+[18, AAA3, 11:00, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :45.0
+Simulation Day: 0 Hour: 3 Min: 45
+Current Runway List:[[3:50, Available], [3:55, Available], [4:00, Available]]
+Current time step :46.0
+Simulation Day: 0 Hour: 3 Min: 50
+Current Runway List:[[3:55, Available], [4:00, Available], [4:05, Available]]
+Current time step :47.0
+Simulation Day: 0 Hour: 3 Min: 55
+Current Runway List:[[4:00, Available], [4:05, Available], [4:10, Available]]
+Current time step :48.0
+Simulation Day: 0 Hour: 4 Min: 0
+Current Runway List:[[4:05, Available], [4:10, Available], [4:15, Available]]
+Current time step :49.0
+Simulation Day: 0 Hour: 4 Min: 5
+Current 1st Request List:[[AAA2, 4:00], [BBB1, 4:00]]
+Current Runway List:[[4:10, Available], [4:15, Available], [4:20, Available]]
+FlightBoard after sort:
+[1, BBB1, 5:00, 1]
+[19, AAA2, 5:00, 1]
+[5, BBB902, 5:20, 0]
+[14, AAA902, 5:40, 0]
+[10, BBB2, 7:00, 1]
+[18, AAA3, 11:00, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :50.0
+Simulation Day: 0 Hour: 4 Min: 10
+Current Runway List:[[4:15, Available], [4:20, Available], [4:25, Available]]
+Current time step :51.0
+Simulation Day: 0 Hour: 4 Min: 15
+Current Runway List:[[4:20, Available], [4:25, Available], [4:30, Available]]
+Current time step :52.0
+Simulation Day: 0 Hour: 4 Min: 20
+Current Runway List:[[4:25, Available], [4:30, Available], [4:35, Available]]
+Current time step :53.0
+Simulation Day: 0 Hour: 4 Min: 25
+Current Runway List:[[4:30, Available], [4:35, Available], [4:40, Available]]
+Current time step :54.0
+Simulation Day: 0 Hour: 4 Min: 30
+Current Runway List:[[4:35, Available], [4:40, Available], [4:45, Available]]
+Current time step :55.0
+Simulation Day: 0 Hour: 4 Min: 35
+Current Runway List:[[4:40, Available], [4:45, Available], [4:50, Available]]
+Current time step :56.0
+Simulation Day: 0 Hour: 4 Min: 40
+Current Runway List:[[4:45, Available], [4:50, Available], [4:55, Available]]
+Current time step :57.0
+Simulation Day: 0 Hour: 4 Min: 45
+Current Runway List:[[4:50, Available], [4:55, Available], [5:00, Available]]
+Current time step :58.0
+Simulation Day: 0 Hour: 4 Min: 50
+Current 2nd Request List:[[AAA2, 4:45], [BBB1, 4:45]]
+Current Runway List:[[4:55, Available], [5:00, Available], [5:05, AAA2], [5:10, BBB1]]
+FlightBoard after sort:
+[19, AAA2, 5:05, 1]
+[1, BBB1, 5:10, 1]
+[5, BBB902, 5:20, 0]
+[14, AAA902, 5:40, 0]
+[10, BBB2, 7:00, 1]
+[18, AAA3, 11:00, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :59.0
+Simulation Day: 0 Hour: 4 Min: 55
+Current Runway List:[[5:00, Available], [5:05, AAA2], [5:10, BBB1]]
+Current time step :60.0
+Simulation Day: 0 Hour: 5 Min: 0
+Current Runway List:[[5:05, AAA2], [5:10, BBB1], [5:15, Available]]
+Current time step :61.0
+Simulation Day: 0 Hour: 5 Min: 5
+Current Runway List:[[5:10, BBB1], [5:15, Available], [5:20, Available]]
+FlightBoard after sort:
+[1, BBB1, 5:10, 1]
+[5, BBB902, 5:20, 0]
+[14, AAA902, 5:40, 0]
+[10, BBB2, 7:00, 1]
+[18, AAA3, 11:00, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :62.0
+Simulation Day: 0 Hour: 5 Min: 10
+Current Runway List:[[5:15, Available], [5:20, Available], [5:25, Available]]
+FlightBoard after sort:
+[5, BBB902, 5:20, 0]
+[14, AAA902, 5:40, 0]
+[10, BBB2, 7:00, 1]
+[18, AAA3, 11:00, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :63.0
+Simulation Day: 0 Hour: 5 Min: 15
+Current Runway List:[[5:20, Available], [5:25, Available], [5:30, Available]]
+Current time step :64.0
+Simulation Day: 0 Hour: 5 Min: 20
+Current Runway List:[[5:25, Available], [5:30, Available], [5:35, Available]]
+FlightBoard after sort:
+[14, AAA902, 5:40, 0]
+[10, BBB2, 7:00, 1]
+[18, AAA3, 11:00, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :65.0
+Simulation Day: 0 Hour: 5 Min: 25
+Current Runway List:[[5:30, Available], [5:35, Available], [5:40, Available]]
+Current time step :66.0
+Simulation Day: 0 Hour: 5 Min: 30
+Current Runway List:[[5:35, Available], [5:40, Available], [5:45, Available]]
+Current time step :67.0
+Simulation Day: 0 Hour: 5 Min: 35
+Current Runway List:[[5:40, Available], [5:45, Available], [5:50, Available]]
+Current time step :68.0
+Simulation Day: 0 Hour: 5 Min: 40
+Current Runway List:[[5:45, Available], [5:50, Available], [5:55, Available]]
+FlightBoard after sort:
+[10, BBB2, 7:00, 1]
+[18, AAA3, 11:00, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :69.0
+Simulation Day: 0 Hour: 5 Min: 45
+Current Runway List:[[5:50, Available], [5:55, Available], [6:00, Available]]
+Current time step :70.0
+Simulation Day: 0 Hour: 5 Min: 50
+Current Runway List:[[5:55, Available], [6:00, Available], [6:05, Available]]
+Current time step :71.0
+Simulation Day: 0 Hour: 5 Min: 55
+Current Runway List:[[6:00, Available], [6:05, Available], [6:10, Available]]
+Current time step :72.0
+Simulation Day: 0 Hour: 6 Min: 0
+Current Runway List:[[6:05, Available], [6:10, Available], [6:15, Available]]
+Current time step :73.0
+Simulation Day: 0 Hour: 6 Min: 5
+Current 1st Request List:[[BBB2, 6:00]]
+Current Runway List:[[6:10, Available], [6:15, Available], [6:20, Available]]
+FlightBoard after sort:
+[10, BBB2, 7:00, 1]
+[18, AAA3, 11:00, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :74.0
+Simulation Day: 0 Hour: 6 Min: 10
+Current Runway List:[[6:15, Available], [6:20, Available], [6:25, Available]]
+Current time step :75.0
+Simulation Day: 0 Hour: 6 Min: 15
+Current Runway List:[[6:20, Available], [6:25, Available], [6:30, Available]]
+Current time step :76.0
+Simulation Day: 0 Hour: 6 Min: 20
+Current Runway List:[[6:25, Available], [6:30, Available], [6:35, Available]]
+Current time step :77.0
+Simulation Day: 0 Hour: 6 Min: 25
+Current Runway List:[[6:30, Available], [6:35, Available], [6:40, Available]]
+Current time step :78.0
+Simulation Day: 0 Hour: 6 Min: 30
+Current Runway List:[[6:35, Available], [6:40, Available], [6:45, Available]]
+Current time step :79.0
+Simulation Day: 0 Hour: 6 Min: 35
+Current Runway List:[[6:40, Available], [6:45, Available], [6:50, Available]]
+Current time step :80.0
+Simulation Day: 0 Hour: 6 Min: 40
+Current Runway List:[[6:45, Available], [6:50, Available], [6:55, Available]]
+Current time step :81.0
+Simulation Day: 0 Hour: 6 Min: 45
+Current Runway List:[[6:50, Available], [6:55, Available], [7:00, Available]]
+Current time step :82.0
+Simulation Day: 0 Hour: 6 Min: 50
+Current 2nd Request List:[[BBB2, 6:45]]
+Current Runway List:[[6:55, Available], [7:00, Available], [7:05, BBB2]]
+FlightBoard after sort:
+[10, BBB2, 7:05, 1]
+[18, AAA3, 11:00, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :83.0
+Simulation Day: 0 Hour: 6 Min: 55
+Current Runway List:[[7:00, Available], [7:05, BBB2], [7:10, Available]]
+Current time step :84.0
+Simulation Day: 0 Hour: 7 Min: 0
+Current Runway List:[[7:05, BBB2], [7:10, Available], [7:15, Available]]
+Current time step :85.0
+Simulation Day: 0 Hour: 7 Min: 5
+Current Runway List:[[7:10, Available], [7:15, Available], [7:20, Available]]
+FlightBoard after sort:
+[18, AAA3, 11:00, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :86.0
+Simulation Day: 0 Hour: 7 Min: 10
+Current Runway List:[[7:15, Available], [7:20, Available], [7:25, Available]]
+Current time step :87.0
+Simulation Day: 0 Hour: 7 Min: 15
+Current Runway List:[[7:20, Available], [7:25, Available], [7:30, Available]]
+Current time step :88.0
+Simulation Day: 0 Hour: 7 Min: 20
+Current Runway List:[[7:25, Available], [7:30, Available], [7:35, Available]]
+Current time step :89.0
+Simulation Day: 0 Hour: 7 Min: 25
+Current Runway List:[[7:30, Available], [7:35, Available], [7:40, Available]]
+Current time step :90.0
+Simulation Day: 0 Hour: 7 Min: 30
+Current Runway List:[[7:35, Available], [7:40, Available], [7:45, Available]]
+Current time step :91.0
+Simulation Day: 0 Hour: 7 Min: 35
+Current Runway List:[[7:40, Available], [7:45, Available], [7:50, Available]]
+Current time step :92.0
+Simulation Day: 0 Hour: 7 Min: 40
+Current Runway List:[[7:45, Available], [7:50, Available], [7:55, Available]]
+Current time step :93.0
+Simulation Day: 0 Hour: 7 Min: 45
+Current Runway List:[[7:50, Available], [7:55, Available], [8:00, Available]]
+Current time step :94.0
+Simulation Day: 0 Hour: 7 Min: 50
+Current Runway List:[[7:55, Available], [8:00, Available], [8:05, Available]]
+Current time step :95.0
+Simulation Day: 0 Hour: 7 Min: 55
+Current Runway List:[[8:00, Available], [8:05, Available], [8:10, Available]]
+Current time step :96.0
+Simulation Day: 0 Hour: 8 Min: 0
+Current Runway List:[[8:05, Available], [8:10, Available], [8:15, Available]]
+Current time step :97.0
+Simulation Day: 0 Hour: 8 Min: 5
+Current Runway List:[[8:10, Available], [8:15, Available], [8:20, Available]]
+Current time step :98.0
+Simulation Day: 0 Hour: 8 Min: 10
+Current Runway List:[[8:15, Available], [8:20, Available], [8:25, Available]]
+Current time step :99.0
+Simulation Day: 0 Hour: 8 Min: 15
+Current Runway List:[[8:20, Available], [8:25, Available], [8:30, Available]]
+Current time step :100.0
+Simulation Day: 0 Hour: 8 Min: 20
+Current Runway List:[[8:25, Available], [8:30, Available], [8:35, Available]]
+Current time step :101.0
+Simulation Day: 0 Hour: 8 Min: 25
+Current Runway List:[[8:30, Available], [8:35, Available], [8:40, Available]]
+Current time step :102.0
+Simulation Day: 0 Hour: 8 Min: 30
+Current Runway List:[[8:35, Available], [8:40, Available], [8:45, Available]]
+Current time step :103.0
+Simulation Day: 0 Hour: 8 Min: 35
+Current Runway List:[[8:40, Available], [8:45, Available], [8:50, Available]]
+Current time step :104.0
+Simulation Day: 0 Hour: 8 Min: 40
+Current Runway List:[[8:45, Available], [8:50, Available], [8:55, Available]]
+Current time step :105.0
+Simulation Day: 0 Hour: 8 Min: 45
+Current Runway List:[[8:50, Available], [8:55, Available], [9:00, Available]]
+Current time step :106.0
+Simulation Day: 0 Hour: 8 Min: 50
+Current Runway List:[[8:55, Available], [9:00, Available], [9:05, Available]]
+Current time step :107.0
+Simulation Day: 0 Hour: 8 Min: 55
+Current Runway List:[[9:00, Available], [9:05, Available], [9:10, Available]]
+Current time step :108.0
+Simulation Day: 0 Hour: 9 Min: 0
+Current Runway List:[[9:05, Available], [9:10, Available], [9:15, Available]]
+Current time step :109.0
+Simulation Day: 0 Hour: 9 Min: 5
+Current Runway List:[[9:10, Available], [9:15, Available], [9:20, Available]]
+Current time step :110.0
+Simulation Day: 0 Hour: 9 Min: 10
+Current Runway List:[[9:15, Available], [9:20, Available], [9:25, Available]]
+Current time step :111.0
+Simulation Day: 0 Hour: 9 Min: 15
+Current Runway List:[[9:20, Available], [9:25, Available], [9:30, Available]]
+Current time step :112.0
+Simulation Day: 0 Hour: 9 Min: 20
+Current Runway List:[[9:25, Available], [9:30, Available], [9:35, Available]]
+Current time step :113.0
+Simulation Day: 0 Hour: 9 Min: 25
+Current Runway List:[[9:30, Available], [9:35, Available], [9:40, Available]]
+Current time step :114.0
+Simulation Day: 0 Hour: 9 Min: 30
+Current Runway List:[[9:35, Available], [9:40, Available], [9:45, Available]]
+Current time step :115.0
+Simulation Day: 0 Hour: 9 Min: 35
+Current Runway List:[[9:40, Available], [9:45, Available], [9:50, Available]]
+Current time step :116.0
+Simulation Day: 0 Hour: 9 Min: 40
+Current Runway List:[[9:45, Available], [9:50, Available], [9:55, Available]]
+Current time step :117.0
+Simulation Day: 0 Hour: 9 Min: 45
+Current Runway List:[[9:50, Available], [9:55, Available], [10:00, Available]]
+Current time step :118.0
+Simulation Day: 0 Hour: 9 Min: 50
+Current Runway List:[[9:55, Available], [10:00, Available], [10:05, Available]]
+Current time step :119.0
+Simulation Day: 0 Hour: 9 Min: 55
+Current Runway List:[[10:00, Available], [10:05, Available], [10:10, Available]]
+Current time step :120.0
+Simulation Day: 0 Hour: 10 Min: 0
+Current Runway List:[[10:05, Available], [10:10, Available], [10:15, Available]]
+Current time step :121.0
+Simulation Day: 0 Hour: 10 Min: 5
+Current 1st Request List:[[AAA3, 10:00]]
+Current Runway List:[[10:10, Available], [10:15, Available], [10:20, Available]]
+FlightBoard after sort:
+[18, AAA3, 11:00, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :122.0
+Simulation Day: 0 Hour: 10 Min: 10
+Current Runway List:[[10:15, Available], [10:20, Available], [10:25, Available]]
+Current time step :123.0
+Simulation Day: 0 Hour: 10 Min: 15
+Current Runway List:[[10:20, Available], [10:25, Available], [10:30, Available]]
+Current time step :124.0
+Simulation Day: 0 Hour: 10 Min: 20
+Current Runway List:[[10:25, Available], [10:30, Available], [10:35, Available]]
+Current time step :125.0
+Simulation Day: 0 Hour: 10 Min: 25
+Current Runway List:[[10:30, Available], [10:35, Available], [10:40, Available]]
+Current time step :126.0
+Simulation Day: 0 Hour: 10 Min: 30
+Current Runway List:[[10:35, Available], [10:40, Available], [10:45, Available]]
+Current time step :127.0
+Simulation Day: 0 Hour: 10 Min: 35
+Current Runway List:[[10:40, Available], [10:45, Available], [10:50, Available]]
+Current time step :128.0
+Simulation Day: 0 Hour: 10 Min: 40
+Current Runway List:[[10:45, Available], [10:50, Available], [10:55, Available]]
+Current time step :129.0
+Simulation Day: 0 Hour: 10 Min: 45
+Current Runway List:[[10:50, Available], [10:55, Available], [11:00, Available]]
+Current time step :130.0
+Simulation Day: 0 Hour: 10 Min: 50
+Current 2nd Request List:[[AAA3, 10:45]]
+Current Runway List:[[10:55, Available], [11:00, Available], [11:05, AAA3]]
+FlightBoard after sort:
+[18, AAA3, 11:05, 1]
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :131.0
+Simulation Day: 0 Hour: 10 Min: 55
+Current Runway List:[[11:00, Available], [11:05, AAA3], [11:10, Available]]
+Current time step :132.0
+Simulation Day: 0 Hour: 11 Min: 0
+Current Runway List:[[11:05, AAA3], [11:10, Available], [11:15, Available]]
+Current time step :133.0
+Simulation Day: 0 Hour: 11 Min: 5
+Current Runway List:[[11:10, Available], [11:15, Available], [11:20, Available]]
+FlightBoard after sort:
+[4, BBB903, 11:20, 0]
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :134.0
+Simulation Day: 0 Hour: 11 Min: 10
+Current Runway List:[[11:15, Available], [11:20, Available], [11:25, Available]]
+Current time step :135.0
+Simulation Day: 0 Hour: 11 Min: 15
+Current Runway List:[[11:20, Available], [11:25, Available], [11:30, Available]]
+Current time step :136.0
+Simulation Day: 0 Hour: 11 Min: 20
+Current Runway List:[[11:25, Available], [11:30, Available], [11:35, Available]]
+FlightBoard after sort:
+[13, AAA903, 11:40, 0]
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :137.0
+Simulation Day: 0 Hour: 11 Min: 25
+Current Runway List:[[11:30, Available], [11:35, Available], [11:40, Available]]
+Current time step :138.0
+Simulation Day: 0 Hour: 11 Min: 30
+Current Runway List:[[11:35, Available], [11:40, Available], [11:45, Available]]
+Current time step :139.0
+Simulation Day: 0 Hour: 11 Min: 35
+Current Runway List:[[11:40, Available], [11:45, Available], [11:50, Available]]
+Current time step :140.0
+Simulation Day: 0 Hour: 11 Min: 40
+Current Runway List:[[11:45, Available], [11:50, Available], [11:55, Available]]
+FlightBoard after sort:
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :141.0
+Simulation Day: 0 Hour: 11 Min: 45
+Current Runway List:[[11:50, Available], [11:55, Available], [12:00, Available]]
+Current time step :142.0
+Simulation Day: 0 Hour: 11 Min: 50
+Current Runway List:[[11:55, Available], [12:00, Available], [12:05, Available]]
+Current time step :143.0
+Simulation Day: 0 Hour: 11 Min: 55
+Current Runway List:[[12:00, Available], [12:05, Available], [12:10, Available]]
+Current time step :144.0
+Simulation Day: 0 Hour: 12 Min: 0
+Current Runway List:[[12:05, Available], [12:10, Available], [12:15, Available]]
+Current time step :145.0
+Simulation Day: 0 Hour: 12 Min: 5
+Current 1st Request List:[[BBB3, 12:00]]
+Current Runway List:[[12:10, Available], [12:15, Available], [12:20, Available]]
+FlightBoard after sort:
+[9, BBB3, 13:00, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :146.0
+Simulation Day: 0 Hour: 12 Min: 10
+Current Runway List:[[12:15, Available], [12:20, Available], [12:25, Available]]
+Current time step :147.0
+Simulation Day: 0 Hour: 12 Min: 15
+Current Runway List:[[12:20, Available], [12:25, Available], [12:30, Available]]
+Current time step :148.0
+Simulation Day: 0 Hour: 12 Min: 20
+Current Runway List:[[12:25, Available], [12:30, Available], [12:35, Available]]
+Current time step :149.0
+Simulation Day: 0 Hour: 12 Min: 25
+Current Runway List:[[12:30, Available], [12:35, Available], [12:40, Available]]
+Current time step :150.0
+Simulation Day: 0 Hour: 12 Min: 30
+Current Runway List:[[12:35, Available], [12:40, Available], [12:45, Available]]
+Current time step :151.0
+Simulation Day: 0 Hour: 12 Min: 35
+Current Runway List:[[12:40, Available], [12:45, Available], [12:50, Available]]
+Current time step :152.0
+Simulation Day: 0 Hour: 12 Min: 40
+Current Runway List:[[12:45, Available], [12:50, Available], [12:55, Available]]
+Current time step :153.0
+Simulation Day: 0 Hour: 12 Min: 45
+Current Runway List:[[12:50, Available], [12:55, Available], [13:00, Available]]
+Current time step :154.0
+Simulation Day: 0 Hour: 12 Min: 50
+Current 2nd Request List:[[BBB3, 12:45]]
+Current Runway List:[[12:55, Available], [13:00, Available], [13:05, BBB3]]
+FlightBoard after sort:
+[9, BBB3, 13:05, 1]
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :155.0
+Simulation Day: 0 Hour: 12 Min: 55
+Current Runway List:[[13:00, Available], [13:05, BBB3], [13:10, Available]]
+Current time step :156.0
+Simulation Day: 0 Hour: 13 Min: 0
+Current Runway List:[[13:05, BBB3], [13:10, Available], [13:15, Available]]
+Current time step :157.0
+Simulation Day: 0 Hour: 13 Min: 5
+Current 1st Request List:[[AAA4, 13:00]]
+Current Runway List:[[13:10, Available], [13:15, Available], [13:20, Available]]
+FlightBoard after sort:
+[17, AAA4, 14:00, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :158.0
+Simulation Day: 0 Hour: 13 Min: 10
+Current Runway List:[[13:15, Available], [13:20, Available], [13:25, Available]]
+Current time step :159.0
+Simulation Day: 0 Hour: 13 Min: 15
+Current Runway List:[[13:20, Available], [13:25, Available], [13:30, Available]]
+Current time step :160.0
+Simulation Day: 0 Hour: 13 Min: 20
+Current Runway List:[[13:25, Available], [13:30, Available], [13:35, Available]]
+Current time step :161.0
+Simulation Day: 0 Hour: 13 Min: 25
+Current Runway List:[[13:30, Available], [13:35, Available], [13:40, Available]]
+Current time step :162.0
+Simulation Day: 0 Hour: 13 Min: 30
+Current Runway List:[[13:35, Available], [13:40, Available], [13:45, Available]]
+Current time step :163.0
+Simulation Day: 0 Hour: 13 Min: 35
+Current Runway List:[[13:40, Available], [13:45, Available], [13:50, Available]]
+Current time step :164.0
+Simulation Day: 0 Hour: 13 Min: 40
+Current Runway List:[[13:45, Available], [13:50, Available], [13:55, Available]]
+Current time step :165.0
+Simulation Day: 0 Hour: 13 Min: 45
+Current Runway List:[[13:50, Available], [13:55, Available], [14:00, Available]]
+Current time step :166.0
+Simulation Day: 0 Hour: 13 Min: 50
+Current 2nd Request List:[[AAA4, 13:45]]
+Current Runway List:[[13:55, Available], [14:00, Available], [14:05, AAA4]]
+FlightBoard after sort:
+[17, AAA4, 14:05, 1]
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :167.0
+Simulation Day: 0 Hour: 13 Min: 55
+Current Runway List:[[14:00, Available], [14:05, AAA4], [14:10, Available]]
+Current time step :168.0
+Simulation Day: 0 Hour: 14 Min: 0
+Current Runway List:[[14:05, AAA4], [14:10, Available], [14:15, Available]]
+Current time step :169.0
+Simulation Day: 0 Hour: 14 Min: 5
+Current Runway List:[[14:10, Available], [14:15, Available], [14:20, Available]]
+FlightBoard after sort:
+[3, BBB904, 14:20, 0]
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :170.0
+Simulation Day: 0 Hour: 14 Min: 10
+Current Runway List:[[14:15, Available], [14:20, Available], [14:25, Available]]
+Current time step :171.0
+Simulation Day: 0 Hour: 14 Min: 15
+Current Runway List:[[14:20, Available], [14:25, Available], [14:30, Available]]
+Current time step :172.0
+Simulation Day: 0 Hour: 14 Min: 20
+Current Runway List:[[14:25, Available], [14:30, Available], [14:35, Available]]
+FlightBoard after sort:
+[12, AAA904, 14:40, 0]
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :173.0
+Simulation Day: 0 Hour: 14 Min: 25
+Current Runway List:[[14:30, Available], [14:35, Available], [14:40, Available]]
+Current time step :174.0
+Simulation Day: 0 Hour: 14 Min: 30
+Current Runway List:[[14:35, Available], [14:40, Available], [14:45, Available]]
+Current time step :175.0
+Simulation Day: 0 Hour: 14 Min: 35
+Current Runway List:[[14:40, Available], [14:45, Available], [14:50, Available]]
+Current time step :176.0
+Simulation Day: 0 Hour: 14 Min: 40
+Current Runway List:[[14:45, Available], [14:50, Available], [14:55, Available]]
+FlightBoard after sort:
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :177.0
+Simulation Day: 0 Hour: 14 Min: 45
+Current Runway List:[[14:50, Available], [14:55, Available], [15:00, Available]]
+Current time step :178.0
+Simulation Day: 0 Hour: 14 Min: 50
+Current Runway List:[[14:55, Available], [15:00, Available], [15:05, Available]]
+Current time step :179.0
+Simulation Day: 0 Hour: 14 Min: 55
+Current Runway List:[[15:00, Available], [15:05, Available], [15:10, Available]]
+Current time step :180.0
+Simulation Day: 0 Hour: 15 Min: 0
+Current Runway List:[[15:05, Available], [15:10, Available], [15:15, Available]]
+Current time step :181.0
+Simulation Day: 0 Hour: 15 Min: 5
+Current 1st Request List:[[BBB4, 15:00]]
+Current Runway List:[[15:10, Available], [15:15, Available], [15:20, Available]]
+FlightBoard after sort:
+[8, BBB4, 16:00, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :182.0
+Simulation Day: 0 Hour: 15 Min: 10
+Current Runway List:[[15:15, Available], [15:20, Available], [15:25, Available]]
+Current time step :183.0
+Simulation Day: 0 Hour: 15 Min: 15
+Current Runway List:[[15:20, Available], [15:25, Available], [15:30, Available]]
+Current time step :184.0
+Simulation Day: 0 Hour: 15 Min: 20
+Current Runway List:[[15:25, Available], [15:30, Available], [15:35, Available]]
+Current time step :185.0
+Simulation Day: 0 Hour: 15 Min: 25
+Current Runway List:[[15:30, Available], [15:35, Available], [15:40, Available]]
+Current time step :186.0
+Simulation Day: 0 Hour: 15 Min: 30
+Current Runway List:[[15:35, Available], [15:40, Available], [15:45, Available]]
+Current time step :187.0
+Simulation Day: 0 Hour: 15 Min: 35
+Current Runway List:[[15:40, Available], [15:45, Available], [15:50, Available]]
+Current time step :188.0
+Simulation Day: 0 Hour: 15 Min: 40
+Current Runway List:[[15:45, Available], [15:50, Available], [15:55, Available]]
+Current time step :189.0
+Simulation Day: 0 Hour: 15 Min: 45
+Current Runway List:[[15:50, Available], [15:55, Available], [16:00, Available]]
+Current time step :190.0
+Simulation Day: 0 Hour: 15 Min: 50
+Current 2nd Request List:[[BBB4, 15:45]]
+Current Runway List:[[15:55, Available], [16:00, Available], [16:05, BBB4]]
+FlightBoard after sort:
+[8, BBB4, 16:05, 1]
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :191.0
+Simulation Day: 0 Hour: 15 Min: 55
+Current Runway List:[[16:00, Available], [16:05, BBB4], [16:10, Available]]
+Current time step :192.0
+Simulation Day: 0 Hour: 16 Min: 0
+Current Runway List:[[16:05, BBB4], [16:10, Available], [16:15, Available]]
+Current time step :193.0
+Simulation Day: 0 Hour: 16 Min: 5
+Current Runway List:[[16:10, Available], [16:15, Available], [16:20, Available]]
+FlightBoard after sort:
+[16, AAA5, 20:00, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :194.0
+Simulation Day: 0 Hour: 16 Min: 10
+Current Runway List:[[16:15, Available], [16:20, Available], [16:25, Available]]
+Current time step :195.0
+Simulation Day: 0 Hour: 16 Min: 15
+Current Runway List:[[16:20, Available], [16:25, Available], [16:30, Available]]
+Current time step :196.0
+Simulation Day: 0 Hour: 16 Min: 20
+Current Runway List:[[16:25, Available], [16:30, Available], [16:35, Available]]
+Current time step :197.0
+Simulation Day: 0 Hour: 16 Min: 25
+Current Runway List:[[16:30, Available], [16:35, Available], [16:40, Available]]
+Current time step :198.0
+Simulation Day: 0 Hour: 16 Min: 30
+Current Runway List:[[16:35, Available], [16:40, Available], [16:45, Available]]
+Current time step :199.0
+Simulation Day: 0 Hour: 16 Min: 35
+Current Runway List:[[16:40, Available], [16:45, Available], [16:50, Available]]
+Current time step :200.0
+Simulation Day: 0 Hour: 16 Min: 40
+Current Runway List:[[16:45, Available], [16:50, Available], [16:55, Available]]
+Current time step :201.0
+Simulation Day: 0 Hour: 16 Min: 45
+Current Runway List:[[16:50, Available], [16:55, Available], [17:00, Available]]
+Current time step :202.0
+Simulation Day: 0 Hour: 16 Min: 50
+Current Runway List:[[16:55, Available], [17:00, Available], [17:05, Available]]
+Current time step :203.0
+Simulation Day: 0 Hour: 16 Min: 55
+Current Runway List:[[17:00, Available], [17:05, Available], [17:10, Available]]
+Current time step :204.0
+Simulation Day: 0 Hour: 17 Min: 0
+Current Runway List:[[17:05, Available], [17:10, Available], [17:15, Available]]
+Current time step :205.0
+Simulation Day: 0 Hour: 17 Min: 5
+Current Runway List:[[17:10, Available], [17:15, Available], [17:20, Available]]
+Current time step :206.0
+Simulation Day: 0 Hour: 17 Min: 10
+Current Runway List:[[17:15, Available], [17:20, Available], [17:25, Available]]
+Current time step :207.0
+Simulation Day: 0 Hour: 17 Min: 15
+Current Runway List:[[17:20, Available], [17:25, Available], [17:30, Available]]
+Current time step :208.0
+Simulation Day: 0 Hour: 17 Min: 20
+Current Runway List:[[17:25, Available], [17:30, Available], [17:35, Available]]
+Current time step :209.0
+Simulation Day: 0 Hour: 17 Min: 25
+Current Runway List:[[17:30, Available], [17:35, Available], [17:40, Available]]
+Current time step :210.0
+Simulation Day: 0 Hour: 17 Min: 30
+Current Runway List:[[17:35, Available], [17:40, Available], [17:45, Available]]
+Current time step :211.0
+Simulation Day: 0 Hour: 17 Min: 35
+Current Runway List:[[17:40, Available], [17:45, Available], [17:50, Available]]
+Current time step :212.0
+Simulation Day: 0 Hour: 17 Min: 40
+Current Runway List:[[17:45, Available], [17:50, Available], [17:55, Available]]
+Current time step :213.0
+Simulation Day: 0 Hour: 17 Min: 45
+Current Runway List:[[17:50, Available], [17:55, Available], [18:00, Available]]
+Current time step :214.0
+Simulation Day: 0 Hour: 17 Min: 50
+Current Runway List:[[17:55, Available], [18:00, Available], [18:05, Available]]
+Current time step :215.0
+Simulation Day: 0 Hour: 17 Min: 55
+Current Runway List:[[18:00, Available], [18:05, Available], [18:10, Available]]
+Current time step :216.0
+Simulation Day: 0 Hour: 18 Min: 0
+Current Runway List:[[18:05, Available], [18:10, Available], [18:15, Available]]
+Current time step :217.0
+Simulation Day: 0 Hour: 18 Min: 5
+Current Runway List:[[18:10, Available], [18:15, Available], [18:20, Available]]
+Current time step :218.0
+Simulation Day: 0 Hour: 18 Min: 10
+Current Runway List:[[18:15, Available], [18:20, Available], [18:25, Available]]
+Current time step :219.0
+Simulation Day: 0 Hour: 18 Min: 15
+Current Runway List:[[18:20, Available], [18:25, Available], [18:30, Available]]
+Current time step :220.0
+Simulation Day: 0 Hour: 18 Min: 20
+Current Runway List:[[18:25, Available], [18:30, Available], [18:35, Available]]
+Current time step :221.0
+Simulation Day: 0 Hour: 18 Min: 25
+Current Runway List:[[18:30, Available], [18:35, Available], [18:40, Available]]
+Current time step :222.0
+Simulation Day: 0 Hour: 18 Min: 30
+Current Runway List:[[18:35, Available], [18:40, Available], [18:45, Available]]
+Current time step :223.0
+Simulation Day: 0 Hour: 18 Min: 35
+Current Runway List:[[18:40, Available], [18:45, Available], [18:50, Available]]
+Current time step :224.0
+Simulation Day: 0 Hour: 18 Min: 40
+Current Runway List:[[18:45, Available], [18:50, Available], [18:55, Available]]
+Current time step :225.0
+Simulation Day: 0 Hour: 18 Min: 45
+Current Runway List:[[18:50, Available], [18:55, Available], [19:00, Available]]
+Current time step :226.0
+Simulation Day: 0 Hour: 18 Min: 50
+Current Runway List:[[18:55, Available], [19:00, Available], [19:05, Available]]
+Current time step :227.0
+Simulation Day: 0 Hour: 18 Min: 55
+Current Runway List:[[19:00, Available], [19:05, Available], [19:10, Available]]
+Current time step :228.0
+Simulation Day: 0 Hour: 19 Min: 0
+Current Runway List:[[19:05, Available], [19:10, Available], [19:15, Available]]
+Current time step :229.0
+Simulation Day: 0 Hour: 19 Min: 5
+Current Runway List:[[19:10, Available], [19:15, Available], [19:20, Available]]
+Current time step :230.0
+Simulation Day: 0 Hour: 19 Min: 10
+Current Runway List:[[19:15, Available], [19:20, Available], [19:25, Available]]
+Current time step :231.0
+Simulation Day: 0 Hour: 19 Min: 15
+Current Runway List:[[19:20, Available], [19:25, Available], [19:30, Available]]
+Current time step :232.0
+Simulation Day: 0 Hour: 19 Min: 20
+Current 1st Request List:[[AAA5, 19:15]]
+Current Runway List:[[19:25, Available], [19:30, Available], [19:35, Available]]
+FlightBoard after sort:
+[16, AAA5, 20:15, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :233.0
+Simulation Day: 0 Hour: 19 Min: 25
+Current Runway List:[[19:30, Available], [19:35, Available], [19:40, Available]]
+Current time step :234.0
+Simulation Day: 0 Hour: 19 Min: 30
+Current Runway List:[[19:35, Available], [19:40, Available], [19:45, Available]]
+Current time step :235.0
+Simulation Day: 0 Hour: 19 Min: 35
+Current Runway List:[[19:40, Available], [19:45, Available], [19:50, Available]]
+Current time step :236.0
+Simulation Day: 0 Hour: 19 Min: 40
+Current Runway List:[[19:45, Available], [19:50, Available], [19:55, Available]]
+Current time step :237.0
+Simulation Day: 0 Hour: 19 Min: 45
+Current Runway List:[[19:50, Available], [19:55, Available], [20:00, Available]]
+Current time step :238.0
+Simulation Day: 0 Hour: 19 Min: 50
+Current 2nd Request List:[[AAA5, 19:45]]
+Current Runway List:[[19:55, Available], [20:00, Available], [20:05, AAA5]]
+FlightBoard after sort:
+[16, AAA5, 20:05, 1]
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :239.0
+Simulation Day: 0 Hour: 19 Min: 55
+Current Runway List:[[20:00, Available], [20:05, AAA5], [20:10, Available]]
+Current time step :240.0
+Simulation Day: 0 Hour: 20 Min: 0
+Current Runway List:[[20:05, AAA5], [20:10, Available], [20:15, Available]]
+Current time step :241.0
+Simulation Day: 0 Hour: 20 Min: 5
+Current Runway List:[[20:10, Available], [20:15, Available], [20:20, Available]]
+FlightBoard after sort:
+[2, BBB905, 20:20, 0]
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :242.0
+Simulation Day: 0 Hour: 20 Min: 10
+Current Runway List:[[20:15, Available], [20:20, Available], [20:25, Available]]
+Current time step :243.0
+Simulation Day: 0 Hour: 20 Min: 15
+Current Runway List:[[20:20, Available], [20:25, Available], [20:30, Available]]
+Current time step :244.0
+Simulation Day: 0 Hour: 20 Min: 20
+Current Runway List:[[20:25, Available], [20:30, Available], [20:35, Available]]
+FlightBoard after sort:
+[11, AAA905, 20:40, 0]
+[7, BBB5, 22:00, 1]
+Current time step :245.0
+Simulation Day: 0 Hour: 20 Min: 25
+Current Runway List:[[20:30, Available], [20:35, Available], [20:40, Available]]
+Current time step :246.0
+Simulation Day: 0 Hour: 20 Min: 30
+Current Runway List:[[20:35, Available], [20:40, Available], [20:45, Available]]
+Current time step :247.0
+Simulation Day: 0 Hour: 20 Min: 35
+Current Runway List:[[20:40, Available], [20:45, Available], [20:50, Available]]
+Current time step :248.0
+Simulation Day: 0 Hour: 20 Min: 40
+Current Runway List:[[20:45, Available], [20:50, Available], [20:55, Available]]
+FlightBoard after sort:
+[7, BBB5, 22:00, 1]
+Current time step :249.0
+Simulation Day: 0 Hour: 20 Min: 45
+Current Runway List:[[20:50, Available], [20:55, Available], [21:00, Available]]
+Current time step :250.0
+Simulation Day: 0 Hour: 20 Min: 50
+Current Runway List:[[20:55, Available], [21:00, Available], [21:05, Available]]
+Current time step :251.0
+Simulation Day: 0 Hour: 20 Min: 55
+Current Runway List:[[21:00, Available], [21:05, Available], [21:10, Available]]
+Current time step :252.0
+Simulation Day: 0 Hour: 21 Min: 0
+Current Runway List:[[21:05, Available], [21:10, Available], [21:15, Available]]
+Current time step :253.0
+Simulation Day: 0 Hour: 21 Min: 5
+Current 1st Request List:[[BBB5, 21:00]]
+Current Runway List:[[21:10, Available], [21:15, Available], [21:20, Available]]
+FlightBoard after sort:
+[7, BBB5, 22:00, 1]
+Current time step :254.0
+Simulation Day: 0 Hour: 21 Min: 10
+Current Runway List:[[21:15, Available], [21:20, Available], [21:25, Available]]
+Current time step :255.0
+Simulation Day: 0 Hour: 21 Min: 15
+Current Runway List:[[21:20, Available], [21:25, Available], [21:30, Available]]
+Current time step :256.0
+Simulation Day: 0 Hour: 21 Min: 20
+Current Runway List:[[21:25, Available], [21:30, Available], [21:35, Available]]
+Current time step :257.0
+Simulation Day: 0 Hour: 21 Min: 25
+Current Runway List:[[21:30, Available], [21:35, Available], [21:40, Available]]
+Current time step :258.0
+Simulation Day: 0 Hour: 21 Min: 30
+Current Runway List:[[21:35, Available], [21:40, Available], [21:45, Available]]
+Current time step :259.0
+Simulation Day: 0 Hour: 21 Min: 35
+Current Runway List:[[21:40, Available], [21:45, Available], [21:50, Available]]
+Current time step :260.0
+Simulation Day: 0 Hour: 21 Min: 40
+Current Runway List:[[21:45, Available], [21:50, Available], [21:55, Available]]
+Current time step :261.0
+Simulation Day: 0 Hour: 21 Min: 45
+Current Runway List:[[21:50, Available], [21:55, Available], [22:00, Available]]
+Current time step :262.0
+Simulation Day: 0 Hour: 21 Min: 50
+Current 2nd Request List:[[BBB5, 21:45]]
+Current Runway List:[[21:55, Available], [22:00, Available], [22:05, BBB5]]
+FlightBoard after sort:
+[7, BBB5, 22:05, 1]
+Current time step :263.0
+Simulation Day: 0 Hour: 21 Min: 55
+Current Runway List:[[22:00, Available], [22:05, BBB5], [22:10, Available]]
+Current time step :264.0
+Simulation Day: 0 Hour: 22 Min: 0
+Current Runway List:[[22:05, BBB5], [22:10, Available], [22:15, Available]]
+Current time step :265.0
+Simulation Day: 0 Hour: 22 Min: 5
+Current Runway List:[[22:10, Available], [22:15, Available], [22:20, Available]]
+FlightBoard after sort:
+Current time step :266.0
+Simulation Day: 0 Hour: 22 Min: 10
+Current Runway List:[[22:15, Available], [22:20, Available], [22:25, Available]]
+Current time step :267.0
+Simulation Day: 0 Hour: 22 Min: 15
+Current Runway List:[[22:20, Available], [22:25, Available], [22:30, Available]]
+Current time step :268.0
+Simulation Day: 0 Hour: 22 Min: 20
+Current Runway List:[[22:25, Available], [22:30, Available], [22:35, Available]]
+Current time step :269.0
+Simulation Day: 0 Hour: 22 Min: 25
+Current Runway List:[[22:30, Available], [22:35, Available], [22:40, Available]]
+Current time step :270.0
+Simulation Day: 0 Hour: 22 Min: 30
+Current Runway List:[[22:35, Available], [22:40, Available], [22:45, Available]]
+Current time step :271.0
+Simulation Day: 0 Hour: 22 Min: 35
+Current Runway List:[[22:40, Available], [22:45, Available], [22:50, Available]]
+Current time step :272.0
+Simulation Day: 0 Hour: 22 Min: 40
+Current Runway List:[[22:45, Available], [22:50, Available], [22:55, Available]]
+Current time step :273.0
+Simulation Day: 0 Hour: 22 Min: 45
+Current Runway List:[[22:50, Available], [22:55, Available], [23:00, Available]]
+Current time step :274.0
+Simulation Day: 0 Hour: 22 Min: 50
+Current Runway List:[[22:55, Available], [23:00, Available], [23:05, Available]]
+Current time step :275.0
+Simulation Day: 0 Hour: 22 Min: 55
+Current Runway List:[[23:00, Available], [23:05, Available], [23:10, Available]]
+Current time step :276.0
+Simulation Day: 0 Hour: 23 Min: 0
+Current Runway List:[[23:05, Available], [23:10, Available], [23:15, Available]]
+Current time step :277.0
+Simulation Day: 0 Hour: 23 Min: 5
+Current Runway List:[[23:10, Available], [23:15, Available], [23:20, Available]]
+Current time step :278.0
+Simulation Day: 0 Hour: 23 Min: 10
+Current Runway List:[[23:15, Available], [23:20, Available], [23:25, Available]]
+Current time step :279.0
+Simulation Day: 0 Hour: 23 Min: 15
+Current Runway List:[[23:20, Available], [23:25, Available], [23:30, Available]]
+Current time step :280.0
+Simulation Day: 0 Hour: 23 Min: 20
+Current Runway List:[[23:25, Available], [23:30, Available], [23:35, Available]]
+Current time step :281.0
+Simulation Day: 0 Hour: 23 Min: 25
+Current Runway List:[[23:30, Available], [23:35, Available], [23:40, Available]]
+Current time step :282.0
+Simulation Day: 0 Hour: 23 Min: 30
+Current Runway List:[[23:35, Available], [23:40, Available], [23:45, Available]]
+Send removal notification for AAA905
+Send removal notification for AAA904
+Send removal notification for AAA901
+Send removal notification for AAA903
+Send removal notification for AAA902
+Send removal notification for BBB901
+Send removal notification for BBB902
+Send removal notification for BBB903
+Send removal notification for BBB904
+Send removal notification for BBB905
+Send removal notification for BBB1
+Send removal notification for AAA5
+Send removal notification for AAA3
+Send removal notification for BBB5
+Send removal notification for AAA4
+Send removal notification for BBB4
+Send removal notification for AAA1
+Send removal notification for BBB3
+Send removal notification for AAA2
+Send removal notification for BBB2
+Current time step :283.0
+Simulation Day: 0 Hour: 23 Min: 35
+Current Runway List:[[23:40, Available], [23:45, Available], [23:50, Available]]
+Current time step :284.0
+Simulation Day: 0 Hour: 23 Min: 40
+Current Runway List:[[23:45, Available], [23:50, Available], [23:55, Available]]
+Current time step :285.0
+Simulation Day: 0 Hour: 23 Min: 45
+Current Runway List:[[23:50, Available], [23:55, Available], [0:00, Available]]
+Unregister Flight Object AAA905
+Unregister Flight Object AAA904
+Unregister Flight Object AAA901
+Unregister Flight Object AAA903
+Unregister Flight Object AAA902
+Unregister Flight Object BBB901
+Unregister Flight Object BBB902
+Unregister Flight Object BBB903
+Unregister Flight Object BBB904
+Unregister Flight Object BBB905
+Unregister Flight Object BBB1
+Unregister Flight Object AAA5
+Unregister Flight Object AAA3
+Unregister Flight Object BBB5
+Unregister Flight Object AAA4
+Unregister Flight Object BBB4
+Unregister Flight Object AAA1
+Unregister Flight Object BBB3
+Unregister Flight Object AAA2
+Unregister Flight Object BBB2
+Current time step :286.0
+Simulation Day: 0 Hour: 23 Min: 50
+Current Runway List:[[23:55, Available], [0:00, Available], [0:05, Available]]
+Current time step :287.0
+Simulation Day: 0 Hour: 23 Min: 55
+Current Runway List:[[0:00, Available], [0:05, Available], [0:10, Available]]
+Current time step :288.0
+Simulation Day: 1 Hour: 0 Min: 0
+Current Runway List:[[0:05, Available], [0:10, Available], [0:15, Available]]
+Current time step :289.0
+Simulation Day: 1 Hour: 0 Min: 5
+Received Arrive Day Ahead Schedule of AAA11
+Current flight Index : 1
+Received Arrive Day Ahead Schedule of AAA12
+Current flight Index : 2
+Received Arrive Day Ahead Schedule of AAA14
+Current flight Index : 3
+Received Departure Day Ahead Schedule of AAA913
+Current flight Index : 4
+Received Departure Day Ahead Schedule of BBB911
+Current flight Index : 5
+Received Departure Day Ahead Schedule of BBB912
+Current flight Index : 6
+Received Departure Day Ahead Schedule of AAA914
+Current flight Index : 7
+Received Departure Day Ahead Schedule of BBB913
+Current flight Index : 8
+Received Departure Day Ahead Schedule of BBB914
+Current flight Index : 9
+Received Arrive Day Ahead Schedule of AAA15
+Current flight Index : 10
+Received Departure Day Ahead Schedule of AAA915
+Current flight Index : 11
+Received Departure Day Ahead Schedule of BBB915
+Current flight Index : 12
+Received Arrive Day Ahead Schedule of BBB11
+Current flight Index : 13
+Received Arrive Day Ahead Schedule of AAA13
+Current flight Index : 14
+Received Departure Day Ahead Schedule of AAA911
+Current flight Index : 15
+Received Arrive Day Ahead Schedule of BBB15
+Current flight Index : 16
+Received Arrive Day Ahead Schedule of BBB14
+Current flight Index : 17
+Received Arrive Day Ahead Schedule of BBB12
+Current flight Index : 18
+Received Arrive Day Ahead Schedule of BBB13
+Current flight Index : 19
+Received Departure Day Ahead Schedule of AAA912
+Current flight Index : 20
+Current Runway List:[[0:10, Available], [0:15, Available], [0:20, Available]]
+FlightBoard after sort:
+[4, BBB911, 3:20, 0]
+[0, AAA11, 3:30, 1]
+[14, AAA911, 4:30, 0]
+[12, BBB11, 5:00, 1]
+[5, BBB912, 5:20, 0]
+[1, AAA12, 5:30, 1]
+[19, AAA912, 6:30, 0]
+[17, BBB12, 7:00, 1]
+[7, BBB913, 11:20, 0]
+[13, AAA13, 11:30, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :290.0
+Simulation Day: 1 Hour: 0 Min: 10
+Current Runway List:[[0:15, Available], [0:20, Available], [0:25, Available]]
+Current time step :291.0
+Simulation Day: 1 Hour: 0 Min: 15
+Current Runway List:[[0:20, Available], [0:25, Available], [0:30, Available]]
+Current time step :292.0
+Simulation Day: 1 Hour: 0 Min: 20
+Current Runway List:[[0:25, Available], [0:30, Available], [0:35, Available]]
+Current time step :293.0
+Simulation Day: 1 Hour: 0 Min: 25
+Current Runway List:[[0:30, Available], [0:35, Available], [0:40, Available]]
+Current time step :294.0
+Simulation Day: 1 Hour: 0 Min: 30
+Current Runway List:[[0:35, Available], [0:40, Available], [0:45, Available]]
+Current time step :295.0
+Simulation Day: 1 Hour: 0 Min: 35
+Current Runway List:[[0:40, Available], [0:45, Available], [0:50, Available]]
+Current time step :296.0
+Simulation Day: 1 Hour: 0 Min: 40
+Current Runway List:[[0:45, Available], [0:50, Available], [0:55, Available]]
+Current time step :297.0
+Simulation Day: 1 Hour: 0 Min: 45
+Current Runway List:[[0:50, Available], [0:55, Available], [1:00, Available]]
+Current time step :298.0
+Simulation Day: 1 Hour: 0 Min: 50
+Current Runway List:[[0:55, Available], [1:00, Available], [1:05, Available]]
+Current time step :299.0
+Simulation Day: 1 Hour: 0 Min: 55
+Current Runway List:[[1:00, Available], [1:05, Available], [1:10, Available]]
+Current time step :300.0
+Simulation Day: 1 Hour: 1 Min: 0
+Current Runway List:[[1:05, Available], [1:10, Available], [1:15, Available]]
+Current time step :301.0
+Simulation Day: 1 Hour: 1 Min: 5
+Current Runway List:[[1:10, Available], [1:15, Available], [1:20, Available]]
+Current time step :302.0
+Simulation Day: 1 Hour: 1 Min: 10
+Current Runway List:[[1:15, Available], [1:20, Available], [1:25, Available]]
+Current time step :303.0
+Simulation Day: 1 Hour: 1 Min: 15
+Current Runway List:[[1:20, Available], [1:25, Available], [1:30, Available]]
+Current time step :304.0
+Simulation Day: 1 Hour: 1 Min: 20
+Current Runway List:[[1:25, Available], [1:30, Available], [1:35, Available]]
+Current time step :305.0
+Simulation Day: 1 Hour: 1 Min: 25
+Current Runway List:[[1:30, Available], [1:35, Available], [1:40, Available]]
+Current time step :306.0
+Simulation Day: 1 Hour: 1 Min: 30
+Current Runway List:[[1:35, Available], [1:40, Available], [1:45, Available]]
+Current time step :307.0
+Simulation Day: 1 Hour: 1 Min: 35
+Current Runway List:[[1:40, Available], [1:45, Available], [1:50, Available]]
+Current time step :308.0
+Simulation Day: 1 Hour: 1 Min: 40
+Current Runway List:[[1:45, Available], [1:50, Available], [1:55, Available]]
+Current time step :309.0
+Simulation Day: 1 Hour: 1 Min: 45
+Current Runway List:[[1:50, Available], [1:55, Available], [2:00, Available]]
+Current time step :310.0
+Simulation Day: 1 Hour: 1 Min: 50
+Current Runway List:[[1:55, Available], [2:00, Available], [2:05, Available]]
+Current time step :311.0
+Simulation Day: 1 Hour: 1 Min: 55
+Current Runway List:[[2:00, Available], [2:05, Available], [2:10, Available]]
+Current time step :312.0
+Simulation Day: 1 Hour: 2 Min: 0
+Current Runway List:[[2:05, Available], [2:10, Available], [2:15, Available]]
+Current time step :313.0
+Simulation Day: 1 Hour: 2 Min: 5
+Current Runway List:[[2:10, Available], [2:15, Available], [2:20, Available]]
+Current time step :314.0
+Simulation Day: 1 Hour: 2 Min: 10
+Current Runway List:[[2:15, Available], [2:20, Available], [2:25, Available]]
+Current time step :315.0
+Simulation Day: 1 Hour: 2 Min: 15
+Current Runway List:[[2:20, Available], [2:25, Available], [2:30, Available]]
+Current time step :316.0
+Simulation Day: 1 Hour: 2 Min: 20
+Current Runway List:[[2:25, Available], [2:30, Available], [2:35, Available]]
+Current time step :317.0
+Simulation Day: 1 Hour: 2 Min: 25
+Current Runway List:[[2:30, Available], [2:35, Available], [2:40, Available]]
+Current time step :318.0
+Simulation Day: 1 Hour: 2 Min: 30
+Current Runway List:[[2:35, Available], [2:40, Available], [2:45, Available]]
+Current time step :319.0
+Simulation Day: 1 Hour: 2 Min: 35
+Current 1st Request List:[[AAA11, 2:30]]
+Current Runway List:[[2:40, Available], [2:45, Available], [2:50, Available]]
+FlightBoard after sort:
+[4, BBB911, 3:20, 0]
+[0, AAA11, 3:30, 1]
+[14, AAA911, 4:30, 0]
+[12, BBB11, 5:00, 1]
+[5, BBB912, 5:20, 0]
+[1, AAA12, 5:30, 1]
+[19, AAA912, 6:30, 0]
+[17, BBB12, 7:00, 1]
+[7, BBB913, 11:20, 0]
+[13, AAA13, 11:30, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :320.0
+Simulation Day: 1 Hour: 2 Min: 40
+Current Runway List:[[2:45, Available], [2:50, Available], [2:55, Available]]
+Current time step :321.0
+Simulation Day: 1 Hour: 2 Min: 45
+Current Runway List:[[2:50, Available], [2:55, Available], [3:00, Available]]
+Current time step :322.0
+Simulation Day: 1 Hour: 2 Min: 50
+Current Runway List:[[2:55, Available], [3:00, Available], [3:05, Available]]
+Current time step :323.0
+Simulation Day: 1 Hour: 2 Min: 55
+Current Runway List:[[3:00, Available], [3:05, Available], [3:10, Available]]
+Current time step :324.0
+Simulation Day: 1 Hour: 3 Min: 0
+Current Runway List:[[3:05, Available], [3:10, Available], [3:15, Available]]
+Current time step :325.0
+Simulation Day: 1 Hour: 3 Min: 5
+Current Runway List:[[3:10, Available], [3:15, Available], [3:20, Available]]
+Current time step :326.0
+Simulation Day: 1 Hour: 3 Min: 10
+Current Runway List:[[3:15, Available], [3:20, Available], [3:25, Available]]
+Current time step :327.0
+Simulation Day: 1 Hour: 3 Min: 15
+Current Runway List:[[3:20, Available], [3:25, Available], [3:30, Available]]
+Current time step :328.0
+Simulation Day: 1 Hour: 3 Min: 20
+Current 2nd Request List:[[AAA11, 3:15]]
+Current Runway List:[[3:25, Available], [3:30, Available], [3:35, AAA11]]
+FlightBoard after sort:
+[0, AAA11, 3:35, 1]
+[14, AAA911, 4:30, 0]
+[12, BBB11, 5:00, 1]
+[5, BBB912, 5:20, 0]
+[1, AAA12, 5:30, 1]
+[19, AAA912, 6:30, 0]
+[17, BBB12, 7:00, 1]
+[7, BBB913, 11:20, 0]
+[13, AAA13, 11:30, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :329.0
+Simulation Day: 1 Hour: 3 Min: 25
+Current Runway List:[[3:30, Available], [3:35, AAA11], [3:40, Available]]
+Current time step :330.0
+Simulation Day: 1 Hour: 3 Min: 30
+Current Runway List:[[3:35, AAA11], [3:40, Available], [3:45, Available]]
+Current time step :331.0
+Simulation Day: 1 Hour: 3 Min: 35
+Current Runway List:[[3:40, Available], [3:45, Available], [3:50, Available]]
+FlightBoard after sort:
+[14, AAA911, 4:30, 0]
+[12, BBB11, 5:00, 1]
+[5, BBB912, 5:20, 0]
+[1, AAA12, 5:30, 1]
+[19, AAA912, 6:30, 0]
+[17, BBB12, 7:00, 1]
+[7, BBB913, 11:20, 0]
+[13, AAA13, 11:30, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :332.0
+Simulation Day: 1 Hour: 3 Min: 40
+Current Runway List:[[3:45, Available], [3:50, Available], [3:55, Available]]
+Current time step :333.0
+Simulation Day: 1 Hour: 3 Min: 45
+Current Runway List:[[3:50, Available], [3:55, Available], [4:00, Available]]
+Current time step :334.0
+Simulation Day: 1 Hour: 3 Min: 50
+Current Runway List:[[3:55, Available], [4:00, Available], [4:05, Available]]
+Current time step :335.0
+Simulation Day: 1 Hour: 3 Min: 55
+Current Runway List:[[4:00, Available], [4:05, Available], [4:10, Available]]
+Current time step :336.0
+Simulation Day: 1 Hour: 4 Min: 0
+Current Runway List:[[4:05, Available], [4:10, Available], [4:15, Available]]
+Current time step :337.0
+Simulation Day: 1 Hour: 4 Min: 5
+Current 1st Request List:[[BBB11, 4:00]]
+Current Runway List:[[4:10, Available], [4:15, Available], [4:20, Available]]
+FlightBoard after sort:
+[14, AAA911, 4:30, 0]
+[12, BBB11, 5:00, 1]
+[5, BBB912, 5:20, 0]
+[1, AAA12, 5:30, 1]
+[19, AAA912, 6:30, 0]
+[17, BBB12, 7:00, 1]
+[7, BBB913, 11:20, 0]
+[13, AAA13, 11:30, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :338.0
+Simulation Day: 1 Hour: 4 Min: 10
+Current Runway List:[[4:15, Available], [4:20, Available], [4:25, Available]]
+Current time step :339.0
+Simulation Day: 1 Hour: 4 Min: 15
+Current Runway List:[[4:20, Available], [4:25, Available], [4:30, Available]]
+Current time step :340.0
+Simulation Day: 1 Hour: 4 Min: 20
+Current Runway List:[[4:25, Available], [4:30, Available], [4:35, Available]]
+Current time step :341.0
+Simulation Day: 1 Hour: 4 Min: 25
+Current Runway List:[[4:30, Available], [4:35, Available], [4:40, Available]]
+Current time step :342.0
+Simulation Day: 1 Hour: 4 Min: 30
+Current Runway List:[[4:35, Available], [4:40, Available], [4:45, Available]]
+FlightBoard after sort:
+[12, BBB11, 5:00, 1]
+[5, BBB912, 5:20, 0]
+[1, AAA12, 5:30, 1]
+[19, AAA912, 6:30, 0]
+[17, BBB12, 7:00, 1]
+[7, BBB913, 11:20, 0]
+[13, AAA13, 11:30, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :343.0
+Simulation Day: 1 Hour: 4 Min: 35
+Current 1st Request List:[[AAA12, 4:30]]
+Current Runway List:[[4:40, Available], [4:45, Available], [4:50, Available]]
+FlightBoard after sort:
+[12, BBB11, 5:00, 1]
+[5, BBB912, 5:20, 0]
+[1, AAA12, 5:30, 1]
+[19, AAA912, 6:30, 0]
+[17, BBB12, 7:00, 1]
+[7, BBB913, 11:20, 0]
+[13, AAA13, 11:30, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :344.0
+Simulation Day: 1 Hour: 4 Min: 40
+Current Runway List:[[4:45, Available], [4:50, Available], [4:55, Available]]
+Current time step :345.0
+Simulation Day: 1 Hour: 4 Min: 45
+Current Runway List:[[4:50, Available], [4:55, Available], [5:00, Available]]
+Current time step :346.0
+Simulation Day: 1 Hour: 4 Min: 50
+Current 2nd Request List:[[BBB11, 4:45]]
+Current Runway List:[[4:55, Available], [5:00, Available], [5:05, BBB11]]
+FlightBoard after sort:
+[12, BBB11, 5:05, 1]
+[5, BBB912, 5:20, 0]
+[1, AAA12, 5:30, 1]
+[19, AAA912, 6:30, 0]
+[17, BBB12, 7:00, 1]
+[7, BBB913, 11:20, 0]
+[13, AAA13, 11:30, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :347.0
+Simulation Day: 1 Hour: 4 Min: 55
+Current Runway List:[[5:00, Available], [5:05, BBB11], [5:10, Available]]
+Current time step :348.0
+Simulation Day: 1 Hour: 5 Min: 0
+Current Runway List:[[5:05, BBB11], [5:10, Available], [5:15, Available]]
+Current time step :349.0
+Simulation Day: 1 Hour: 5 Min: 5
+Current Runway List:[[5:10, Available], [5:15, Available], [5:20, Available]]
+FlightBoard after sort:
+[5, BBB912, 5:20, 0]
+[1, AAA12, 5:30, 1]
+[19, AAA912, 6:30, 0]
+[17, BBB12, 7:00, 1]
+[7, BBB913, 11:20, 0]
+[13, AAA13, 11:30, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :350.0
+Simulation Day: 1 Hour: 5 Min: 10
+Current Runway List:[[5:15, Available], [5:20, Available], [5:25, Available]]
+Current time step :351.0
+Simulation Day: 1 Hour: 5 Min: 15
+Current Runway List:[[5:20, Available], [5:25, Available], [5:30, Available]]
+Current time step :352.0
+Simulation Day: 1 Hour: 5 Min: 20
+Current 2nd Request List:[[AAA12, 5:15]]
+Current Runway List:[[5:25, Available], [5:30, Available], [5:35, AAA12]]
+FlightBoard after sort:
+[1, AAA12, 5:35, 1]
+[19, AAA912, 6:30, 0]
+[17, BBB12, 7:00, 1]
+[7, BBB913, 11:20, 0]
+[13, AAA13, 11:30, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :353.0
+Simulation Day: 1 Hour: 5 Min: 25
+Current Runway List:[[5:30, Available], [5:35, AAA12], [5:40, Available]]
+Current time step :354.0
+Simulation Day: 1 Hour: 5 Min: 30
+Current Runway List:[[5:35, AAA12], [5:40, Available], [5:45, Available]]
+Current time step :355.0
+Simulation Day: 1 Hour: 5 Min: 35
+Current Runway List:[[5:40, Available], [5:45, Available], [5:50, Available]]
+FlightBoard after sort:
+[19, AAA912, 6:30, 0]
+[17, BBB12, 7:00, 1]
+[7, BBB913, 11:20, 0]
+[13, AAA13, 11:30, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :356.0
+Simulation Day: 1 Hour: 5 Min: 40
+Current Runway List:[[5:45, Available], [5:50, Available], [5:55, Available]]
+Current time step :357.0
+Simulation Day: 1 Hour: 5 Min: 45
+Current Runway List:[[5:50, Available], [5:55, Available], [6:00, Available]]
+Current time step :358.0
+Simulation Day: 1 Hour: 5 Min: 50
+Current Runway List:[[5:55, Available], [6:00, Available], [6:05, Available]]
+Current time step :359.0
+Simulation Day: 1 Hour: 5 Min: 55
+Current Runway List:[[6:00, Available], [6:05, Available], [6:10, Available]]
+Current time step :360.0
+Simulation Day: 1 Hour: 6 Min: 0
+Current Runway List:[[6:05, Available], [6:10, Available], [6:15, Available]]
+Current time step :361.0
+Simulation Day: 1 Hour: 6 Min: 5
+Current 1st Request List:[[BBB12, 6:00]]
+Current Runway List:[[6:10, Available], [6:15, Available], [6:20, Available]]
+FlightBoard after sort:
+[19, AAA912, 6:30, 0]
+[17, BBB12, 7:00, 1]
+[7, BBB913, 11:20, 0]
+[13, AAA13, 11:30, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :362.0
+Simulation Day: 1 Hour: 6 Min: 10
+Current Runway List:[[6:15, Available], [6:20, Available], [6:25, Available]]
+Current time step :363.0
+Simulation Day: 1 Hour: 6 Min: 15
+Current Runway List:[[6:20, Available], [6:25, Available], [6:30, Available]]
+Current time step :364.0
+Simulation Day: 1 Hour: 6 Min: 20
+Current Runway List:[[6:25, Available], [6:30, Available], [6:35, Available]]
+Current time step :365.0
+Simulation Day: 1 Hour: 6 Min: 25
+Current Runway List:[[6:30, Available], [6:35, Available], [6:40, Available]]
+Current time step :366.0
+Simulation Day: 1 Hour: 6 Min: 30
+Current Runway List:[[6:35, Available], [6:40, Available], [6:45, Available]]
+FlightBoard after sort:
+[17, BBB12, 7:00, 1]
+[7, BBB913, 11:20, 0]
+[13, AAA13, 11:30, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :367.0
+Simulation Day: 1 Hour: 6 Min: 35
+Current Runway List:[[6:40, Available], [6:45, Available], [6:50, Available]]
+Current time step :368.0
+Simulation Day: 1 Hour: 6 Min: 40
+Current Runway List:[[6:45, Available], [6:50, Available], [6:55, Available]]
+Current time step :369.0
+Simulation Day: 1 Hour: 6 Min: 45
+Current Runway List:[[6:50, Available], [6:55, Available], [7:00, Available]]
+Current time step :370.0
+Simulation Day: 1 Hour: 6 Min: 50
+Current 2nd Request List:[[BBB12, 6:45]]
+Current Runway List:[[6:55, Available], [7:00, Available], [7:05, BBB12]]
+FlightBoard after sort:
+[17, BBB12, 7:05, 1]
+[7, BBB913, 11:20, 0]
+[13, AAA13, 11:30, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :371.0
+Simulation Day: 1 Hour: 6 Min: 55
+Current Runway List:[[7:00, Available], [7:05, BBB12], [7:10, Available]]
+Current time step :372.0
+Simulation Day: 1 Hour: 7 Min: 0
+Current Runway List:[[7:05, BBB12], [7:10, Available], [7:15, Available]]
+Current time step :373.0
+Simulation Day: 1 Hour: 7 Min: 5
+Current Runway List:[[7:10, Available], [7:15, Available], [7:20, Available]]
+FlightBoard after sort:
+[7, BBB913, 11:20, 0]
+[13, AAA13, 11:30, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :374.0
+Simulation Day: 1 Hour: 7 Min: 10
+Current Runway List:[[7:15, Available], [7:20, Available], [7:25, Available]]
+Current time step :375.0
+Simulation Day: 1 Hour: 7 Min: 15
+Current Runway List:[[7:20, Available], [7:25, Available], [7:30, Available]]
+Current time step :376.0
+Simulation Day: 1 Hour: 7 Min: 20
+Current Runway List:[[7:25, Available], [7:30, Available], [7:35, Available]]
+Current time step :377.0
+Simulation Day: 1 Hour: 7 Min: 25
+Current Runway List:[[7:30, Available], [7:35, Available], [7:40, Available]]
+Current time step :378.0
+Simulation Day: 1 Hour: 7 Min: 30
+Current Runway List:[[7:35, Available], [7:40, Available], [7:45, Available]]
+Current time step :379.0
+Simulation Day: 1 Hour: 7 Min: 35
+Current Runway List:[[7:40, Available], [7:45, Available], [7:50, Available]]
+Current time step :380.0
+Simulation Day: 1 Hour: 7 Min: 40
+Current Runway List:[[7:45, Available], [7:50, Available], [7:55, Available]]
+Current time step :381.0
+Simulation Day: 1 Hour: 7 Min: 45
+Current Runway List:[[7:50, Available], [7:55, Available], [8:00, Available]]
+Current time step :382.0
+Simulation Day: 1 Hour: 7 Min: 50
+Current Runway List:[[7:55, Available], [8:00, Available], [8:05, Available]]
+Current time step :383.0
+Simulation Day: 1 Hour: 7 Min: 55
+Current Runway List:[[8:00, Available], [8:05, Available], [8:10, Available]]
+Current time step :384.0
+Simulation Day: 1 Hour: 8 Min: 0
+Current Runway List:[[8:05, Available], [8:10, Available], [8:15, Available]]
+Current time step :385.0
+Simulation Day: 1 Hour: 8 Min: 5
+Current Runway List:[[8:10, Available], [8:15, Available], [8:20, Available]]
+Current time step :386.0
+Simulation Day: 1 Hour: 8 Min: 10
+Current Runway List:[[8:15, Available], [8:20, Available], [8:25, Available]]
+Current time step :387.0
+Simulation Day: 1 Hour: 8 Min: 15
+Current Runway List:[[8:20, Available], [8:25, Available], [8:30, Available]]
+Current time step :388.0
+Simulation Day: 1 Hour: 8 Min: 20
+Current Runway List:[[8:25, Available], [8:30, Available], [8:35, Available]]
+Current time step :389.0
+Simulation Day: 1 Hour: 8 Min: 25
+Current Runway List:[[8:30, Available], [8:35, Available], [8:40, Available]]
+Current time step :390.0
+Simulation Day: 1 Hour: 8 Min: 30
+Current Runway List:[[8:35, Available], [8:40, Available], [8:45, Available]]
+Current time step :391.0
+Simulation Day: 1 Hour: 8 Min: 35
+Current Runway List:[[8:40, Available], [8:45, Available], [8:50, Available]]
+Current time step :392.0
+Simulation Day: 1 Hour: 8 Min: 40
+Current Runway List:[[8:45, Available], [8:50, Available], [8:55, Available]]
+Current time step :393.0
+Simulation Day: 1 Hour: 8 Min: 45
+Current Runway List:[[8:50, Available], [8:55, Available], [9:00, Available]]
+Current time step :394.0
+Simulation Day: 1 Hour: 8 Min: 50
+Current Runway List:[[8:55, Available], [9:00, Available], [9:05, Available]]
+Current time step :395.0
+Simulation Day: 1 Hour: 8 Min: 55
+Current Runway List:[[9:00, Available], [9:05, Available], [9:10, Available]]
+Current time step :396.0
+Simulation Day: 1 Hour: 9 Min: 0
+Current Runway List:[[9:05, Available], [9:10, Available], [9:15, Available]]
+Current time step :397.0
+Simulation Day: 1 Hour: 9 Min: 5
+Current Runway List:[[9:10, Available], [9:15, Available], [9:20, Available]]
+Current time step :398.0
+Simulation Day: 1 Hour: 9 Min: 10
+Current Runway List:[[9:15, Available], [9:20, Available], [9:25, Available]]
+Current time step :399.0
+Simulation Day: 1 Hour: 9 Min: 15
+Current Runway List:[[9:20, Available], [9:25, Available], [9:30, Available]]
+Current time step :400.0
+Simulation Day: 1 Hour: 9 Min: 20
+Current Runway List:[[9:25, Available], [9:30, Available], [9:35, Available]]
+Current time step :401.0
+Simulation Day: 1 Hour: 9 Min: 25
+Current Runway List:[[9:30, Available], [9:35, Available], [9:40, Available]]
+Current time step :402.0
+Simulation Day: 1 Hour: 9 Min: 30
+Current Runway List:[[9:35, Available], [9:40, Available], [9:45, Available]]
+Current time step :403.0
+Simulation Day: 1 Hour: 9 Min: 35
+Current Runway List:[[9:40, Available], [9:45, Available], [9:50, Available]]
+Current time step :404.0
+Simulation Day: 1 Hour: 9 Min: 40
+Current Runway List:[[9:45, Available], [9:50, Available], [9:55, Available]]
+Current time step :405.0
+Simulation Day: 1 Hour: 9 Min: 45
+Current Runway List:[[9:50, Available], [9:55, Available], [10:00, Available]]
+Current time step :406.0
+Simulation Day: 1 Hour: 9 Min: 50
+Current Runway List:[[9:55, Available], [10:00, Available], [10:05, Available]]
+Current time step :407.0
+Simulation Day: 1 Hour: 9 Min: 55
+Current Runway List:[[10:00, Available], [10:05, Available], [10:10, Available]]
+Current time step :408.0
+Simulation Day: 1 Hour: 10 Min: 0
+Current Runway List:[[10:05, Available], [10:10, Available], [10:15, Available]]
+Current time step :409.0
+Simulation Day: 1 Hour: 10 Min: 5
+Current Runway List:[[10:10, Available], [10:15, Available], [10:20, Available]]
+Current time step :410.0
+Simulation Day: 1 Hour: 10 Min: 10
+Current Runway List:[[10:15, Available], [10:20, Available], [10:25, Available]]
+Current time step :411.0
+Simulation Day: 1 Hour: 10 Min: 15
+Current Runway List:[[10:20, Available], [10:25, Available], [10:30, Available]]
+Current time step :412.0
+Simulation Day: 1 Hour: 10 Min: 20
+Current Runway List:[[10:25, Available], [10:30, Available], [10:35, Available]]
+Current time step :413.0
+Simulation Day: 1 Hour: 10 Min: 25
+Current Runway List:[[10:30, Available], [10:35, Available], [10:40, Available]]
+Current time step :414.0
+Simulation Day: 1 Hour: 10 Min: 30
+Current Runway List:[[10:35, Available], [10:40, Available], [10:45, Available]]
+Current time step :415.0
+Simulation Day: 1 Hour: 10 Min: 35
+Current 1st Request List:[[AAA13, 10:30]]
+Current Runway List:[[10:40, Available], [10:45, Available], [10:50, Available]]
+FlightBoard after sort:
+[7, BBB913, 11:20, 0]
+[13, AAA13, 11:30, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :416.0
+Simulation Day: 1 Hour: 10 Min: 40
+Current Runway List:[[10:45, Available], [10:50, Available], [10:55, Available]]
+Current time step :417.0
+Simulation Day: 1 Hour: 10 Min: 45
+Current Runway List:[[10:50, Available], [10:55, Available], [11:00, Available]]
+Current time step :418.0
+Simulation Day: 1 Hour: 10 Min: 50
+Current Runway List:[[10:55, Available], [11:00, Available], [11:05, Available]]
+Current time step :419.0
+Simulation Day: 1 Hour: 10 Min: 55
+Current Runway List:[[11:00, Available], [11:05, Available], [11:10, Available]]
+Current time step :420.0
+Simulation Day: 1 Hour: 11 Min: 0
+Current Runway List:[[11:05, Available], [11:10, Available], [11:15, Available]]
+Current time step :421.0
+Simulation Day: 1 Hour: 11 Min: 5
+Current Runway List:[[11:10, Available], [11:15, Available], [11:20, Available]]
+Current time step :422.0
+Simulation Day: 1 Hour: 11 Min: 10
+Current Runway List:[[11:15, Available], [11:20, Available], [11:25, Available]]
+Current time step :423.0
+Simulation Day: 1 Hour: 11 Min: 15
+Current Runway List:[[11:20, Available], [11:25, Available], [11:30, Available]]
+Current time step :424.0
+Simulation Day: 1 Hour: 11 Min: 20
+Current 2nd Request List:[[AAA13, 11:15]]
+Current Runway List:[[11:25, Available], [11:30, Available], [11:35, AAA13]]
+FlightBoard after sort:
+[13, AAA13, 11:35, 1]
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :425.0
+Simulation Day: 1 Hour: 11 Min: 25
+Current Runway List:[[11:30, Available], [11:35, AAA13], [11:40, Available]]
+Current time step :426.0
+Simulation Day: 1 Hour: 11 Min: 30
+Current Runway List:[[11:35, AAA13], [11:40, Available], [11:45, Available]]
+Current time step :427.0
+Simulation Day: 1 Hour: 11 Min: 35
+Current Runway List:[[11:40, Available], [11:45, Available], [11:50, Available]]
+FlightBoard after sort:
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :428.0
+Simulation Day: 1 Hour: 11 Min: 40
+Current Runway List:[[11:45, Available], [11:50, Available], [11:55, Available]]
+Current time step :429.0
+Simulation Day: 1 Hour: 11 Min: 45
+Current Runway List:[[11:50, Available], [11:55, Available], [12:00, Available]]
+Current time step :430.0
+Simulation Day: 1 Hour: 11 Min: 50
+Current Runway List:[[11:55, Available], [12:00, Available], [12:05, Available]]
+Current time step :431.0
+Simulation Day: 1 Hour: 11 Min: 55
+Current Runway List:[[12:00, Available], [12:05, Available], [12:10, Available]]
+Current time step :432.0
+Simulation Day: 1 Hour: 12 Min: 0
+Current Runway List:[[12:05, Available], [12:10, Available], [12:15, Available]]
+Current time step :433.0
+Simulation Day: 1 Hour: 12 Min: 5
+Current 1st Request List:[[BBB13, 12:00]]
+Current Runway List:[[12:10, Available], [12:15, Available], [12:20, Available]]
+FlightBoard after sort:
+[3, AAA913, 12:30, 0]
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :434.0
+Simulation Day: 1 Hour: 12 Min: 10
+Current Runway List:[[12:15, Available], [12:20, Available], [12:25, Available]]
+Current time step :435.0
+Simulation Day: 1 Hour: 12 Min: 15
+Current Runway List:[[12:20, Available], [12:25, Available], [12:30, Available]]
+Current time step :436.0
+Simulation Day: 1 Hour: 12 Min: 20
+Current Runway List:[[12:25, Available], [12:30, Available], [12:35, Available]]
+Current time step :437.0
+Simulation Day: 1 Hour: 12 Min: 25
+Current Runway List:[[12:30, Available], [12:35, Available], [12:40, Available]]
+Current time step :438.0
+Simulation Day: 1 Hour: 12 Min: 30
+Current Runway List:[[12:35, Available], [12:40, Available], [12:45, Available]]
+FlightBoard after sort:
+[18, BBB13, 13:00, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :439.0
+Simulation Day: 1 Hour: 12 Min: 35
+Current Runway List:[[12:40, Available], [12:45, Available], [12:50, Available]]
+Current time step :440.0
+Simulation Day: 1 Hour: 12 Min: 40
+Current Runway List:[[12:45, Available], [12:50, Available], [12:55, Available]]
+Current time step :441.0
+Simulation Day: 1 Hour: 12 Min: 45
+Current Runway List:[[12:50, Available], [12:55, Available], [13:00, Available]]
+Current time step :442.0
+Simulation Day: 1 Hour: 12 Min: 50
+Current 2nd Request List:[[BBB13, 12:45]]
+Current Runway List:[[12:55, Available], [13:00, Available], [13:05, BBB13]]
+FlightBoard after sort:
+[18, BBB13, 13:05, 1]
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :443.0
+Simulation Day: 1 Hour: 12 Min: 55
+Current Runway List:[[13:00, Available], [13:05, BBB13], [13:10, Available]]
+Current time step :444.0
+Simulation Day: 1 Hour: 13 Min: 0
+Current Runway List:[[13:05, BBB13], [13:10, Available], [13:15, Available]]
+Current time step :445.0
+Simulation Day: 1 Hour: 13 Min: 5
+Current Runway List:[[13:10, Available], [13:15, Available], [13:20, Available]]
+FlightBoard after sort:
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :446.0
+Simulation Day: 1 Hour: 13 Min: 10
+Current Runway List:[[13:15, Available], [13:20, Available], [13:25, Available]]
+Current time step :447.0
+Simulation Day: 1 Hour: 13 Min: 15
+Current Runway List:[[13:20, Available], [13:25, Available], [13:30, Available]]
+Current time step :448.0
+Simulation Day: 1 Hour: 13 Min: 20
+Current Runway List:[[13:25, Available], [13:30, Available], [13:35, Available]]
+Current time step :449.0
+Simulation Day: 1 Hour: 13 Min: 25
+Current Runway List:[[13:30, Available], [13:35, Available], [13:40, Available]]
+Current time step :450.0
+Simulation Day: 1 Hour: 13 Min: 30
+Current Runway List:[[13:35, Available], [13:40, Available], [13:45, Available]]
+Current time step :451.0
+Simulation Day: 1 Hour: 13 Min: 35
+Current 1st Request List:[[AAA14, 13:30]]
+Current Runway List:[[13:40, Available], [13:45, Available], [13:50, Available]]
+FlightBoard after sort:
+[8, BBB914, 14:20, 0]
+[2, AAA14, 14:30, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :452.0
+Simulation Day: 1 Hour: 13 Min: 40
+Current Runway List:[[13:45, Available], [13:50, Available], [13:55, Available]]
+Current time step :453.0
+Simulation Day: 1 Hour: 13 Min: 45
+Current Runway List:[[13:50, Available], [13:55, Available], [14:00, Available]]
+Current time step :454.0
+Simulation Day: 1 Hour: 13 Min: 50
+Current Runway List:[[13:55, Available], [14:00, Available], [14:05, Available]]
+Current time step :455.0
+Simulation Day: 1 Hour: 13 Min: 55
+Current Runway List:[[14:00, Available], [14:05, Available], [14:10, Available]]
+Current time step :456.0
+Simulation Day: 1 Hour: 14 Min: 0
+Current Runway List:[[14:05, Available], [14:10, Available], [14:15, Available]]
+Current time step :457.0
+Simulation Day: 1 Hour: 14 Min: 5
+Current Runway List:[[14:10, Available], [14:15, Available], [14:20, Available]]
+Current time step :458.0
+Simulation Day: 1 Hour: 14 Min: 10
+Current Runway List:[[14:15, Available], [14:20, Available], [14:25, Available]]
+Current time step :459.0
+Simulation Day: 1 Hour: 14 Min: 15
+Current Runway List:[[14:20, Available], [14:25, Available], [14:30, Available]]
+Current time step :460.0
+Simulation Day: 1 Hour: 14 Min: 20
+Current 2nd Request List:[[AAA14, 14:15]]
+Current Runway List:[[14:25, Available], [14:30, Available], [14:35, AAA14]]
+FlightBoard after sort:
+[2, AAA14, 14:35, 1]
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :461.0
+Simulation Day: 1 Hour: 14 Min: 25
+Current Runway List:[[14:30, Available], [14:35, AAA14], [14:40, Available]]
+Current time step :462.0
+Simulation Day: 1 Hour: 14 Min: 30
+Current Runway List:[[14:35, AAA14], [14:40, Available], [14:45, Available]]
+Current time step :463.0
+Simulation Day: 1 Hour: 14 Min: 35
+Current Runway List:[[14:40, Available], [14:45, Available], [14:50, Available]]
+FlightBoard after sort:
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :464.0
+Simulation Day: 1 Hour: 14 Min: 40
+Current Runway List:[[14:45, Available], [14:50, Available], [14:55, Available]]
+Current time step :465.0
+Simulation Day: 1 Hour: 14 Min: 45
+Current Runway List:[[14:50, Available], [14:55, Available], [15:00, Available]]
+Current time step :466.0
+Simulation Day: 1 Hour: 14 Min: 50
+Current Runway List:[[14:55, Available], [15:00, Available], [15:05, Available]]
+Current time step :467.0
+Simulation Day: 1 Hour: 14 Min: 55
+Current Runway List:[[15:00, Available], [15:05, Available], [15:10, Available]]
+Current time step :468.0
+Simulation Day: 1 Hour: 15 Min: 0
+Current Runway List:[[15:05, Available], [15:10, Available], [15:15, Available]]
+Current time step :469.0
+Simulation Day: 1 Hour: 15 Min: 5
+Current 1st Request List:[[BBB14, 15:00]]
+Current Runway List:[[15:10, Available], [15:15, Available], [15:20, Available]]
+FlightBoard after sort:
+[6, AAA914, 15:30, 0]
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :470.0
+Simulation Day: 1 Hour: 15 Min: 10
+Current Runway List:[[15:15, Available], [15:20, Available], [15:25, Available]]
+Current time step :471.0
+Simulation Day: 1 Hour: 15 Min: 15
+Current Runway List:[[15:20, Available], [15:25, Available], [15:30, Available]]
+Current time step :472.0
+Simulation Day: 1 Hour: 15 Min: 20
+Current Runway List:[[15:25, Available], [15:30, Available], [15:35, Available]]
+Current time step :473.0
+Simulation Day: 1 Hour: 15 Min: 25
+Current Runway List:[[15:30, Available], [15:35, Available], [15:40, Available]]
+Current time step :474.0
+Simulation Day: 1 Hour: 15 Min: 30
+Current Runway List:[[15:35, Available], [15:40, Available], [15:45, Available]]
+FlightBoard after sort:
+[16, BBB14, 16:00, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :475.0
+Simulation Day: 1 Hour: 15 Min: 35
+Current Runway List:[[15:40, Available], [15:45, Available], [15:50, Available]]
+Current time step :476.0
+Simulation Day: 1 Hour: 15 Min: 40
+Current Runway List:[[15:45, Available], [15:50, Available], [15:55, Available]]
+Current time step :477.0
+Simulation Day: 1 Hour: 15 Min: 45
+Current Runway List:[[15:50, Available], [15:55, Available], [16:00, Available]]
+Current time step :478.0
+Simulation Day: 1 Hour: 15 Min: 50
+Current 2nd Request List:[[BBB14, 15:45]]
+Current Runway List:[[15:55, Available], [16:00, Available], [16:05, BBB14]]
+FlightBoard after sort:
+[16, BBB14, 16:05, 1]
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :479.0
+Simulation Day: 1 Hour: 15 Min: 55
+Current Runway List:[[16:00, Available], [16:05, BBB14], [16:10, Available]]
+Current time step :480.0
+Simulation Day: 1 Hour: 16 Min: 0
+Current Runway List:[[16:05, BBB14], [16:10, Available], [16:15, Available]]
+Current time step :481.0
+Simulation Day: 1 Hour: 16 Min: 5
+Current Runway List:[[16:10, Available], [16:15, Available], [16:20, Available]]
+FlightBoard after sort:
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :482.0
+Simulation Day: 1 Hour: 16 Min: 10
+Current Runway List:[[16:15, Available], [16:20, Available], [16:25, Available]]
+Current time step :483.0
+Simulation Day: 1 Hour: 16 Min: 15
+Current Runway List:[[16:20, Available], [16:25, Available], [16:30, Available]]
+Current time step :484.0
+Simulation Day: 1 Hour: 16 Min: 20
+Current Runway List:[[16:25, Available], [16:30, Available], [16:35, Available]]
+Current time step :485.0
+Simulation Day: 1 Hour: 16 Min: 25
+Current Runway List:[[16:30, Available], [16:35, Available], [16:40, Available]]
+Current time step :486.0
+Simulation Day: 1 Hour: 16 Min: 30
+Current Runway List:[[16:35, Available], [16:40, Available], [16:45, Available]]
+Current time step :487.0
+Simulation Day: 1 Hour: 16 Min: 35
+Current Runway List:[[16:40, Available], [16:45, Available], [16:50, Available]]
+Current time step :488.0
+Simulation Day: 1 Hour: 16 Min: 40
+Current Runway List:[[16:45, Available], [16:50, Available], [16:55, Available]]
+Current time step :489.0
+Simulation Day: 1 Hour: 16 Min: 45
+Current Runway List:[[16:50, Available], [16:55, Available], [17:00, Available]]
+Current time step :490.0
+Simulation Day: 1 Hour: 16 Min: 50
+Current Runway List:[[16:55, Available], [17:00, Available], [17:05, Available]]
+Current time step :491.0
+Simulation Day: 1 Hour: 16 Min: 55
+Current Runway List:[[17:00, Available], [17:05, Available], [17:10, Available]]
+Current time step :492.0
+Simulation Day: 1 Hour: 17 Min: 0
+Current Runway List:[[17:05, Available], [17:10, Available], [17:15, Available]]
+Current time step :493.0
+Simulation Day: 1 Hour: 17 Min: 5
+Current Runway List:[[17:10, Available], [17:15, Available], [17:20, Available]]
+Current time step :494.0
+Simulation Day: 1 Hour: 17 Min: 10
+Current Runway List:[[17:15, Available], [17:20, Available], [17:25, Available]]
+Current time step :495.0
+Simulation Day: 1 Hour: 17 Min: 15
+Current Runway List:[[17:20, Available], [17:25, Available], [17:30, Available]]
+Current time step :496.0
+Simulation Day: 1 Hour: 17 Min: 20
+Current Runway List:[[17:25, Available], [17:30, Available], [17:35, Available]]
+Current time step :497.0
+Simulation Day: 1 Hour: 17 Min: 25
+Current Runway List:[[17:30, Available], [17:35, Available], [17:40, Available]]
+Current time step :498.0
+Simulation Day: 1 Hour: 17 Min: 30
+Current Runway List:[[17:35, Available], [17:40, Available], [17:45, Available]]
+Current time step :499.0
+Simulation Day: 1 Hour: 17 Min: 35
+Current Runway List:[[17:40, Available], [17:45, Available], [17:50, Available]]
+Current time step :500.0
+Simulation Day: 1 Hour: 17 Min: 40
+Current Runway List:[[17:45, Available], [17:50, Available], [17:55, Available]]
+Current time step :501.0
+Simulation Day: 1 Hour: 17 Min: 45
+Current Runway List:[[17:50, Available], [17:55, Available], [18:00, Available]]
+Current time step :502.0
+Simulation Day: 1 Hour: 17 Min: 50
+Current Runway List:[[17:55, Available], [18:00, Available], [18:05, Available]]
+Current time step :503.0
+Simulation Day: 1 Hour: 17 Min: 55
+Current Runway List:[[18:00, Available], [18:05, Available], [18:10, Available]]
+Current time step :504.0
+Simulation Day: 1 Hour: 18 Min: 0
+Current Runway List:[[18:05, Available], [18:10, Available], [18:15, Available]]
+Current time step :505.0
+Simulation Day: 1 Hour: 18 Min: 5
+Current Runway List:[[18:10, Available], [18:15, Available], [18:20, Available]]
+Current time step :506.0
+Simulation Day: 1 Hour: 18 Min: 10
+Current Runway List:[[18:15, Available], [18:20, Available], [18:25, Available]]
+Current time step :507.0
+Simulation Day: 1 Hour: 18 Min: 15
+Current Runway List:[[18:20, Available], [18:25, Available], [18:30, Available]]
+Current time step :508.0
+Simulation Day: 1 Hour: 18 Min: 20
+Current Runway List:[[18:25, Available], [18:30, Available], [18:35, Available]]
+Current time step :509.0
+Simulation Day: 1 Hour: 18 Min: 25
+Current Runway List:[[18:30, Available], [18:35, Available], [18:40, Available]]
+Current time step :510.0
+Simulation Day: 1 Hour: 18 Min: 30
+Current Runway List:[[18:35, Available], [18:40, Available], [18:45, Available]]
+Current time step :511.0
+Simulation Day: 1 Hour: 18 Min: 35
+Current Runway List:[[18:40, Available], [18:45, Available], [18:50, Available]]
+Current time step :512.0
+Simulation Day: 1 Hour: 18 Min: 40
+Current Runway List:[[18:45, Available], [18:50, Available], [18:55, Available]]
+Current time step :513.0
+Simulation Day: 1 Hour: 18 Min: 45
+Current Runway List:[[18:50, Available], [18:55, Available], [19:00, Available]]
+Current time step :514.0
+Simulation Day: 1 Hour: 18 Min: 50
+Current Runway List:[[18:55, Available], [19:00, Available], [19:05, Available]]
+Current time step :515.0
+Simulation Day: 1 Hour: 18 Min: 55
+Current Runway List:[[19:00, Available], [19:05, Available], [19:10, Available]]
+Current time step :516.0
+Simulation Day: 1 Hour: 19 Min: 0
+Current Runway List:[[19:05, Available], [19:10, Available], [19:15, Available]]
+Current time step :517.0
+Simulation Day: 1 Hour: 19 Min: 5
+Current Runway List:[[19:10, Available], [19:15, Available], [19:20, Available]]
+Current time step :518.0
+Simulation Day: 1 Hour: 19 Min: 10
+Current Runway List:[[19:15, Available], [19:20, Available], [19:25, Available]]
+Current time step :519.0
+Simulation Day: 1 Hour: 19 Min: 15
+Current Runway List:[[19:20, Available], [19:25, Available], [19:30, Available]]
+Current time step :520.0
+Simulation Day: 1 Hour: 19 Min: 20
+Current Runway List:[[19:25, Available], [19:30, Available], [19:35, Available]]
+Current time step :521.0
+Simulation Day: 1 Hour: 19 Min: 25
+Current Runway List:[[19:30, Available], [19:35, Available], [19:40, Available]]
+Current time step :522.0
+Simulation Day: 1 Hour: 19 Min: 30
+Current Runway List:[[19:35, Available], [19:40, Available], [19:45, Available]]
+Current time step :523.0
+Simulation Day: 1 Hour: 19 Min: 35
+Current 1st Request List:[[AAA15, 19:30]]
+Current Runway List:[[19:40, Available], [19:45, Available], [19:50, Available]]
+FlightBoard after sort:
+[11, BBB915, 20:20, 0]
+[9, AAA15, 20:30, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :524.0
+Simulation Day: 1 Hour: 19 Min: 40
+Current Runway List:[[19:45, Available], [19:50, Available], [19:55, Available]]
+Current time step :525.0
+Simulation Day: 1 Hour: 19 Min: 45
+Current Runway List:[[19:50, Available], [19:55, Available], [20:00, Available]]
+Current time step :526.0
+Simulation Day: 1 Hour: 19 Min: 50
+Current Runway List:[[19:55, Available], [20:00, Available], [20:05, Available]]
+Current time step :527.0
+Simulation Day: 1 Hour: 19 Min: 55
+Current Runway List:[[20:00, Available], [20:05, Available], [20:10, Available]]
+Current time step :528.0
+Simulation Day: 1 Hour: 20 Min: 0
+Current Runway List:[[20:05, Available], [20:10, Available], [20:15, Available]]
+Current time step :529.0
+Simulation Day: 1 Hour: 20 Min: 5
+Current Runway List:[[20:10, Available], [20:15, Available], [20:20, Available]]
+Current time step :530.0
+Simulation Day: 1 Hour: 20 Min: 10
+Current Runway List:[[20:15, Available], [20:20, Available], [20:25, Available]]
+Current time step :531.0
+Simulation Day: 1 Hour: 20 Min: 15
+Current Runway List:[[20:20, Available], [20:25, Available], [20:30, Available]]
+Current time step :532.0
+Simulation Day: 1 Hour: 20 Min: 20
+Current 2nd Request List:[[AAA15, 20:15]]
+Current Runway List:[[20:25, Available], [20:30, Available], [20:35, AAA15]]
+FlightBoard after sort:
+[9, AAA15, 20:35, 1]
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :533.0
+Simulation Day: 1 Hour: 20 Min: 25
+Current Runway List:[[20:30, Available], [20:35, AAA15], [20:40, Available]]
+Current time step :534.0
+Simulation Day: 1 Hour: 20 Min: 30
+Current Runway List:[[20:35, AAA15], [20:40, Available], [20:45, Available]]
+Current time step :535.0
+Simulation Day: 1 Hour: 20 Min: 35
+Current Runway List:[[20:40, Available], [20:45, Available], [20:50, Available]]
+FlightBoard after sort:
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :536.0
+Simulation Day: 1 Hour: 20 Min: 40
+Current Runway List:[[20:45, Available], [20:50, Available], [20:55, Available]]
+Current time step :537.0
+Simulation Day: 1 Hour: 20 Min: 45
+Current Runway List:[[20:50, Available], [20:55, Available], [21:00, Available]]
+Current time step :538.0
+Simulation Day: 1 Hour: 20 Min: 50
+Current Runway List:[[20:55, Available], [21:00, Available], [21:05, Available]]
+Current time step :539.0
+Simulation Day: 1 Hour: 20 Min: 55
+Current Runway List:[[21:00, Available], [21:05, Available], [21:10, Available]]
+Current time step :540.0
+Simulation Day: 1 Hour: 21 Min: 0
+Current Runway List:[[21:05, Available], [21:10, Available], [21:15, Available]]
+Current time step :541.0
+Simulation Day: 1 Hour: 21 Min: 5
+Current 1st Request List:[[BBB15, 21:00]]
+Current Runway List:[[21:10, Available], [21:15, Available], [21:20, Available]]
+FlightBoard after sort:
+[10, AAA915, 21:30, 0]
+[15, BBB15, 22:00, 1]
+Current time step :542.0
+Simulation Day: 1 Hour: 21 Min: 10
+Current Runway List:[[21:15, Available], [21:20, Available], [21:25, Available]]
+Current time step :543.0
+Simulation Day: 1 Hour: 21 Min: 15
+Current Runway List:[[21:20, Available], [21:25, Available], [21:30, Available]]
+Current time step :544.0
+Simulation Day: 1 Hour: 21 Min: 20
+Current Runway List:[[21:25, Available], [21:30, Available], [21:35, Available]]
+Current time step :545.0
+Simulation Day: 1 Hour: 21 Min: 25
+Current Runway List:[[21:30, Available], [21:35, Available], [21:40, Available]]
+Current time step :546.0
+Simulation Day: 1 Hour: 21 Min: 30
+Current Runway List:[[21:35, Available], [21:40, Available], [21:45, Available]]
+FlightBoard after sort:
+[15, BBB15, 22:00, 1]
+Current time step :547.0
+Simulation Day: 1 Hour: 21 Min: 35
+Current Runway List:[[21:40, Available], [21:45, Available], [21:50, Available]]
+Current time step :548.0
+Simulation Day: 1 Hour: 21 Min: 40
+Current Runway List:[[21:45, Available], [21:50, Available], [21:55, Available]]
+Current time step :549.0
+Simulation Day: 1 Hour: 21 Min: 45
+Current Runway List:[[21:50, Available], [21:55, Available], [22:00, Available]]
+Current time step :550.0
+Simulation Day: 1 Hour: 21 Min: 50
+Current 2nd Request List:[[BBB15, 21:45]]
+Current Runway List:[[21:55, Available], [22:00, Available], [22:05, BBB15]]
+FlightBoard after sort:
+[15, BBB15, 22:05, 1]
+Current time step :551.0
+Simulation Day: 1 Hour: 21 Min: 55
+Current Runway List:[[22:00, Available], [22:05, BBB15], [22:10, Available]]
+Current time step :552.0
+Simulation Day: 1 Hour: 22 Min: 0
+Current Runway List:[[22:05, BBB15], [22:10, Available], [22:15, Available]]
+Current time step :553.0
+Simulation Day: 1 Hour: 22 Min: 5
+Current Runway List:[[22:10, Available], [22:15, Available], [22:20, Available]]
+FlightBoard after sort:
+Current time step :554.0
+Simulation Day: 1 Hour: 22 Min: 10
+Current Runway List:[[22:15, Available], [22:20, Available], [22:25, Available]]
+Current time step :555.0
+Simulation Day: 1 Hour: 22 Min: 15
+Current Runway List:[[22:20, Available], [22:25, Available], [22:30, Available]]
+Current time step :556.0
+Simulation Day: 1 Hour: 22 Min: 20
+Current Runway List:[[22:25, Available], [22:30, Available], [22:35, Available]]
+Current time step :557.0
+Simulation Day: 1 Hour: 22 Min: 25
+Current Runway List:[[22:30, Available], [22:35, Available], [22:40, Available]]
+Current time step :558.0
+Simulation Day: 1 Hour: 22 Min: 30
+Current Runway List:[[22:35, Available], [22:40, Available], [22:45, Available]]
+Current time step :559.0
+Simulation Day: 1 Hour: 22 Min: 35
+Current Runway List:[[22:40, Available], [22:45, Available], [22:50, Available]]
+Current time step :560.0
+Simulation Day: 1 Hour: 22 Min: 40
+Current Runway List:[[22:45, Available], [22:50, Available], [22:55, Available]]
+Current time step :561.0
+Simulation Day: 1 Hour: 22 Min: 45
+Current Runway List:[[22:50, Available], [22:55, Available], [23:00, Available]]
+Current time step :562.0
+Simulation Day: 1 Hour: 22 Min: 50
+Current Runway List:[[22:55, Available], [23:00, Available], [23:05, Available]]
+Current time step :563.0
+Simulation Day: 1 Hour: 22 Min: 55
+Current Runway List:[[23:00, Available], [23:05, Available], [23:10, Available]]
+Current time step :564.0
+Simulation Day: 1 Hour: 23 Min: 0
+Current Runway List:[[23:05, Available], [23:10, Available], [23:15, Available]]
+Current time step :565.0
+Simulation Day: 1 Hour: 23 Min: 5
+Current Runway List:[[23:10, Available], [23:15, Available], [23:20, Available]]
+Current time step :566.0
+Simulation Day: 1 Hour: 23 Min: 10
+Current Runway List:[[23:15, Available], [23:20, Available], [23:25, Available]]
+Current time step :567.0
+Simulation Day: 1 Hour: 23 Min: 15
+Current Runway List:[[23:20, Available], [23:25, Available], [23:30, Available]]
+Current time step :568.0
+Simulation Day: 1 Hour: 23 Min: 20
+Current Runway List:[[23:25, Available], [23:30, Available], [23:35, Available]]
+Current time step :569.0
+Simulation Day: 1 Hour: 23 Min: 25
+Current Runway List:[[23:30, Available], [23:35, Available], [23:40, Available]]
+Current time step :570.0
+Simulation Day: 1 Hour: 23 Min: 30
+Current Runway List:[[23:35, Available], [23:40, Available], [23:45, Available]]
+Send removal notification for AAA915
+Send removal notification for AAA912
+Send removal notification for AAA911
+Send removal notification for AAA914
+Send removal notification for BBB911
+Send removal notification for AAA913
+Send removal notification for BBB912
+Send removal notification for BBB913
+Send removal notification for BBB914
+Send removal notification for BBB915
+Send removal notification for AAA12
+Send removal notification for AAA13
+Send removal notification for BBB12
+Send removal notification for AAA11
+Send removal notification for BBB11
+Send removal notification for BBB14
+Send removal notification for BBB13
+Send removal notification for AAA14
+Send removal notification for AAA15
+Send removal notification for BBB15
+Current time step :571.0
+Simulation Day: 1 Hour: 23 Min: 35
+Current Runway List:[[23:40, Available], [23:45, Available], [23:50, Available]]
+Current time step :572.0
+Simulation Day: 1 Hour: 23 Min: 40
+Current Runway List:[[23:45, Available], [23:50, Available], [23:55, Available]]
+Current time step :573.0
+Simulation Day: 1 Hour: 23 Min: 45
+Current Runway List:[[23:50, Available], [23:55, Available], [0:00, Available]]
+Unregister Flight Object AAA915
+Unregister Flight Object AAA912
+Unregister Flight Object AAA911
+Unregister Flight Object AAA914
+Unregister Flight Object BBB911
+Unregister Flight Object AAA913
+Unregister Flight Object BBB912
+Unregister Flight Object BBB913
+Unregister Flight Object BBB914
+Unregister Flight Object BBB915
+Unregister Flight Object AAA12
+Unregister Flight Object AAA13
+Unregister Flight Object BBB12
+Unregister Flight Object AAA11
+Unregister Flight Object BBB11
+Unregister Flight Object BBB14
+Unregister Flight Object BBB13
+Unregister Flight Object AAA14
+Unregister Flight Object AAA15
+Unregister Flight Object BBB15
+Current time step :574.0
+Simulation Day: 1 Hour: 23 Min: 50
+Current Runway List:[[23:55, Available], [0:00, Available], [0:05, Available]]
+Current time step :575.0
+Simulation Day: 1 Hour: 23 Min: 55
+Current Runway List:[[0:00, Available], [0:05, Available], [0:10, Available]]
+Current time step :576.0
+Simulation Day: 2 Hour: 0 Min: 0
+Current Runway List:[[0:05, Available], [0:10, Available], [0:15, Available]]
+Current time step :577.0
+Simulation Day: 2 Hour: 0 Min: 5
+Received Arrive Day Ahead Schedule of AAA1
+Current flight Index : 1
+Received Arrive Day Ahead Schedule of AAA2
+Current flight Index : 2
+Received Arrive Day Ahead Schedule of AAA4
+Current flight Index : 3
+Received Arrive Day Ahead Schedule of AAA25
+Current flight Index : 4
+Received Arrive Day Ahead Schedule of BBB905
+Current flight Index : 5
+Received Arrive Day Ahead Schedule of AAA9
+Current flight Index : 6
+Received Arrive Day Ahead Schedule of BBB6
+Current flight Index : 7
+Received Arrive Day Ahead Schedule of BBB7
+Current flight Index : 8
+Received Arrive Day Ahead Schedule of AAA3
+Current flight Index : 9
+Received Arrive Day Ahead Schedule of AAA10
+Current flight Index : 10
+Received Arrive Day Ahead Schedule of BBB8
+Current flight Index : 11
+Received Arrive Day Ahead Schedule of AAA22
+Current flight Index : 12
+Current Runway List:[[0:10, Available], [0:15, Available], [0:20, Available]]
+FlightBoard after sort:
+[0, AAA1, 3:00, 1]
+[1, AAA2, 3:05, 1]
+[8, AAA3, 3:10, 1]
+[2, AAA4, 3:15, 1]
+[4, BBB905, 3:20, 1]
+[6, BBB6, 3:25, 1]
+[7, BBB7, 3:30, 1]
+[10, BBB8, 3:35, 1]
+[5, AAA9, 3:40, 1]
+[9, AAA10, 3:45, 1]
+[11, AAA22, 3:50, 1]
+[3, AAA25, 3:55, 1]
+Current time step :578.0
+Simulation Day: 2 Hour: 0 Min: 10
+Current Runway List:[[0:15, Available], [0:20, Available], [0:25, Available]]

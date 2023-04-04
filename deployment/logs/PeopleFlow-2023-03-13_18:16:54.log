@@ -1,0 +1,41 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.webgme.guest:FlatCase_exec[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding FlatCase_exec 0.1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mexec-maven-plugin:1.5.0:java[m [1m(default-cli)[m @ [36mFlatCase_exec[0;1m ---[m
+
+-------------------------------------------------------------------
+GMS: address=vagrant-46537, cluster=FlatCase, physical address=192.168.0.21:60854
+-------------------------------------------------------------------
+18:18:27.035 [org.webgme.guest.peopleflow.PeopleFlow.main()] INFO  org.webgme.guest.peopleflow.PeopleFlow - waiting on readyToPopulate...
+18:18:27.292 [org.webgme.guest.peopleflow.PeopleFlow.main()] INFO  org.webgme.guest.peopleflow.PeopleFlow - ...synchronized on readyToPopulate
+18:18:27.292 [org.webgme.guest.peopleflow.PeopleFlow.main()] INFO  org.webgme.guest.peopleflow.PeopleFlow - waiting on readyToRun...
+18:18:27.549 [org.webgme.guest.peopleflow.PeopleFlow.main()] INFO  org.webgme.guest.peopleflow.PeopleFlow - ...synchronized on readyToRun
+18:18:27.556 [org.webgme.guest.peopleflow.PeopleFlow.main()] INFO  org.webgme.guest.peopleflow.PeopleFlow - started logical time progression
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-46537] portico.lrc.jgroups: Detected that federate [unkonwn] may have crashed, investigating...
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-46537] portico.lrc.jgroups: Detected that federate [unkonwn] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-46537] portico.lrc.jgroups: Detected that federate [unkonwn] may have crashed, investigating...
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-46537] portico.lrc.jgroups: Detected that federate [FederationManager-b138f345-9a52-427a-8ff7-d54ef723e874] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-46537] portico.lrc.jgroups: Detected that federate [unkonwn] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-46537] portico.lrc.jgroups: Detected that federate [unkonwn] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-46537] portico.lrc.jgroups: Detected that federate [unkonwn] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-46537] portico.lrc.jgroups: Detected that federate [unkonwn] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-46537] portico.lrc.jgroups: Detected that federate [unkonwn] may have crashed, investigating...
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null

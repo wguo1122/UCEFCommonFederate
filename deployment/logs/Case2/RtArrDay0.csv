@@ -1,0 +1,11 @@
+﻿Airline,FlightNum,FirstLandingRequest,SecondLandingRequest
+AAA,1,1:25,1:45
+AAA,2,1:20,2:05
+AAA,3,1:40,2:25
+AAA,4,2:00,2:45
+AAA,5,2:20,3:05
+BBB,1,1:05,1:50
+BBB,2,1:25,2:10
+BBB,3,1:45,2:30
+BBB,4,2:05,2:50
+BBB,5,2:25,3:10

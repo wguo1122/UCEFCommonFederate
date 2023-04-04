@@ -1,0 +1,21 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.webgme.guest:FlatCase_exec[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding FlatCase_exec 0.1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mexec-maven-plugin:1.5.0:java[m [1m(default-cli)[m @ [36mFlatCase_exec[0;1m ---[m
+
+-------------------------------------------------------------------
+GMS: address=vagrant-46802, cluster=FlatCase, physical address=192.168.0.21:45084
+-------------------------------------------------------------------
+19:50:58.732 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - waiting on readyToPopulate...
+19:51:24.258 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - ...synchronized on readyToPopulate
+19:51:24.258 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - waiting on readyToRun...
+19:51:24.515 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - ...synchronized on readyToRun
+19:51:24.544 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - started logical time progression

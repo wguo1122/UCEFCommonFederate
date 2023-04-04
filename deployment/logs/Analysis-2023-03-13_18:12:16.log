@@ -1,0 +1,24 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.webgme.guest:FlatCase_exec[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding FlatCase_exec 0.1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mexec-maven-plugin:1.5.0:java[m [1m(default-cli)[m @ [36mFlatCase_exec[0;1m ---[m
+
+-------------------------------------------------------------------
+GMS: address=vagrant-19434, cluster=FlatCase, physical address=192.168.0.21:51773
+-------------------------------------------------------------------
+18:13:19.944 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - waiting on readyToPopulate...
+18:13:50.660 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - ...synchronized on readyToPopulate
+18:13:50.660 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - waiting on readyToRun...
+18:13:50.916 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - ...synchronized on readyToRun
+18:13:50.919 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - started logical time progression
+18:16:42.987 [org.webgme.guest.analysis.Analysis.main()] INFO  org.cpswt.hla.SynchronizedFederate - Analysis-f37da1a4-5b68-438b-b925-cf31776a576a: SimEnd interaction received, exiting...
+18:16:42.987 [org.webgme.guest.analysis.Analysis.main()] INFO  org.cpswt.hla.SynchronizedFederate - Exiting gracefully ....
+18:16:48.040 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - Done.

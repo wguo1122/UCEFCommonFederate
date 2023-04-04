@@ -1,0 +1,42 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.webgme.guest:FlatCase_exec[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding FlatCase_exec 0.1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mexec-maven-plugin:1.5.0:java[m [1m(default-cli)[m @ [36mFlatCase_exec[0;1m ---[m
+
+-------------------------------------------------------------------
+GMS: address=vagrant-30839, cluster=FlatCase, physical address=192.168.0.21:51162
+-------------------------------------------------------------------
+18:17:57.046 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - waiting on readyToPopulate...
+18:18:27.159 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - ...synchronized on readyToPopulate
+18:18:27.166 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - waiting on readyToRun...
+18:18:27.418 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - ...synchronized on readyToRun
+18:18:27.434 [org.webgme.guest.analysis.Analysis.main()] INFO  org.webgme.guest.analysis.Analysis - started logical time progression
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-30839] portico.lrc.jgroups: Detected that federate [unkonwn] may have crashed, investigating...
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-30839] portico.lrc.jgroups: Detected that federate [FederationManager-b138f345-9a52-427a-8ff7-d54ef723e874] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-30839] portico.lrc.jgroups: Detected that federate [PeopleFlow-9f44c9b0-7df5-41a6-a83b-a427783e9c9d] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-30839] portico.lrc.jgroups: Detected that federate [PassengerManag2-6fd37322-3b1e-4452-9692-2cea177e8e20] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-30839] portico.lrc.jgroups: Detected that federate [PassengerManag1-adf738f8-20a7-4fa4-920c-d1176dcf5e77] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-30839] portico.lrc.jgroups: Detected that federate [unkonwn] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-30839] portico.lrc.jgroups: Detected that federate [unkonwn] may have crashed, investigating...
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [Regular] portico.lrc.jgroups: Federate [PassengerManag2-6fd37322-3b1e-4452-9692-2cea177e8e20] has crashed. Sending fake resignation because it was too rude to.
+WARN  [Regular] portico.lrc.jgroups: Federate [PassengerManag1-adf738f8-20a7-4fa4-920c-d1176dcf5e77] has crashed. Sending fake resignation because it was too rude to.
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-30839] portico.lrc.jgroups: Detected that federate [FederationManager-b138f345-9a52-427a-8ff7-d54ef723e874] may have crashed, investigating...
+WARN  [Regular] portico.lrc.jgroups: Federate [FederationManager-b138f345-9a52-427a-8ff7-d54ef723e874] has crashed. Sending fake resignation because it was too rude to.
+WARN  [Regular] portico.lrc.jgroups: Federate [PeopleFlow-9f44c9b0-7df5-41a6-a83b-a427783e9c9d] has crashed. Sending fake resignation because it was too rude to.
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=null
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=b98d54f3-304d-4bc5-8df4-c74fbd76316d
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=e2acf4ff-09b7-4bb2-9017-e411b9207e1b

@@ -1,0 +1,992 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.webgme.guest:FlatCase_exec[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding FlatCase_exec 0.1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mexec-maven-plugin:1.5.0:java[m [1m(default-cli)[m @ [36mFlatCase_exec[0;1m ---[m
+
+-------------------------------------------------------------------
+GMS: address=vagrant-51325, cluster=FlatCase, physical address=192.168.0.21:52521
+-------------------------------------------------------------------
+18:40:26.646 [org.webgme.guest.atc.ATC.main()] INFO  org.webgme.guest.atc.ATC - waiting on readyToPopulate...
+18:41:22.528 [org.webgme.guest.atc.ATC.main()] INFO  org.webgme.guest.atc.ATC - ...synchronized on readyToPopulate
+18:41:22.528 [org.webgme.guest.atc.ATC.main()] INFO  org.webgme.guest.atc.ATC - waiting on readyToRun...
+18:41:22.794 [org.webgme.guest.atc.ATC.main()] INFO  org.webgme.guest.atc.ATC - ...synchronized on readyToRun
+18:41:22.831 [org.webgme.guest.atc.ATC.main()] INFO  org.webgme.guest.atc.ATC - started logical time progression
+Current time step :0.0
+Simulation Day: 0 Hour: 0 Min: 0
+Reading RealTimeArriveSchdule at :./RealTimeArriveSchdule/RtArrDay0.csv
+﻿Airline,FlightNum,FirstLandingRequest,SecondLandingRequest
+firstRequestList after sort:
+[BBB, 1, 1:05]
+[AAA, 2, 1:20]
+[AAA, 1, 1:25]
+[BBB, 2, 1:25]
+[AAA, 3, 1:40]
+[BBB, 3, 1:45]
+[AAA, 4, 2:00]
+[BBB, 4, 2:05]
+[AAA, 5, 2:20]
+[BBB, 5, 2:25]
+secondRequestList after sort:
+[AAA, 1, 1:45]
+[BBB, 1, 1:50]
+[AAA, 2, 2:05]
+[BBB, 2, 2:10]
+[AAA, 3, 2:25]
+[BBB, 3, 2:30]
+[AAA, 4, 2:45]
+[BBB, 4, 2:50]
+[AAA, 5, 3:05]
+[BBB, 5, 3:10]
+Current time step :1.0
+Simulation Day: 0 Hour: 0 Min: 5
+Current time step :2.0
+Simulation Day: 0 Hour: 0 Min: 10
+Received new Arr updates of flight BBB1
+Received new Arr updates of flight BBB5
+Received new Arr updates of flight BBB4
+Received new Arr updates of flight BBB3
+Received new Arr updates of flight BBB2
+Received new Arr updates of flight AAA1
+Received new Arr updates of flight AAA5
+Received new Arr updates of flight AAA4
+Received new Arr updates of flight AAA3
+Received new Arr updates of flight AAA2
+FlightBoard after sort:
+[AAA1, 2:00, 1]
+[BBB1, 2:05, 1]
+[AAA2, 2:20, 1]
+[BBB2, 2:25, 1]
+[AAA3, 2:40, 1]
+[BBB3, 2:45, 1]
+[AAA4, 3:00, 1]
+[BBB4, 3:05, 1]
+[AAA5, 3:20, 1]
+[BBB5, 3:25, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+Current time step :3.0
+Simulation Day: 0 Hour: 0 Min: 15
+Current time step :4.0
+Simulation Day: 0 Hour: 0 Min: 20
+Current time step :5.0
+Simulation Day: 0 Hour: 0 Min: 25
+Current time step :6.0
+Simulation Day: 0 Hour: 0 Min: 30
+Current time step :7.0
+Simulation Day: 0 Hour: 0 Min: 35
+Current time step :8.0
+Simulation Day: 0 Hour: 0 Min: 40
+Current time step :9.0
+Simulation Day: 0 Hour: 0 Min: 45
+Current time step :10.0
+Simulation Day: 0 Hour: 0 Min: 50
+Current time step :11.0
+Simulation Day: 0 Hour: 0 Min: 55
+Current time step :12.0
+Simulation Day: 0 Hour: 1 Min: 0
+Current time step :13.0
+Simulation Day: 0 Hour: 1 Min: 5
+Sending 1st landing request for BBB1
+Current time step :14.0
+Simulation Day: 0 Hour: 1 Min: 10
+Current time step :15.0
+Simulation Day: 0 Hour: 1 Min: 15
+Current time step :16.0
+Simulation Day: 0 Hour: 1 Min: 20
+Sending 1st landing request for AAA2
+Current time step :17.0
+Simulation Day: 0 Hour: 1 Min: 25
+Sending 1st landing request for AAA1
+Sending 1st landing request for BBB2
+Current time step :18.0
+Simulation Day: 0 Hour: 1 Min: 30
+Current time step :19.0
+Simulation Day: 0 Hour: 1 Min: 35
+Received new Arr updates of flight AAA1
+FlightBoard after sort:
+[BBB1, 2:05, 1]
+[AAA2, 2:20, 1]
+[AAA1, 2:25, 1]
+[BBB2, 2:25, 1]
+[AAA3, 2:40, 1]
+[BBB3, 2:45, 1]
+[AAA4, 3:00, 1]
+[BBB4, 3:05, 1]
+[AAA5, 3:20, 1]
+[BBB5, 3:25, 1]
+FlightID Map:{BBB1=0, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=2, BBB3=5, AAA2=1, BBB2=3}
+Current time step :20.0
+Simulation Day: 0 Hour: 1 Min: 40
+Sending 1st landing request for AAA3
+Current time step :21.0
+Simulation Day: 0 Hour: 1 Min: 45
+Sending 1st landing request for BBB3
+Sending 2nd landing request for AAA1
+Current time step :22.0
+Simulation Day: 0 Hour: 1 Min: 50
+Sending 2nd landing request for BBB1
+Current time step :23.0
+Simulation Day: 0 Hour: 1 Min: 55
+Received new Arr updates of flight AAA1
+FlightBoard after sort:
+[BBB1, 2:05, 1]
+[AAA1, 2:05, 1]
+[AAA2, 2:20, 1]
+[BBB2, 2:25, 1]
+[AAA3, 2:40, 1]
+[BBB3, 2:45, 1]
+[AAA4, 3:00, 1]
+[BBB4, 3:05, 1]
+[AAA5, 3:20, 1]
+[BBB5, 3:25, 1]
+FlightID Map:{BBB1=0, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=1, BBB3=5, AAA2=2, BBB2=3}
+Current time step :24.0
+Simulation Day: 0 Hour: 2 Min: 0
+Sending 1st landing request for AAA4
+Received new Arr updates of flight BBB1
+FlightBoard after sort:
+[AAA1, 2:05, 1]
+[BBB1, 2:10, 1]
+[AAA2, 2:20, 1]
+[BBB2, 2:25, 1]
+[AAA3, 2:40, 1]
+[BBB3, 2:45, 1]
+[AAA4, 3:00, 1]
+[BBB4, 3:05, 1]
+[AAA5, 3:20, 1]
+[BBB5, 3:25, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+Current time step :25.0
+Simulation Day: 0 Hour: 2 Min: 5
+Sending 1st landing request for BBB4
+Sending 2nd landing request for AAA2
+Current time step :26.0
+Simulation Day: 0 Hour: 2 Min: 10
+Sending 2nd landing request for BBB2
+Received new Arr updates of flight AAA1
+FlightBoard after sort:
+[AAA1, 2:05, 1]
+[BBB1, 2:10, 1]
+[AAA2, 2:20, 1]
+[BBB2, 2:25, 1]
+[AAA3, 2:40, 1]
+[BBB3, 2:45, 1]
+[AAA4, 3:00, 1]
+[BBB4, 3:05, 1]
+[AAA5, 3:20, 1]
+[BBB5, 3:25, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+Current time step :27.0
+Simulation Day: 0 Hour: 2 Min: 15
+Received new Arr updates of flight BBB1
+Received new Arr updates of flight AAA2
+FlightBoard after sort:
+[AAA1, 2:05, 1]
+[BBB1, 2:10, 1]
+[AAA2, 2:25, 1]
+[BBB2, 2:25, 1]
+[AAA3, 2:40, 1]
+[BBB3, 2:45, 1]
+[AAA4, 3:00, 1]
+[BBB4, 3:05, 1]
+[AAA5, 3:20, 1]
+[BBB5, 3:25, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+Current time step :28.0
+Simulation Day: 0 Hour: 2 Min: 20
+Sending 1st landing request for AAA5
+Received new Arr updates of flight BBB2
+FlightBoard after sort:
+[AAA1, 2:05, 1]
+[BBB1, 2:10, 1]
+[AAA2, 2:25, 1]
+[BBB2, 2:30, 1]
+[AAA3, 2:40, 1]
+[BBB3, 2:45, 1]
+[AAA4, 3:00, 1]
+[BBB4, 3:05, 1]
+[AAA5, 3:20, 1]
+[BBB5, 3:25, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+Current time step :29.0
+Simulation Day: 0 Hour: 2 Min: 25
+Sending 1st landing request for BBB5
+Sending 2nd landing request for AAA3
+Current time step :30.0
+Simulation Day: 0 Hour: 2 Min: 30
+Sending 2nd landing request for BBB3
+Received new Arr updates of flight AAA2
+FlightBoard after sort:
+[AAA1, 2:05, 1]
+[BBB1, 2:10, 1]
+[AAA2, 2:25, 1]
+[BBB2, 2:30, 1]
+[AAA3, 2:40, 1]
+[BBB3, 2:45, 1]
+[AAA4, 3:00, 1]
+[BBB4, 3:05, 1]
+[AAA5, 3:20, 1]
+[BBB5, 3:25, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+Current time step :31.0
+Simulation Day: 0 Hour: 2 Min: 35
+Received new Arr updates of flight BBB2
+Received new Arr updates of flight AAA3
+FlightBoard after sort:
+[AAA1, 2:05, 1]
+[BBB1, 2:10, 1]
+[AAA2, 2:25, 1]
+[BBB2, 2:30, 1]
+[AAA3, 2:45, 1]
+[BBB3, 2:45, 1]
+[AAA4, 3:00, 1]
+[BBB4, 3:05, 1]
+[AAA5, 3:20, 1]
+[BBB5, 3:25, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+Current time step :32.0
+Simulation Day: 0 Hour: 2 Min: 40
+Received new Arr updates of flight BBB3
+FlightBoard after sort:
+[AAA1, 2:05, 1]
+[BBB1, 2:10, 1]
+[AAA2, 2:25, 1]
+[BBB2, 2:30, 1]
+[AAA3, 2:45, 1]
+[BBB3, 2:50, 1]
+[AAA4, 3:00, 1]
+[BBB4, 3:05, 1]
+[AAA5, 3:20, 1]
+[BBB5, 3:25, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+Current time step :33.0
+Simulation Day: 0 Hour: 2 Min: 45
+Sending 2nd landing request for AAA4
+Current time step :34.0
+Simulation Day: 0 Hour: 2 Min: 50
+Sending 2nd landing request for BBB4
+Received new Arr updates of flight AAA3
+FlightBoard after sort:
+[AAA1, 2:05, 1]
+[BBB1, 2:10, 1]
+[AAA2, 2:25, 1]
+[BBB2, 2:30, 1]
+[AAA3, 2:45, 1]
+[BBB3, 2:50, 1]
+[AAA4, 3:00, 1]
+[BBB4, 3:05, 1]
+[AAA5, 3:20, 1]
+[BBB5, 3:25, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+Current time step :35.0
+Simulation Day: 0 Hour: 2 Min: 55
+Received new Arr updates of flight BBB3
+Received new Arr updates of flight AAA4
+FlightBoard after sort:
+[AAA1, 2:05, 1]
+[BBB1, 2:10, 1]
+[AAA2, 2:25, 1]
+[BBB2, 2:30, 1]
+[AAA3, 2:45, 1]
+[BBB3, 2:50, 1]
+[AAA4, 3:05, 1]
+[BBB4, 3:05, 1]
+[AAA5, 3:20, 1]
+[BBB5, 3:25, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+Current time step :36.0
+Simulation Day: 0 Hour: 3 Min: 0
+Received new Arr updates of flight BBB4
+FlightBoard after sort:
+[AAA1, 2:05, 1]
+[BBB1, 2:10, 1]
+[AAA2, 2:25, 1]
+[BBB2, 2:30, 1]
+[AAA3, 2:45, 1]
+[BBB3, 2:50, 1]
+[AAA4, 3:05, 1]
+[BBB4, 3:10, 1]
+[AAA5, 3:20, 1]
+[BBB5, 3:25, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+Current time step :37.0
+Simulation Day: 0 Hour: 3 Min: 5
+Sending 2nd landing request for AAA5
+Current time step :38.0
+Simulation Day: 0 Hour: 3 Min: 10
+Sending 2nd landing request for BBB5
+Received new Arr updates of flight AAA4
+FlightBoard after sort:
+[AAA1, 2:05, 1]
+[BBB1, 2:10, 1]
+[AAA2, 2:25, 1]
+[BBB2, 2:30, 1]
+[AAA3, 2:45, 1]
+[BBB3, 2:50, 1]
+[AAA4, 3:05, 1]
+[BBB4, 3:10, 1]
+[AAA5, 3:20, 1]
+[BBB5, 3:25, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+Current time step :39.0
+Simulation Day: 0 Hour: 3 Min: 15
+Received new Arr updates of flight BBB4
+Received new Arr updates of flight AAA5
+FlightBoard after sort:
+[AAA1, 2:05, 1]
+[BBB1, 2:10, 1]
+[AAA2, 2:25, 1]
+[BBB2, 2:30, 1]
+[AAA3, 2:45, 1]
+[BBB3, 2:50, 1]
+[AAA4, 3:05, 1]
+[BBB4, 3:10, 1]
+[AAA5, 3:25, 1]
+[BBB5, 3:25, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+Current time step :40.0
+Simulation Day: 0 Hour: 3 Min: 20
+Received new Arr updates of flight BBB5
+FlightBoard after sort:
+[AAA1, 2:05, 1]
+[BBB1, 2:10, 1]
+[AAA2, 2:25, 1]
+[BBB2, 2:30, 1]
+[AAA3, 2:45, 1]
+[BBB3, 2:50, 1]
+[AAA4, 3:05, 1]
+[BBB4, 3:10, 1]
+[AAA5, 3:25, 1]
+[BBB5, 3:30, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+Current time step :41.0
+Simulation Day: 0 Hour: 3 Min: 25
+Current time step :42.0
+Simulation Day: 0 Hour: 3 Min: 30
+Received new Arr updates of flight AAA5
+FlightBoard after sort:
+[AAA1, 2:05, 1]
+[BBB1, 2:10, 1]
+[AAA2, 2:25, 1]
+[BBB2, 2:30, 1]
+[AAA3, 2:45, 1]
+[BBB3, 2:50, 1]
+[AAA4, 3:05, 1]
+[BBB4, 3:10, 1]
+[AAA5, 3:25, 1]
+[BBB5, 3:30, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+Current time step :43.0
+Simulation Day: 0 Hour: 3 Min: 35
+Received new Arr updates of flight BBB5
+FlightBoard after sort:
+[AAA1, 2:05, 1]
+[BBB1, 2:10, 1]
+[AAA2, 2:25, 1]
+[BBB2, 2:30, 1]
+[AAA3, 2:45, 1]
+[BBB3, 2:50, 1]
+[AAA4, 3:05, 1]
+[BBB4, 3:10, 1]
+[AAA5, 3:25, 1]
+[BBB5, 3:30, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+Current time step :44.0
+Simulation Day: 0 Hour: 3 Min: 40
+Current time step :45.0
+Simulation Day: 0 Hour: 3 Min: 45
+Current time step :46.0
+Simulation Day: 0 Hour: 3 Min: 50
+Current time step :47.0
+Simulation Day: 0 Hour: 3 Min: 55
+Current time step :48.0
+Simulation Day: 0 Hour: 4 Min: 0
+Current time step :49.0
+Simulation Day: 0 Hour: 4 Min: 5
+Current time step :50.0
+Simulation Day: 0 Hour: 4 Min: 10
+Current time step :51.0
+Simulation Day: 0 Hour: 4 Min: 15
+Current time step :52.0
+Simulation Day: 0 Hour: 4 Min: 20
+Current time step :53.0
+Simulation Day: 0 Hour: 4 Min: 25
+Current time step :54.0
+Simulation Day: 0 Hour: 4 Min: 30
+Current time step :55.0
+Simulation Day: 0 Hour: 4 Min: 35
+Current time step :56.0
+Simulation Day: 0 Hour: 4 Min: 40
+Current time step :57.0
+Simulation Day: 0 Hour: 4 Min: 45
+Current time step :58.0
+Simulation Day: 0 Hour: 4 Min: 50
+Current time step :59.0
+Simulation Day: 0 Hour: 4 Min: 55
+Current time step :60.0
+Simulation Day: 0 Hour: 5 Min: 0
+Current time step :61.0
+Simulation Day: 0 Hour: 5 Min: 5
+Current time step :62.0
+Simulation Day: 0 Hour: 5 Min: 10
+Current time step :63.0
+Simulation Day: 0 Hour: 5 Min: 15
+Current time step :64.0
+Simulation Day: 0 Hour: 5 Min: 20
+Current time step :65.0
+Simulation Day: 0 Hour: 5 Min: 25
+Current time step :66.0
+Simulation Day: 0 Hour: 5 Min: 30
+Current time step :67.0
+Simulation Day: 0 Hour: 5 Min: 35
+Current time step :68.0
+Simulation Day: 0 Hour: 5 Min: 40
+Current time step :69.0
+Simulation Day: 0 Hour: 5 Min: 45
+Current time step :70.0
+Simulation Day: 0 Hour: 5 Min: 50
+Current time step :71.0
+Simulation Day: 0 Hour: 5 Min: 55
+Current time step :72.0
+Simulation Day: 0 Hour: 6 Min: 0
+Current time step :73.0
+Simulation Day: 0 Hour: 6 Min: 5
+Current time step :74.0
+Simulation Day: 0 Hour: 6 Min: 10
+Current time step :75.0
+Simulation Day: 0 Hour: 6 Min: 15
+Current time step :76.0
+Simulation Day: 0 Hour: 6 Min: 20
+Current time step :77.0
+Simulation Day: 0 Hour: 6 Min: 25
+Current time step :78.0
+Simulation Day: 0 Hour: 6 Min: 30
+Current time step :79.0
+Simulation Day: 0 Hour: 6 Min: 35
+Current time step :80.0
+Simulation Day: 0 Hour: 6 Min: 40
+Current time step :81.0
+Simulation Day: 0 Hour: 6 Min: 45
+Current time step :82.0
+Simulation Day: 0 Hour: 6 Min: 50
+Current time step :83.0
+Simulation Day: 0 Hour: 6 Min: 55
+Current time step :84.0
+Simulation Day: 0 Hour: 7 Min: 0
+Current time step :85.0
+Simulation Day: 0 Hour: 7 Min: 5
+Current time step :86.0
+Simulation Day: 0 Hour: 7 Min: 10
+Current time step :87.0
+Simulation Day: 0 Hour: 7 Min: 15
+Current time step :88.0
+Simulation Day: 0 Hour: 7 Min: 20
+Current time step :89.0
+Simulation Day: 0 Hour: 7 Min: 25
+Current time step :90.0
+Simulation Day: 0 Hour: 7 Min: 30
+Current time step :91.0
+Simulation Day: 0 Hour: 7 Min: 35
+Current time step :92.0
+Simulation Day: 0 Hour: 7 Min: 40
+Current time step :93.0
+Simulation Day: 0 Hour: 7 Min: 45
+Current time step :94.0
+Simulation Day: 0 Hour: 7 Min: 50
+Current time step :95.0
+Simulation Day: 0 Hour: 7 Min: 55
+Current time step :96.0
+Simulation Day: 0 Hour: 8 Min: 0
+Current time step :97.0
+Simulation Day: 0 Hour: 8 Min: 5
+Current time step :98.0
+Simulation Day: 0 Hour: 8 Min: 10
+Current time step :99.0
+Simulation Day: 0 Hour: 8 Min: 15
+Current time step :100.0
+Simulation Day: 0 Hour: 8 Min: 20
+Current time step :101.0
+Simulation Day: 0 Hour: 8 Min: 25
+Current time step :102.0
+Simulation Day: 0 Hour: 8 Min: 30
+Current time step :103.0
+Simulation Day: 0 Hour: 8 Min: 35
+Current time step :104.0
+Simulation Day: 0 Hour: 8 Min: 40
+Current time step :105.0
+Simulation Day: 0 Hour: 8 Min: 45
+Current time step :106.0
+Simulation Day: 0 Hour: 8 Min: 50
+Current time step :107.0
+Simulation Day: 0 Hour: 8 Min: 55
+Current time step :108.0
+Simulation Day: 0 Hour: 9 Min: 0
+Current time step :109.0
+Simulation Day: 0 Hour: 9 Min: 5
+Current time step :110.0
+Simulation Day: 0 Hour: 9 Min: 10
+Current time step :111.0
+Simulation Day: 0 Hour: 9 Min: 15
+Current time step :112.0
+Simulation Day: 0 Hour: 9 Min: 20
+Current time step :113.0
+Simulation Day: 0 Hour: 9 Min: 25
+Current time step :114.0
+Simulation Day: 0 Hour: 9 Min: 30
+Current time step :115.0
+Simulation Day: 0 Hour: 9 Min: 35
+Current time step :116.0
+Simulation Day: 0 Hour: 9 Min: 40
+Current time step :117.0
+Simulation Day: 0 Hour: 9 Min: 45
+Current time step :118.0
+Simulation Day: 0 Hour: 9 Min: 50
+Current time step :119.0
+Simulation Day: 0 Hour: 9 Min: 55
+Current time step :120.0
+Simulation Day: 0 Hour: 10 Min: 0
+Current time step :121.0
+Simulation Day: 0 Hour: 10 Min: 5
+Current time step :122.0
+Simulation Day: 0 Hour: 10 Min: 10
+Current time step :123.0
+Simulation Day: 0 Hour: 10 Min: 15
+Current time step :124.0
+Simulation Day: 0 Hour: 10 Min: 20
+Current time step :125.0
+Simulation Day: 0 Hour: 10 Min: 25
+Current time step :126.0
+Simulation Day: 0 Hour: 10 Min: 30
+Current time step :127.0
+Simulation Day: 0 Hour: 10 Min: 35
+Current time step :128.0
+Simulation Day: 0 Hour: 10 Min: 40
+Current time step :129.0
+Simulation Day: 0 Hour: 10 Min: 45
+Current time step :130.0
+Simulation Day: 0 Hour: 10 Min: 50
+Current time step :131.0
+Simulation Day: 0 Hour: 10 Min: 55
+Current time step :132.0
+Simulation Day: 0 Hour: 11 Min: 0
+Current time step :133.0
+Simulation Day: 0 Hour: 11 Min: 5
+Current time step :134.0
+Simulation Day: 0 Hour: 11 Min: 10
+Current time step :135.0
+Simulation Day: 0 Hour: 11 Min: 15
+Current time step :136.0
+Simulation Day: 0 Hour: 11 Min: 20
+Current time step :137.0
+Simulation Day: 0 Hour: 11 Min: 25
+Current time step :138.0
+Simulation Day: 0 Hour: 11 Min: 30
+Current time step :139.0
+Simulation Day: 0 Hour: 11 Min: 35
+Current time step :140.0
+Simulation Day: 0 Hour: 11 Min: 40
+Current time step :141.0
+Simulation Day: 0 Hour: 11 Min: 45
+Current time step :142.0
+Simulation Day: 0 Hour: 11 Min: 50
+Current time step :143.0
+Simulation Day: 0 Hour: 11 Min: 55
+Current time step :144.0
+Simulation Day: 0 Hour: 12 Min: 0
+Current time step :145.0
+Simulation Day: 0 Hour: 12 Min: 5
+Current time step :146.0
+Simulation Day: 0 Hour: 12 Min: 10
+Current time step :147.0
+Simulation Day: 0 Hour: 12 Min: 15
+Current time step :148.0
+Simulation Day: 0 Hour: 12 Min: 20
+Current time step :149.0
+Simulation Day: 0 Hour: 12 Min: 25
+Current time step :150.0
+Simulation Day: 0 Hour: 12 Min: 30
+Current time step :151.0
+Simulation Day: 0 Hour: 12 Min: 35
+Current time step :152.0
+Simulation Day: 0 Hour: 12 Min: 40
+Current time step :153.0
+Simulation Day: 0 Hour: 12 Min: 45
+Current time step :154.0
+Simulation Day: 0 Hour: 12 Min: 50
+Current time step :155.0
+Simulation Day: 0 Hour: 12 Min: 55
+Current time step :156.0
+Simulation Day: 0 Hour: 13 Min: 0
+Current time step :157.0
+Simulation Day: 0 Hour: 13 Min: 5
+Current time step :158.0
+Simulation Day: 0 Hour: 13 Min: 10
+Current time step :159.0
+Simulation Day: 0 Hour: 13 Min: 15
+Current time step :160.0
+Simulation Day: 0 Hour: 13 Min: 20
+Current time step :161.0
+Simulation Day: 0 Hour: 13 Min: 25
+Current time step :162.0
+Simulation Day: 0 Hour: 13 Min: 30
+Current time step :163.0
+Simulation Day: 0 Hour: 13 Min: 35
+Current time step :164.0
+Simulation Day: 0 Hour: 13 Min: 40
+Current time step :165.0
+Simulation Day: 0 Hour: 13 Min: 45
+Current time step :166.0
+Simulation Day: 0 Hour: 13 Min: 50
+Current time step :167.0
+Simulation Day: 0 Hour: 13 Min: 55
+Current time step :168.0
+Simulation Day: 0 Hour: 14 Min: 0
+Current time step :169.0
+Simulation Day: 0 Hour: 14 Min: 5
+Current time step :170.0
+Simulation Day: 0 Hour: 14 Min: 10
+Current time step :171.0
+Simulation Day: 0 Hour: 14 Min: 15
+Current time step :172.0
+Simulation Day: 0 Hour: 14 Min: 20
+Current time step :173.0
+Simulation Day: 0 Hour: 14 Min: 25
+Current time step :174.0
+Simulation Day: 0 Hour: 14 Min: 30
+Current time step :175.0
+Simulation Day: 0 Hour: 14 Min: 35
+Current time step :176.0
+Simulation Day: 0 Hour: 14 Min: 40
+Current time step :177.0
+Simulation Day: 0 Hour: 14 Min: 45
+Current time step :178.0
+Simulation Day: 0 Hour: 14 Min: 50
+Current time step :179.0
+Simulation Day: 0 Hour: 14 Min: 55
+Current time step :180.0
+Simulation Day: 0 Hour: 15 Min: 0
+Current time step :181.0
+Simulation Day: 0 Hour: 15 Min: 5
+Current time step :182.0
+Simulation Day: 0 Hour: 15 Min: 10
+Current time step :183.0
+Simulation Day: 0 Hour: 15 Min: 15
+Current time step :184.0
+Simulation Day: 0 Hour: 15 Min: 20
+Current time step :185.0
+Simulation Day: 0 Hour: 15 Min: 25
+Current time step :186.0
+Simulation Day: 0 Hour: 15 Min: 30
+Current time step :187.0
+Simulation Day: 0 Hour: 15 Min: 35
+Current time step :188.0
+Simulation Day: 0 Hour: 15 Min: 40
+Current time step :189.0
+Simulation Day: 0 Hour: 15 Min: 45
+Current time step :190.0
+Simulation Day: 0 Hour: 15 Min: 50
+Current time step :191.0
+Simulation Day: 0 Hour: 15 Min: 55
+Current time step :192.0
+Simulation Day: 0 Hour: 16 Min: 0
+Current time step :193.0
+Simulation Day: 0 Hour: 16 Min: 5
+Current time step :194.0
+Simulation Day: 0 Hour: 16 Min: 10
+Current time step :195.0
+Simulation Day: 0 Hour: 16 Min: 15
+Current time step :196.0
+Simulation Day: 0 Hour: 16 Min: 20
+Current time step :197.0
+Simulation Day: 0 Hour: 16 Min: 25
+Current time step :198.0
+Simulation Day: 0 Hour: 16 Min: 30
+Current time step :199.0
+Simulation Day: 0 Hour: 16 Min: 35
+Current time step :200.0
+Simulation Day: 0 Hour: 16 Min: 40
+Current time step :201.0
+Simulation Day: 0 Hour: 16 Min: 45
+Current time step :202.0
+Simulation Day: 0 Hour: 16 Min: 50
+Current time step :203.0
+Simulation Day: 0 Hour: 16 Min: 55
+Current time step :204.0
+Simulation Day: 0 Hour: 17 Min: 0
+Current time step :205.0
+Simulation Day: 0 Hour: 17 Min: 5
+Current time step :206.0
+Simulation Day: 0 Hour: 17 Min: 10
+Current time step :207.0
+Simulation Day: 0 Hour: 17 Min: 15
+Current time step :208.0
+Simulation Day: 0 Hour: 17 Min: 20
+Current time step :209.0
+Simulation Day: 0 Hour: 17 Min: 25
+Current time step :210.0
+Simulation Day: 0 Hour: 17 Min: 30
+Current time step :211.0
+Simulation Day: 0 Hour: 17 Min: 35
+Current time step :212.0
+Simulation Day: 0 Hour: 17 Min: 40
+Current time step :213.0
+Simulation Day: 0 Hour: 17 Min: 45
+Current time step :214.0
+Simulation Day: 0 Hour: 17 Min: 50
+Current time step :215.0
+Simulation Day: 0 Hour: 17 Min: 55
+Current time step :216.0
+Simulation Day: 0 Hour: 18 Min: 0
+Current time step :217.0
+Simulation Day: 0 Hour: 18 Min: 5
+Current time step :218.0
+Simulation Day: 0 Hour: 18 Min: 10
+Current time step :219.0
+Simulation Day: 0 Hour: 18 Min: 15
+Current time step :220.0
+Simulation Day: 0 Hour: 18 Min: 20
+Current time step :221.0
+Simulation Day: 0 Hour: 18 Min: 25
+Current time step :222.0
+Simulation Day: 0 Hour: 18 Min: 30
+Current time step :223.0
+Simulation Day: 0 Hour: 18 Min: 35
+Current time step :224.0
+Simulation Day: 0 Hour: 18 Min: 40
+Current time step :225.0
+Simulation Day: 0 Hour: 18 Min: 45
+Current time step :226.0
+Simulation Day: 0 Hour: 18 Min: 50
+Current time step :227.0
+Simulation Day: 0 Hour: 18 Min: 55
+Current time step :228.0
+Simulation Day: 0 Hour: 19 Min: 0
+Current time step :229.0
+Simulation Day: 0 Hour: 19 Min: 5
+Current time step :230.0
+Simulation Day: 0 Hour: 19 Min: 10
+Current time step :231.0
+Simulation Day: 0 Hour: 19 Min: 15
+Current time step :232.0
+Simulation Day: 0 Hour: 19 Min: 20
+Current time step :233.0
+Simulation Day: 0 Hour: 19 Min: 25
+Current time step :234.0
+Simulation Day: 0 Hour: 19 Min: 30
+Current time step :235.0
+Simulation Day: 0 Hour: 19 Min: 35
+Current time step :236.0
+Simulation Day: 0 Hour: 19 Min: 40
+Current time step :237.0
+Simulation Day: 0 Hour: 19 Min: 45
+Current time step :238.0
+Simulation Day: 0 Hour: 19 Min: 50
+Current time step :239.0
+Simulation Day: 0 Hour: 19 Min: 55
+Current time step :240.0
+Simulation Day: 0 Hour: 20 Min: 0
+Current time step :241.0
+Simulation Day: 0 Hour: 20 Min: 5
+Current time step :242.0
+Simulation Day: 0 Hour: 20 Min: 10
+Current time step :243.0
+Simulation Day: 0 Hour: 20 Min: 15
+Current time step :244.0
+Simulation Day: 0 Hour: 20 Min: 20
+Current time step :245.0
+Simulation Day: 0 Hour: 20 Min: 25
+Current time step :246.0
+Simulation Day: 0 Hour: 20 Min: 30
+Current time step :247.0
+Simulation Day: 0 Hour: 20 Min: 35
+Current time step :248.0
+Simulation Day: 0 Hour: 20 Min: 40
+Current time step :249.0
+Simulation Day: 0 Hour: 20 Min: 45
+Current time step :250.0
+Simulation Day: 0 Hour: 20 Min: 50
+Current time step :251.0
+Simulation Day: 0 Hour: 20 Min: 55
+Current time step :252.0
+Simulation Day: 0 Hour: 21 Min: 0
+Current time step :253.0
+Simulation Day: 0 Hour: 21 Min: 5
+Current time step :254.0
+Simulation Day: 0 Hour: 21 Min: 10
+Current time step :255.0
+Simulation Day: 0 Hour: 21 Min: 15
+Current time step :256.0
+Simulation Day: 0 Hour: 21 Min: 20
+Current time step :257.0
+Simulation Day: 0 Hour: 21 Min: 25
+Current time step :258.0
+Simulation Day: 0 Hour: 21 Min: 30
+Current time step :259.0
+Simulation Day: 0 Hour: 21 Min: 35
+Current time step :260.0
+Simulation Day: 0 Hour: 21 Min: 40
+Current time step :261.0
+Simulation Day: 0 Hour: 21 Min: 45
+Current time step :262.0
+Simulation Day: 0 Hour: 21 Min: 50
+Current time step :263.0
+Simulation Day: 0 Hour: 21 Min: 55
+Current time step :264.0
+Simulation Day: 0 Hour: 22 Min: 0
+Current time step :265.0
+Simulation Day: 0 Hour: 22 Min: 5
+Current time step :266.0
+Simulation Day: 0 Hour: 22 Min: 10
+Current time step :267.0
+Simulation Day: 0 Hour: 22 Min: 15
+Current time step :268.0
+Simulation Day: 0 Hour: 22 Min: 20
+Current time step :269.0
+Simulation Day: 0 Hour: 22 Min: 25
+Current time step :270.0
+Simulation Day: 0 Hour: 22 Min: 30
+Current time step :271.0
+Simulation Day: 0 Hour: 22 Min: 35
+Current time step :272.0
+Simulation Day: 0 Hour: 22 Min: 40
+Current time step :273.0
+Simulation Day: 0 Hour: 22 Min: 45
+Current time step :274.0
+Simulation Day: 0 Hour: 22 Min: 50
+Current time step :275.0
+Simulation Day: 0 Hour: 22 Min: 55
+Current time step :276.0
+Simulation Day: 0 Hour: 23 Min: 0
+Current time step :277.0
+Simulation Day: 0 Hour: 23 Min: 5
+Current time step :278.0
+Simulation Day: 0 Hour: 23 Min: 10
+Current time step :279.0
+Simulation Day: 0 Hour: 23 Min: 15
+Current time step :280.0
+Simulation Day: 0 Hour: 23 Min: 20
+Current time step :281.0
+Simulation Day: 0 Hour: 23 Min: 25
+Current time step :282.0
+Simulation Day: 0 Hour: 23 Min: 30
+Current time step :283.0
+Simulation Day: 0 Hour: 23 Min: 35
+Received new removal Notificaiton for AAA905
+Ignored new removal Notificaiton for AAA905
+Received new removal Notificaiton for AAA904
+Ignored new removal Notificaiton for AAA904
+Received new removal Notificaiton for AAA903
+Ignored new removal Notificaiton for AAA903
+Received new removal Notificaiton for BBB903
+Ignored new removal Notificaiton for BBB903
+Received new removal Notificaiton for BBB4
+Received new removal Notificaiton for AAA1
+Received new removal Notificaiton for BBB904
+Ignored new removal Notificaiton for BBB904
+Received new removal Notificaiton for BBB3
+Received new removal Notificaiton for AAA2
+Received new removal Notificaiton for AAA902
+Ignored new removal Notificaiton for AAA902
+Received new removal Notificaiton for BBB905
+Ignored new removal Notificaiton for BBB905
+Received new removal Notificaiton for BBB2
+Received new removal Notificaiton for BBB1
+Received new removal Notificaiton for AAA901
+Ignored new removal Notificaiton for AAA901
+Received new removal Notificaiton for BBB901
+Ignored new removal Notificaiton for BBB901
+Received new removal Notificaiton for AAA4
+Received new removal Notificaiton for BBB5
+Received new removal Notificaiton for AAA5
+Received new removal Notificaiton for AAA3
+Received new removal Notificaiton for BBB902
+Ignored new removal Notificaiton for BBB902
+Remove flight AAA1 from flightBoardList!
+Remove flight BBB1 from flightBoardList!
+Remove flight AAA2 from flightBoardList!
+Remove flight BBB2 from flightBoardList!
+Remove flight AAA3 from flightBoardList!
+Remove flight BBB3 from flightBoardList!
+Remove flight AAA4 from flightBoardList!
+Remove flight BBB4 from flightBoardList!
+Remove flight AAA5 from flightBoardList!
+Remove flight BBB5 from flightBoardList!
+New flightBoardList after removal[]
+Current time step :284.0
+Simulation Day: 0 Hour: 23 Min: 40
+Current time step :285.0
+Simulation Day: 0 Hour: 23 Min: 45
+Current time step :286.0
+Simulation Day: 0 Hour: 23 Min: 50
+Current time step :287.0
+Simulation Day: 0 Hour: 23 Min: 55
+Current time step :288.0
+Simulation Day: 1 Hour: 0 Min: 0
+Reading RealTimeArriveSchdule at :./RealTimeArriveSchdule/RtArrDay1.csv
+﻿Airline,FlightNum,FirstLandingRequest,SecondLandingRequest
+firstRequestList after sort:
+[AAA, 1, 1:00]
+[BBB, 1, 1:05]
+[AAA, 2, 1:20]
+[BBB, 2, 1:25]
+[AAA, 3, 1:40]
+[BBB, 3, 1:45]
+[AAA, 4, 2:00]
+[BBB, 4, 2:05]
+[AAA, 5, 2:20]
+[BBB, 5, 2:25]
+secondRequestList after sort:
+[AAA, 1, 1:45]
+[BBB, 1, 1:50]
+[AAA, 2, 2:05]
+[BBB, 2, 2:10]
+[AAA, 3, 2:25]
+[BBB, 3, 2:30]
+[AAA, 4, 2:45]
+[BBB, 4, 2:50]
+[AAA, 5, 3:05]
+[BBB, 5, 3:10]
+Current time step :289.0
+Simulation Day: 1 Hour: 0 Min: 5
+Current time step :290.0
+Simulation Day: 1 Hour: 0 Min: 10
+Received new Arr updates of flight AAA1
+Received new Arr updates of flight AAA2
+Received new Arr updates of flight AAA4
+Received new Arr updates of flight AAA5
+Received new Arr updates of flight BBB1
+Received new Arr updates of flight AAA3
+Received new Arr updates of flight BBB5
+Received new Arr updates of flight BBB4
+Received new Arr updates of flight BBB2
+Received new Arr updates of flight BBB3
+FlightBoard after sort:
+[AAA1, 2:00, 1]
+[BBB1, 2:05, 1]
+[AAA2, 2:20, 1]
+[BBB2, 2:25, 1]
+[AAA3, 2:40, 1]
+[BBB3, 2:45, 1]
+[AAA4, 3:00, 1]
+[BBB4, 3:05, 1]
+[AAA5, 3:20, 1]
+[BBB5, 3:25, 1]
+FlightID Map:{BBB1=1, AAA5=8, AAA3=4, BBB5=9, AAA4=6, BBB4=7, AAA1=0, BBB3=5, AAA2=2, BBB2=3}
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-51325] portico.lrc.jgroups: Detected that federate [FederationManager-0013b62c-8f08-4135-8e7b-cdbd5aec0dcb] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-51325] portico.lrc.jgroups: Detected that federate [FederationManager-0013b62c-8f08-4135-8e7b-cdbd5aec0dcb] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-51325] portico.lrc.jgroups: Detected that federate [FederationManager-0013b62c-8f08-4135-8e7b-cdbd5aec0dcb] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-51325] portico.lrc.jgroups: Detected that federate [PassengerManag1-ac3c2c7a-fe25-4aa6-9dc7-f33cf525b1e2] may have crashed, investigating...
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-51325] portico.lrc.jgroups: Detected that federate [FederationManager-0013b62c-8f08-4135-8e7b-cdbd5aec0dcb] may have crashed, investigating...
+WARN  [Regular] portico.lrc.jgroups: Federate [FederationManager-0013b62c-8f08-4135-8e7b-cdbd5aec0dcb] has crashed. Sending fake resignation because it was too rude to.
+WARN  [Regular] portico.lrc.jgroups: Federate [PassengerManag1-ac3c2c7a-fe25-4aa6-9dc7-f33cf525b1e2] has crashed. Sending fake resignation because it was too rude to.
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=393a6cdb-7886-453d-96d2-9d8e3b8a2f69
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=61285130-8524-45c7-9762-4af8185ebbd1
+WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=393a6cdb-7886-453d-96d2-9d8e3b8a2f69
+WARN  [VERIFY_SUSPECT.TimerThread,FlatCase,vagrant-51325] portico.lrc.jgroups: Detected that federate [unkonwn] may have crashed, investigating...
