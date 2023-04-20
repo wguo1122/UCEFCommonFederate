@@ -1,0 +1,114 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.webgme.guest:FlatCase_exec[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding FlatCase_exec 0.1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mexec-maven-plugin:1.5.0:java[m [1m(default-cli)[m @ [36mFlatCase_exec[0;1m ---[m
+
+-------------------------------------------------------------------
+GMS: address=vagrant-11243, cluster=FlatCase, physical address=192.168.0.21:43232
+-------------------------------------------------------------------
+ERROR [org.webgme.guest.atc.ATC.main()] portico.lrc: Waited 5 seconds for RoleCall from federate [2], none received, connection error
+org.portico.lrc.compat.JRTIinternalError: Waited 5 seconds for RoleCall from federate [2], none received, connection error
+	at org.portico.lrc.services.federation.handlers.outgoing.JoinFederationHandler.process(JoinFederationHandler.java:146)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:321)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:387)
+	at org.cpswt.hla.SynchronizedFederate.joinFederation(SynchronizedFederate.java:246)
+	at org.webgme.guest.atc.ATCBase.<init>(ATCBase.java:28)
+	at org.webgme.guest.atc.ATC.<init>(ATC.java:55)
+	at org.webgme.guest.atc.ATC.main(ATC.java:368)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+17:22:12.043 [org.webgme.guest.atc.ATC.main()] ERROR org.cpswt.hla.SynchronizedFederate - General error while trying to join federation. {}
+hla.rti.RTIinternalError: org.portico.lrc.compat.JRTIinternalError: Waited 5 seconds for RoleCall from federate [2], none received, connection error
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:345) ~[ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:387) ~[ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.cpswt.hla.SynchronizedFederate.joinFederation(SynchronizedFederate.java:246) [ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.webgme.guest.atc.ATCBase.<init>(ATCBase.java:28) [ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.webgme.guest.atc.ATC.<init>(ATC.java:55) [ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.webgme.guest.atc.ATC.main(ATC.java:368) [ATC-0.1.0-SNAPSHOT.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294) [exec-maven-plugin-1.5.0.jar:?]
+	at java.lang.Thread.run(Thread.java:830) [?:?]
+Caused by: org.portico.lrc.compat.JRTIinternalError: Waited 5 seconds for RoleCall from federate [2], none received, connection error
+	at org.portico.lrc.services.federation.handlers.outgoing.JoinFederationHandler.process(JoinFederationHandler.java:146) ~[ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187) ~[ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123) ~[ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822) ~[ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:321) ~[ATC-0.1.0-SNAPSHOT.jar:?]
+	... 11 more
+ERROR [org.webgme.guest.atc.ATC.main()] portico.lrc: Already connected to federation [FlatCase] as federate [ATC-9dc3a07c-ce27-4939-bcfe-7fe483dd3914]
+org.portico.lrc.compat.JFederateAlreadyExecutionMember: Already connected to federation [FlatCase] as federate [ATC-9dc3a07c-ce27-4939-bcfe-7fe483dd3914]
+	at org.portico.lrc.services.federation.handlers.outgoing.JoinFederationHandler.process(JoinFederationHandler.java:86)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:321)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:387)
+	at org.cpswt.hla.SynchronizedFederate.joinFederation(SynchronizedFederate.java:246)
+	at org.webgme.guest.atc.ATCBase.<init>(ATCBase.java:28)
+	at org.webgme.guest.atc.ATC.<init>(ATC.java:55)
+	at org.webgme.guest.atc.ATC.main(ATC.java:368)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+17:22:12.050 [org.webgme.guest.atc.ATC.main()] ERROR org.cpswt.hla.SynchronizedFederate - Federate already execution member: {}
+hla.rti.FederateAlreadyExecutionMember: org.portico.lrc.compat.JFederateAlreadyExecutionMember: Already connected to federation [FlatCase] as federate [ATC-9dc3a07c-ce27-4939-bcfe-7fe483dd3914]
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:349) ~[ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:387) ~[ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.cpswt.hla.SynchronizedFederate.joinFederation(SynchronizedFederate.java:246) [ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.webgme.guest.atc.ATCBase.<init>(ATCBase.java:28) [ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.webgme.guest.atc.ATC.<init>(ATC.java:55) [ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.webgme.guest.atc.ATC.main(ATC.java:368) [ATC-0.1.0-SNAPSHOT.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?]
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294) [exec-maven-plugin-1.5.0.jar:?]
+	at java.lang.Thread.run(Thread.java:830) [?:?]
+Caused by: org.portico.lrc.compat.JFederateAlreadyExecutionMember: Already connected to federation [FlatCase] as federate [ATC-9dc3a07c-ce27-4939-bcfe-7fe483dd3914]
+	at org.portico.lrc.services.federation.handlers.outgoing.JoinFederationHandler.process(JoinFederationHandler.java:86) ~[ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187) ~[ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123) ~[ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822) ~[ATC-0.1.0-SNAPSHOT.jar:?]
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:321) ~[ATC-0.1.0-SNAPSHOT.jar:?]
+	... 11 more
+ERROR [org.webgme.guest.atc.ATC.main()] portico.lrc: FAILURE Exception encountered while processing incoming message: null
+java.lang.NullPointerException
+	at org.portico.impl.hla13.handlers.TimeConstrainedEnabledCallbackHandler.process(TimeConstrainedEnabledCallbackHandler.java:60)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:688)
+	at org.portico.lrc.LRC.tickUntilEmpty(LRC.java:489)
+	at org.portico.lrc.LRC.tick(LRC.java:449)
+	at org.portico.impl.hla13.Impl13Helper.tick(Impl13Helper.java:130)
+	at org.portico.impl.hla13.Rti13Ambassador.tick(Rti13Ambassador.java:5781)
+	at org.cpswt.hla.SynchronizedFederate.enableTimeConstrained(SynchronizedFederate.java:375)
+	at org.webgme.guest.atc.ATCBase.<init>(ATCBase.java:29)
+	at org.webgme.guest.atc.ATC.<init>(ATC.java:55)
+	at org.webgme.guest.atc.ATC.main(ATC.java:368)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.base/java.lang.Thread.run(Thread.java:830)

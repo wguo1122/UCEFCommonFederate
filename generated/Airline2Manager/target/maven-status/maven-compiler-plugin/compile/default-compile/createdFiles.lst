@@ -1,5 +1,5 @@
-org/webgme/guest/airline2manager/rti/ArrivalPass.class
 org/webgme/guest/airline2manager/rti/Airline2DeparturReady.class
+org/webgme/guest/airline2manager/rti/ArrivalPass.class
 org/webgme/guest/airline2manager/rti/FlightRemovalNotification.class
 org/webgme/guest/airline2manager/Airline2Manager$1.class
 org/webgme/guest/airline2manager/rti/RealTimeArriSche.class

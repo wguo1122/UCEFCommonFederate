@@ -1,0 +1,245 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.webgme.guest:FlatCase_exec[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding FlatCase_exec 0.1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mexec-maven-plugin:1.5.0:java[m [1m(default-cli)[m @ [36mFlatCase_exec[0;1m ---[m
+
+-------------------------------------------------------------------
+GMS: address=vagrant-7452, cluster=FlatCase, physical address=192.168.0.21:59297
+-------------------------------------------------------------------
+ERROR [org.webgme.guest.passengermanag2.PassengerManag2.main()] portico.lrc: federation doesn't exist: FlatCase
+org.portico.lrc.compat.JFederationExecutionDoesNotExist: federation doesn't exist: FlatCase
+	at org.portico.bindings.jgroups.Federation.sendJoinFederation(Federation.java:259)
+	at org.portico.bindings.jgroups.JGroupsConnection.joinFederation(JGroupsConnection.java:251)
+	at org.portico.lrc.services.federation.handlers.outgoing.JoinFederationHandler.process(JoinFederationHandler.java:105)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:321)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:387)
+	at org.cpswt.hla.SynchronizedFederate.joinFederation(SynchronizedFederate.java:246)
+	at org.webgme.guest.passengermanag2.PassengerManag2Base.<init>(PassengerManag2Base.java:28)
+	at org.webgme.guest.passengermanag2.PassengerManag2.<init>(PassengerManag2.java:23)
+	at org.webgme.guest.passengermanag2.PassengerManag2.main(PassengerManag2.java:161)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+17:24:46.593 [org.webgme.guest.passengermanag2.PassengerManag2.main()] WARN  org.cpswt.hla.SynchronizedFederate - Federation with the name FlatCase doesn't exist (yet). Trying to wait and join...
+ERROR [org.webgme.guest.passengermanag2.PassengerManag2.main()] portico.lrc: federation doesn't exist: FlatCase
+org.portico.lrc.compat.JFederationExecutionDoesNotExist: federation doesn't exist: FlatCase
+	at org.portico.bindings.jgroups.Federation.sendJoinFederation(Federation.java:259)
+	at org.portico.bindings.jgroups.JGroupsConnection.joinFederation(JGroupsConnection.java:251)
+	at org.portico.lrc.services.federation.handlers.outgoing.JoinFederationHandler.process(JoinFederationHandler.java:105)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:321)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:387)
+	at org.cpswt.hla.SynchronizedFederate.joinFederation(SynchronizedFederate.java:246)
+	at org.webgme.guest.passengermanag2.PassengerManag2Base.<init>(PassengerManag2Base.java:28)
+	at org.webgme.guest.passengermanag2.PassengerManag2.<init>(PassengerManag2.java:23)
+	at org.webgme.guest.passengermanag2.PassengerManag2.main(PassengerManag2.java:161)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+17:24:47.095 [org.webgme.guest.passengermanag2.PassengerManag2.main()] WARN  org.cpswt.hla.SynchronizedFederate - Federation with the name FlatCase doesn't exist (yet). Trying to wait and join...
+ERROR [org.webgme.guest.passengermanag2.PassengerManag2.main()] portico.lrc: federation doesn't exist: FlatCase
+org.portico.lrc.compat.JFederationExecutionDoesNotExist: federation doesn't exist: FlatCase
+	at org.portico.bindings.jgroups.Federation.sendJoinFederation(Federation.java:259)
+	at org.portico.bindings.jgroups.JGroupsConnection.joinFederation(JGroupsConnection.java:251)
+	at org.portico.lrc.services.federation.handlers.outgoing.JoinFederationHandler.process(JoinFederationHandler.java:105)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:321)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:387)
+	at org.cpswt.hla.SynchronizedFederate.joinFederation(SynchronizedFederate.java:246)
+	at org.webgme.guest.passengermanag2.PassengerManag2Base.<init>(PassengerManag2Base.java:28)
+	at org.webgme.guest.passengermanag2.PassengerManag2.<init>(PassengerManag2.java:23)
+	at org.webgme.guest.passengermanag2.PassengerManag2.main(PassengerManag2.java:161)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+17:24:47.596 [org.webgme.guest.passengermanag2.PassengerManag2.main()] WARN  org.cpswt.hla.SynchronizedFederate - Federation with the name FlatCase doesn't exist (yet). Trying to wait and join...
+ERROR [org.webgme.guest.passengermanag2.PassengerManag2.main()] portico.lrc: federation doesn't exist: FlatCase
+org.portico.lrc.compat.JFederationExecutionDoesNotExist: federation doesn't exist: FlatCase
+	at org.portico.bindings.jgroups.Federation.sendJoinFederation(Federation.java:259)
+	at org.portico.bindings.jgroups.JGroupsConnection.joinFederation(JGroupsConnection.java:251)
+	at org.portico.lrc.services.federation.handlers.outgoing.JoinFederationHandler.process(JoinFederationHandler.java:105)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:321)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:387)
+	at org.cpswt.hla.SynchronizedFederate.joinFederation(SynchronizedFederate.java:246)
+	at org.webgme.guest.passengermanag2.PassengerManag2Base.<init>(PassengerManag2Base.java:28)
+	at org.webgme.guest.passengermanag2.PassengerManag2.<init>(PassengerManag2.java:23)
+	at org.webgme.guest.passengermanag2.PassengerManag2.main(PassengerManag2.java:161)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+17:24:48.097 [org.webgme.guest.passengermanag2.PassengerManag2.main()] WARN  org.cpswt.hla.SynchronizedFederate - Federation with the name FlatCase doesn't exist (yet). Trying to wait and join...
+ERROR [org.webgme.guest.passengermanag2.PassengerManag2.main()] portico.lrc: federation doesn't exist: FlatCase
+org.portico.lrc.compat.JFederationExecutionDoesNotExist: federation doesn't exist: FlatCase
+	at org.portico.bindings.jgroups.Federation.sendJoinFederation(Federation.java:259)
+	at org.portico.bindings.jgroups.JGroupsConnection.joinFederation(JGroupsConnection.java:251)
+	at org.portico.lrc.services.federation.handlers.outgoing.JoinFederationHandler.process(JoinFederationHandler.java:105)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:321)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:387)
+	at org.cpswt.hla.SynchronizedFederate.joinFederation(SynchronizedFederate.java:246)
+	at org.webgme.guest.passengermanag2.PassengerManag2Base.<init>(PassengerManag2Base.java:28)
+	at org.webgme.guest.passengermanag2.PassengerManag2.<init>(PassengerManag2.java:23)
+	at org.webgme.guest.passengermanag2.PassengerManag2.main(PassengerManag2.java:161)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+17:24:48.598 [org.webgme.guest.passengermanag2.PassengerManag2.main()] WARN  org.cpswt.hla.SynchronizedFederate - Federation with the name FlatCase doesn't exist (yet). Trying to wait and join...
+ERROR [org.webgme.guest.passengermanag2.PassengerManag2.main()] portico.lrc: federation doesn't exist: FlatCase
+org.portico.lrc.compat.JFederationExecutionDoesNotExist: federation doesn't exist: FlatCase
+	at org.portico.bindings.jgroups.Federation.sendJoinFederation(Federation.java:259)
+	at org.portico.bindings.jgroups.JGroupsConnection.joinFederation(JGroupsConnection.java:251)
+	at org.portico.lrc.services.federation.handlers.outgoing.JoinFederationHandler.process(JoinFederationHandler.java:105)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:321)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:387)
+	at org.cpswt.hla.SynchronizedFederate.joinFederation(SynchronizedFederate.java:246)
+	at org.webgme.guest.passengermanag2.PassengerManag2Base.<init>(PassengerManag2Base.java:28)
+	at org.webgme.guest.passengermanag2.PassengerManag2.<init>(PassengerManag2.java:23)
+	at org.webgme.guest.passengermanag2.PassengerManag2.main(PassengerManag2.java:161)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+17:24:49.101 [org.webgme.guest.passengermanag2.PassengerManag2.main()] WARN  org.cpswt.hla.SynchronizedFederate - Federation with the name FlatCase doesn't exist (yet). Trying to wait and join...
+ERROR [org.webgme.guest.passengermanag2.PassengerManag2.main()] portico.lrc: federation doesn't exist: FlatCase
+org.portico.lrc.compat.JFederationExecutionDoesNotExist: federation doesn't exist: FlatCase
+	at org.portico.bindings.jgroups.Federation.sendJoinFederation(Federation.java:259)
+	at org.portico.bindings.jgroups.JGroupsConnection.joinFederation(JGroupsConnection.java:251)
+	at org.portico.lrc.services.federation.handlers.outgoing.JoinFederationHandler.process(JoinFederationHandler.java:105)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:321)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:387)
+	at org.cpswt.hla.SynchronizedFederate.joinFederation(SynchronizedFederate.java:246)
+	at org.webgme.guest.passengermanag2.PassengerManag2Base.<init>(PassengerManag2Base.java:28)
+	at org.webgme.guest.passengermanag2.PassengerManag2.<init>(PassengerManag2.java:23)
+	at org.webgme.guest.passengermanag2.PassengerManag2.main(PassengerManag2.java:161)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+17:24:49.602 [org.webgme.guest.passengermanag2.PassengerManag2.main()] WARN  org.cpswt.hla.SynchronizedFederate - Federation with the name FlatCase doesn't exist (yet). Trying to wait and join...
+ERROR [org.webgme.guest.passengermanag2.PassengerManag2.main()] portico.lrc: federation doesn't exist: FlatCase
+org.portico.lrc.compat.JFederationExecutionDoesNotExist: federation doesn't exist: FlatCase
+	at org.portico.bindings.jgroups.Federation.sendJoinFederation(Federation.java:259)
+	at org.portico.bindings.jgroups.JGroupsConnection.joinFederation(JGroupsConnection.java:251)
+	at org.portico.lrc.services.federation.handlers.outgoing.JoinFederationHandler.process(JoinFederationHandler.java:105)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:321)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:387)
+	at org.cpswt.hla.SynchronizedFederate.joinFederation(SynchronizedFederate.java:246)
+	at org.webgme.guest.passengermanag2.PassengerManag2Base.<init>(PassengerManag2Base.java:28)
+	at org.webgme.guest.passengermanag2.PassengerManag2.<init>(PassengerManag2.java:23)
+	at org.webgme.guest.passengermanag2.PassengerManag2.main(PassengerManag2.java:161)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+17:24:50.102 [org.webgme.guest.passengermanag2.PassengerManag2.main()] WARN  org.cpswt.hla.SynchronizedFederate - Federation with the name FlatCase doesn't exist (yet). Trying to wait and join...
+ERROR [org.webgme.guest.passengermanag2.PassengerManag2.main()] portico.lrc: federation doesn't exist: FlatCase
+org.portico.lrc.compat.JFederationExecutionDoesNotExist: federation doesn't exist: FlatCase
+	at org.portico.bindings.jgroups.Federation.sendJoinFederation(Federation.java:259)
+	at org.portico.bindings.jgroups.JGroupsConnection.joinFederation(JGroupsConnection.java:251)
+	at org.portico.lrc.services.federation.handlers.outgoing.JoinFederationHandler.process(JoinFederationHandler.java:105)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:321)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:387)
+	at org.cpswt.hla.SynchronizedFederate.joinFederation(SynchronizedFederate.java:246)
+	at org.webgme.guest.passengermanag2.PassengerManag2Base.<init>(PassengerManag2Base.java:28)
+	at org.webgme.guest.passengermanag2.PassengerManag2.<init>(PassengerManag2.java:23)
+	at org.webgme.guest.passengermanag2.PassengerManag2.main(PassengerManag2.java:161)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+17:24:50.604 [org.webgme.guest.passengermanag2.PassengerManag2.main()] WARN  org.cpswt.hla.SynchronizedFederate - Federation with the name FlatCase doesn't exist (yet). Trying to wait and join...
+ERROR [org.webgme.guest.passengermanag2.PassengerManag2.main()] portico.lrc: federation doesn't exist: FlatCase
+org.portico.lrc.compat.JFederationExecutionDoesNotExist: federation doesn't exist: FlatCase
+	at org.portico.bindings.jgroups.Federation.sendJoinFederation(Federation.java:259)
+	at org.portico.bindings.jgroups.JGroupsConnection.joinFederation(JGroupsConnection.java:251)
+	at org.portico.lrc.services.federation.handlers.outgoing.JoinFederationHandler.process(JoinFederationHandler.java:105)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:321)
+	at org.portico.impl.hla13.Rti13Ambassador.joinFederationExecution(Rti13Ambassador.java:387)
+	at org.cpswt.hla.SynchronizedFederate.joinFederation(SynchronizedFederate.java:246)
+	at org.webgme.guest.passengermanag2.PassengerManag2Base.<init>(PassengerManag2Base.java:28)
+	at org.webgme.guest.passengermanag2.PassengerManag2.<init>(PassengerManag2.java:23)
+	at org.webgme.guest.passengermanag2.PassengerManag2.main(PassengerManag2.java:161)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+17:24:51.105 [org.webgme.guest.passengermanag2.PassengerManag2.main()] ERROR org.cpswt.hla.SynchronizedFederate - Federation was not found with the name {}. Quitting...
+ERROR [org.webgme.guest.passengermanag2.PassengerManag2.main()] portico.lrc: 
+org.portico.lrc.compat.JFederateNotExecutionMember: 
+	at org.portico.lrc.LRCState.checkJoined(LRCState.java:427)
+	at org.portico.lrc.services.time.handlers.outgoing.EnableTimeConstrainedHandler.process(EnableTimeConstrainedHandler.java:55)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.enableTimeConstrained(Rti13Ambassador.java:3362)
+	at org.cpswt.hla.SynchronizedFederate.enableTimeConstrained(SynchronizedFederate.java:351)
+	at org.webgme.guest.passengermanag2.PassengerManag2Base.<init>(PassengerManag2Base.java:29)
+	at org.webgme.guest.passengermanag2.PassengerManag2.<init>(PassengerManag2.java:23)
+	at org.webgme.guest.passengermanag2.PassengerManag2.main(PassengerManag2.java:161)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+17:24:51.106 [org.webgme.guest.passengermanag2.PassengerManag2.main()] ERROR org.webgme.guest.passengermanag2.PassengerManag2 - hla.rti.FederateNotExecutionMember: org.portico.lrc.compat.JFederateNotExecutionMember:  serial:0

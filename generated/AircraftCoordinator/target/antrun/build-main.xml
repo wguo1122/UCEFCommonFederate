@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="maven-antrun-" default="main"  >
 <target name="main">
-  <copy todir="/home/vagrant/Projects/UCEFCommonFederate/generated/AircraftCoordinator/target/conf" overwrite="true">
-    <fileset dir="/home/vagrant/Projects/UCEFCommonFederate/generated/AircraftCoordinator/conf"/>
+  <copy todir="/home/vagrant/Documents/Project/UCEFCommonFederate/generated/AircraftCoordinator/target/conf" overwrite="true">
+    <fileset dir="/home/vagrant/Documents/Project/UCEFCommonFederate/generated/AircraftCoordinator/conf"/>
   </copy>
-  <copy todir="/home/vagrant/Projects/UCEFCommonFederate/generated/AircraftCoordinator/target" overwrite="true">
-    <fileset file="/home/vagrant/Projects/UCEFCommonFederate/generated/AircraftCoordinator/RTI.rid"/>
+  <copy todir="/home/vagrant/Documents/Project/UCEFCommonFederate/generated/AircraftCoordinator/target" overwrite="true">
+    <fileset file="/home/vagrant/Documents/Project/UCEFCommonFederate/generated/AircraftCoordinator/RTI.rid"/>
   </copy>
 </target>
 </project>
