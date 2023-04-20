@@ -1,0 +1,2 @@
+StartTime,2020-01-01,yyyy-mm-dd
+TimeScale,5,minute/timestep
