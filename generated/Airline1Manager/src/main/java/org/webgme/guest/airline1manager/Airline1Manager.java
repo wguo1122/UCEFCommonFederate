@@ -19,6 +19,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.*;  
 
+import java.time.*;
+import java.time.format.*;
+
 
 // Define the Airline1Manager type of federate for the federation.
 
@@ -32,6 +35,12 @@ public class Airline1Manager extends Airline1ManagerBase {
     private int simulationDay = 0;
     private int simulationHour = 0;
     private int simulationMin = 0;
+    LocalDate dateNow;
+    LocalDate startDate;
+    LocalDateTime dateTimeNow;
+    LocalTime timeNow = LocalTime.of(0,0,0);
+    DateTimeFormatter timeformatter = DateTimeFormatter.ofPattern("HH:mm");
+    DateTimeFormatter dateformatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     
     private String path = "";
     private String line = "";
@@ -96,6 +105,30 @@ public class Airline1Manager extends Airline1ManagerBase {
         // TODO perform basic initialization below //
         /////////////////////////////////////////////
 
+        String configPath = "./TimeConfig.txt";
+        System.out.println("Reading Time Configs at :"+ configPath);
+        BufferedReader configreader = new BufferedReader(new FileReader(configPath));
+        String configLine = "";
+        while ((configLine = configreader.readLine()) != null) {
+            // Split the line into separate values
+            String[] values = configLine.split(",");
+            
+            // Check StartDate and Timescale
+            
+            if (values[0].equals("StartTime")) {
+                dateNow = LocalDate.parse(values[1]);
+                startDate = LocalDate.parse(values[1]);
+                dateTimeNow = LocalDateTime.of(dateNow,timeNow);
+            } else if (values[0].equals("TimeScale")) {
+                timeScale=Integer.parseInt(values[1]);
+            } 
+            
+            
+        }
+        configreader.close();
+        System.out.println("Simulaiton starts at :" + startDate + "  " + timeNow);
+        System.out.println("TimeSacle of this simulation is: "+ timeScale + "  min/timestep ");
+
         AdvanceTimeRequest atr = new AdvanceTimeRequest(currentTime);
         putAdvanceTimeRequest(atr);
 
@@ -123,16 +156,25 @@ public class Airline1Manager extends Airline1ManagerBase {
             enteredTimeGrantedState();
 
              // Simulaiton Day/Hour/Min Calculation
-             simulationDay = (int)(currentTime*timeScale)/(60*24);
-             simulationHour = ((int)(currentTime*timeScale)%(60*24))/(60);
-             simulationMin = ((int)(currentTime*timeScale)%(60*24))%(60);
+             
+            dateNow = dateTimeNow.toLocalDate();
+            timeNow = dateTimeNow.toLocalTime();
+
+            simulationDay = dateNow.compareTo(startDate);
+            simulationHour = timeNow.getHour();
+            simulationMin = timeNow.getMinute();
+
+            // simulationDay = (int)(currentTime*timeScale)/(60*24);
+            // simulationHour = ((int)(currentTime*timeScale)%(60*24))/(60);
+            // simulationMin = ((int)(currentTime*timeScale)%(60*24))%(60);
  
              System.out.println("Current time step :"+ currentTime);
              System.out.println("Simulation Day: "+ simulationDay + " Hour: "+ simulationHour + " Min: "+simulationMin);
  
  
              // Sending out new Day-ahead Schedule
-             if (currentTime%((60/timeScale)*24) == 0 ) {
+             // if (currentTime%((60/timeScale)*24) == 0 ) {     
+             if ((timeNow.compareTo(LocalTime.of(0,0,0)))==0){    
  
                  path = "./DayAheadSchdule/"+"AAA"+"Day"+String.valueOf(simulationDay)+".csv";
                  System.out.println("Checking DayAheadSchdule at :"+ path);
@@ -261,6 +303,9 @@ public class Airline1Manager extends Airline1ManagerBase {
 
                 newRemoval = false;
             }
+
+            //Update date and time for the next time step
+            dateTimeNow = dateTimeNow.plusMinutes(timeScale);
 
             ////////////////////////////////////////////////////////////////////
             // TODO break here if ready to resign and break out of while loop //

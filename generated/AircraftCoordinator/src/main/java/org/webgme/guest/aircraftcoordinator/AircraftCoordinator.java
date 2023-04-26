@@ -33,7 +33,7 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
     private boolean newCompleted = false; 
     
  
-    private int timeScale = 5; // mins per timestep
+    private int timeScale = 0; // mins per timestep
     private int simulationDay = 0;
     private int simulationHour = 0;
     private int simulationMin = 0;
@@ -65,6 +65,9 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
     private ArrayList<String> runway0 = new ArrayList<String>(Arrays.asList("00:00","Available")); 
     private ArrayList<String> runway1 = new ArrayList<String>(Arrays.asList("00:05","Available")); 
     private ArrayList<String> runway2 = new ArrayList<String>(Arrays.asList("00:10","Available")); 
+
+    
+
         
     
     ////////////////////////////////////////////////////////////////////////
@@ -179,9 +182,6 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
             simulationHour = timeNow.getHour();
             simulationMin = timeNow.getMinute();
 
-            //simulationDay = (int)(currentTime*timeScale)/(60*24);
-            //simulationHour = ((int)(currentTime*timeScale)%(60*24))/(60);
-            //simulationMin = ((int)(currentTime*timeScale)%(60*24))%(60);
 
             System.out.println("Current time step : " + currentTime);
             System.out.println("Current date and time : "+ dateTimeNow);
@@ -259,13 +259,11 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
             if (newArrivalRequest1) {
                 System.out.println("Current 1st Request List:"+ firstRequestList);
                 for (ArrayList<String> flr : firstRequestList){
-                    //String RequestTime = flr.get(1);
-                    //String newLandingTime = "";
+                    
                     LocalTime requestTime = LocalTime.parse(flr.get(1));
                     LocalTime newlandingTime = requestTime.plusHours(1);
                     String landingstr = newlandingTime.format(timeformatter);
-                    //int landingHour = Integer.valueOf(RequestTime.substring(0,RequestTime.indexOf(":")))+1;
-                    //newLandingTime =String.valueOf(landingHour)+RequestTime.substring(RequestTime.indexOf(":"),RequestTime.length());
+                    
                     // Update rtArriveMap
                     rtArriveMap.get(flr.get(0)).set_estimatedArrivalTime(landingstr);
                     // Update flightBoardList
@@ -296,24 +294,9 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
                     LocalTime runwayTime = LocalTime.parse(runwayList.get(runwayList.size()-1).get(0));
                     LocalTime newlandingTime = runwayTime.plusMinutes(5);
                     String landingstr = newlandingTime.format(timeformatter);
-
-                    
-
-                    // if (landingMin == 0) {
-                    //     newLandingTime = String.valueOf(landingHour)+":05";
-                    // } else if (landingMin != 55) {
-                    //     newLandingTime = String.valueOf(landingHour)+":"+String.valueOf(landingMin+5);
-                    // } else if (landingHour != 23){
-                    //     newLandingTime = String.valueOf(landingHour+1)+":00";
-                    // } else {
-                    //     newLandingTime = "0:00";
-                    // }
                    
-
                     ArrayList<String> runwayRow = new ArrayList<String>(Arrays.asList(landingstr,slr.get(0)));
-                    runwayList.add(runwayRow);
-                    
-                    
+                    runwayList.add(runwayRow);                   
 
                     // Update rtArriveMap
                     rtArriveMap.get(slr.get(0)).set_estimatedArrivalTime(landingstr);
@@ -326,20 +309,7 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
 
             //  Update Runway List
             if (runwayList.size()<4){
-                // String[] runwayTime = runwayList.get(runwayList.size()-1).get(0).split(":");
-                // String newLandingTime = "";
-                // int landingHour = Integer.valueOf(runwayTime[0]);
-                // int landingMin = Integer.valueOf(runwayTime[1]);
-
-                // if (landingMin == 0) {
-                //     newLandingTime = String.valueOf(landingHour)+":05";
-                // } else if (landingMin != 55) {
-                //     newLandingTime = String.valueOf(landingHour)+":"+String.valueOf(landingMin+5);
-                // } else if (landingHour != 23){
-                //     newLandingTime = String.valueOf(landingHour+1)+":00";
-                // } else {
-                //     newLandingTime = "0:00";
-                // }
+                
                 LocalTime runwayTime = LocalTime.parse(runwayList.get(runwayList.size()-1).get(0));
                 LocalTime newlandingTime = runwayTime.plusMinutes(5);
                 String landingstr = newlandingTime.format(timeformatter);
@@ -352,9 +322,10 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
 
             //  Check current time with flight board info list
             for (int i=0; i < flightBoardList.size();){
-                double currentTimeValue = 100*simulationHour+simulationMin;
+
                 String flightID = flightBoardList.get(i).get(1);
-                if (currentTimeValue<Double.valueOf(flightBoardList.get(i).get(2).replace(":",""))) {
+
+                if (timeNow.isBefore(LocalTime.parse(flightBoardList.get(i).get(2)))){
                     break;
                 }
 
@@ -418,7 +389,8 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
             }
 
             //   Sending removal notification at 23:30
-            if ((simulationHour == 23) && (simulationMin == 30)) {
+            //  if ((simulationHour == 23) && (simulationMin == 30)) {
+            if ((timeNow.compareTo(LocalTime.of(23,30,0)))==0){
                 for (RealTimeDepSche rtds : completedDepartureMap.values()){
                     FlightRemovalNotification flightRemovalNotification = create_FlightRemovalNotification();
                     String airline = rtds.get_airline();
@@ -440,7 +412,8 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
             }
 
             //  Unregister completed flight object at 23:45
-            if ((simulationHour == 23) && (simulationMin == 45)) {
+            //  if ((simulationHour == 23) && (simulationMin == 45)) {
+            if ((timeNow.compareTo(LocalTime.of(23,45,0)))==0){
                 for (RealTimeDepSche rtds : completedDepartureMap.values()){
                     System.out.println("Unregister Flight Object "+ rtds.get_airline()+rtds.get_flightNumber());
                     rtds.unregisterObject(getLRC());
@@ -590,8 +563,7 @@ public class AircraftCoordinator extends AircraftCoordinatorBase {
             flightIndex = flightIndex + 1;
 
         }
-        // System.out.println("Current arrive Index : " + arriveIndex);
-        // System.out.println("Current departure Index : " + departureIndex);
+        
         System.out.println("Current flight Index : " + flightIndex);
 
     }
